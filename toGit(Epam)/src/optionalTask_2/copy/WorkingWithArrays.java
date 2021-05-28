@@ -24,9 +24,7 @@ java.io.InputStream inputStream = System.in;
 		WorkingWithArrays opTsk = new WorkingWithArrays(); 
 		
 		opTsk.read();
-		
-		
-		
+	
 	}
 
 	@SuppressWarnings("resource")
