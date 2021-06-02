@@ -30,8 +30,15 @@ public class Human {
         return id;
     }
 
-    public void setFullName(int id) {
-        this.id = id;
+    public void setId(int id) {
+    	
+    	if (0 <= id && id<= 1000) {
+    	
+        this.id = id;}
+    	
+    	else {
+    		System.out.println("Вы ввели неверный id. id должен быть в пределах [0 до 1000]");
+    	}
     }
 	
     public String getSurname() {
@@ -39,21 +46,46 @@ public class Human {
     }
 
     public void setSurname(String surname) {
-        this.surname = surname;
+    
+    	if (surname != null && !surname.isEmpty()) {
+            for (char c : surname.toCharArray()) {
+                if (Character.isDigit(c)) {
+                	System.out.println("В вашей фамилии недопустимые символы (цифры)"); break; 
+                }
+            }
+        }
+    	else {this.surname = surname;}
     }
     public String getName() {
         return name;
     }
 
     public void setName(String name) {
-        this.name = name;
+    	
+    	if (name != null && !name.isEmpty()) {
+            for (char c : name.toCharArray()) {
+                if (Character.isDigit(c)) {
+                	System.out.println("В вашем имени недопустимые символы (цифры)"); break; 
+                }
+            }
+        }
+    	
+    	else { this.name = name;}
     }
     public String getPatronymic() {
-        return name;
+        return patronymic;
     }
 
     public void setPatronymic(String patronymic) {
-        this.patronymic = patronymic;
+    	
+    	if (patronymic != null && !patronymic.isEmpty()) {
+            for (char c : patronymic.toCharArray()) {
+                if (Character.isDigit(c)) {
+                	System.out.println("В вашем отчестве недопустимые символы (цифры)"); break; 
+                }
+            }
+        }
+    	else {this.patronymic = patronymic;}
     }
     public String getAddress() {
         return address;
@@ -62,4 +94,9 @@ public class Human {
     public void setAddress(String address) {
         this.address = address;
     }
+
+    public void arrayObjects(){
+    	
+    };
+    
 }

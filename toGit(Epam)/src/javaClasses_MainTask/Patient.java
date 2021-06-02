@@ -35,9 +35,34 @@ public class Patient extends Human{
 	@Override
 	public String toString() { 
 		
-        return "Привет, я студент: Id - " + getId() + ", фамилия - " + getSurname() + ", имя - " + getName() + ", отчество - " + getPatronymic() + ", адресс- " + getAddress() + ", " 
-        		+ " телефон - " + telephone + ", номер медицинской карты - " + medicalCardNumber + ", диагноз - " + diagnosis + ";";
+        return "Привет, я пациент: Id - " + getId() + ", фамилия - " + getSurname() + ", имя - " + getName() + ", отчество - " + getPatronymic() + ", адресс- " + getAddress() + ", " 
+        		+ " телефон - " + getTelephone() + ", номер медицинской карты - " + getMedicalCardNumber() + ", диагноз - " + getDiagnosis() + ";";
      } 
+	
+	public void arrayObjects() { 
+		
+		Patient [] samplePatient = new Patient [5];
+		
+		samplePatient [0]  = new Patient (15, "Паркер", 1547, "стресс");
+		
+		samplePatient [1]  = new Patient (16, "Бэннер", 1574, "стресс");
+		
+		samplePatient [2]  = new Patient (17, "Стрэндж", 1637, "стресс");
+		
+		samplePatient [3]  = new Patient (18, "Саммерс", 1333, "стресс");
+		
+		samplePatient [4]  = new Patient (19, "Октавиус", 1987, "стресс");
+		
+		for ( Patient ptnt : samplePatient) {
+			
+			if (ptnt.getMedicalCardNumber()==1547 && ptnt.getDiagnosis().equals("стресс")) {
+				
+				System.out.println("Я - " + ptnt.getSurname() + ", мой номер медицинской карты - "  + ptnt.getMedicalCardNumber() + ", диагноз -" + ptnt.getDiagnosis()+ ";");
+				
+			}
+		  }
+		
+	}
 	
 	public int getTelephone() {
         return telephone;
@@ -62,4 +87,5 @@ public class Patient extends Human{
     public void setDiagnosis(String diagnosis) {
         this.diagnosis = diagnosis;
     }
+    
 }

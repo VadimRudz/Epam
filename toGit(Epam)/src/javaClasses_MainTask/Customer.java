@@ -35,6 +35,31 @@ public class Customer extends Human{
         		+ " номер кредитной карты - " + getCreditСardNumber() + ", номер банковского счета - " + getBankAccountNumber() + ";";
      } 
 	
+	public void arrayObjects() {
+		
+		Customer [] sampleCustomer = new Customer [5];
+		
+		sampleCustomer [0]  = new Customer (1, "Дунин-Марцинкевич", "Викентий", "Иванович", "Соломовой, 15", 12456,  387987456);
+		
+		sampleCustomer [1]  = new Customer (2, "Луцевич", "Иван", "Доминикович", "Купалы, 83", 11315,  38746856);
+		
+		sampleCustomer [2]  = new Customer (3, "Пушкин", "Александр", "Сергеевич", "Поповича, 18", 13459,  387531456);
+		
+		sampleCustomer [3]  = new Customer (4, "Мицкевич", "Константин", "Михайлович", "Пролетарская, 3", 22436,  387987447);
+		
+		sampleCustomer [4]  = new Customer (5, "Федоров", "Иван", "Михайлович", "Тавлая, 99", 13556,  38777456);
+		
+		for ( Customer cstm : sampleCustomer) {
+			
+			if (cstm.getCreditСardNumber()==12456 && cstm.getBankAccountNumber() == 387987456) {
+				
+				System.out.println("Я - " + cstm.getName() + ", мой номер кредитной карты - "  + cstm.getCreditСardNumber() + ", номер банковского счета -" + cstm.getBankAccountNumber()+ ";");
+				
+			}
+		  }	
+	}
+
+	
 	public int getCreditСardNumber() {
         return creditСardNumber;
     }
@@ -44,7 +69,7 @@ public class Customer extends Human{
     }
     
     public int getBankAccountNumber() {
-        return creditСardNumber;
+        return bankAccountNumber;
     }
 
     public void setBankAccountNumber(int bankAccountNumber) {

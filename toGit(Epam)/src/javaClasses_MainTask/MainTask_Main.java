@@ -6,18 +6,23 @@ public class MainTask_Main {
 		
 		Student stdnt = new Student();
 		
-		stdnt.arrayStudents();
+		stdnt.arrayObjects();
     	
 		
 		Customer cstmr = new Customer();
 		
-    	cstmr.arrayCustomers();
+    	cstmr.arrayObjects();
 		
 		
 		Patient ptnt = new Patient();
 		
-		ptnt.arrayPatients();
-			
+		ptnt.arrayObjects();
+		
+		
+		Abiturient abtrnt = new Abiturient();
+		
+		abtrnt.arrayObjects();
+	
 
 	}
 
