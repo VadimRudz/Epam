@@ -19,7 +19,7 @@ public class House {
 	private int lifetime;
 
 	public House (){
-		
+	
 	}
 	
 	public int getId() {
