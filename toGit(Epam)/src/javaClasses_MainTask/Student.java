@@ -45,7 +45,7 @@ public class Student extends Human{
 	@Override
 	public String toString() { 
 		
-        return "Привет, я студент: Id - " + getId() + ", фамилия - " + getSurname() + ", имя - " + getName() + ", отчество - " + getPatronymic() + ", адресс- " + getAddress() + ", " 
+        return "Привет, я - студент: Id - " + getId() + ", фамилия - " + getSurname() + ", имя - " + getName() + ", отчество - " + getPatronymic() + ", адресс- " + getAddress() + ", " 
         		+ "дата рождения - " + getDateOfBirth() + ", телефон - " + getTelephone() + ", факультет - " + getFaculty() + ", курс - " + getCourse() + ", группа - " + getGroup() + ";";
      } 
 	

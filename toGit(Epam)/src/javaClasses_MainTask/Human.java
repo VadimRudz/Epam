@@ -92,7 +92,16 @@ public class Human {
     }
 
     public void setAddress(String address) {
-        this.address = address;
+    	
+    	if (patronymic != null && !patronymic.isEmpty()) {
+            for (char c : patronymic.toCharArray()) {
+                if (Character.isDigit(c)) {
+                	System.out.println("В вашем отчестве недопустимые символы (цифры)"); break; 
+                }
+            }
+        }
+    	else {this.address = address;}
+  
     }
 
     public void arrayObjects(){
