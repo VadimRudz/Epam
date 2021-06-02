@@ -2,8 +2,6 @@ package javaClasses_MainTask;
 
 public class House {
 	
-	
-
 	private int id;
 	
 	private int apartmentNumber;
@@ -20,6 +18,10 @@ public class House {
 	
 	private int lifetime;
 
+	public House (){
+		
+	}
+	
 	public int getId() {
 		return id;
 	}
