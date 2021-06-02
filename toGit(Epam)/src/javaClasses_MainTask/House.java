@@ -2,6 +2,8 @@ package javaClasses_MainTask;
 
 public class House {
 	
+	
+
 	private int id;
 	
 	private int apartmentNumber;
@@ -77,7 +79,6 @@ public class House {
 	    		System.out.println("Вы ввели неверный этаж дома. Номер должен быть в пределах [1 до 7]");
 	    	}
 		
-		
 	}
 
 	public int getNumberRooms() {
@@ -144,6 +145,11 @@ public class House {
 
 	}
 
-	
+	@Override
+	public String toString() {
+		return "House [id=" + id + ", apartmentNumber=" + apartmentNumber + ", area=" + area + ", floor=" + floor
+				+ ", numberRooms=" + numberRooms + ", street=" + street + ", buildingType=" + buildingType
+				+ ", lifetime=" + lifetime + "]";
+	}
 	
 }
