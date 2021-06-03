@@ -22,6 +22,26 @@ public class House {
 	
 	}
 	
+	public House(int id, int apartmentNumber, double area, int floor, int numberRooms, String street,
+			String buildingType, int lifetime) {
+		this.id = id;
+		this.apartmentNumber = apartmentNumber;
+		this.area = area;
+		this.floor = floor;
+		this.numberRooms = numberRooms;
+		this.street = street;
+		this.buildingType = buildingType;
+		this.lifetime = lifetime;
+	}
+	
+	public House(int apartmentNumber, double area, int floor, int numberRooms, String street) {
+		this(0, apartmentNumber, area, floor, numberRooms, street, null, 0);
+	}
+	
+	public House(int apartmentNumber, int floor, String street) {
+		this(0, apartmentNumber, 0, floor, 0, street, null, 0);
+	}
+	
 	public int getId() {
 		return id;
 	}
@@ -154,4 +174,26 @@ public class House {
 				+ ", lifetime=" + lifetime + "]";
 	}
 	
+	
+	public void arrayHouses() {
+		
+		House [] sampleHouses = new House [5];
+		
+		sampleHouses [0] = new House(3, 1,"Свободная");
+		sampleHouses [1] = new House(97, 9, 3, 3, "Независимая");
+		sampleHouses [2] = new House(20, 8, "Невероятная");
+		sampleHouses [3] = new House(13, 4, "Колесникова");
+		sampleHouses [4] = new House(27, 7, "Тапковая");
+		
+		for ( House house : sampleHouses) {
+			
+			if (house.getStreet().equals("Невероятная")) {
+				
+				System.out.println("Невероятные беларусы");
+				
+			}
+			
+		}
+		
+	}
 }

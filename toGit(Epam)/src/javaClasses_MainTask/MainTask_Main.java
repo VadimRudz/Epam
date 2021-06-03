@@ -18,6 +18,9 @@ public class MainTask_Main {
 	
 		Book book = new Book();
 		book.arrayBooks();
+		
+		House house = new House();
+		house.arrayHouses();
 
 	}
 
