@@ -3,69 +3,45 @@ package javaClasses_MainTask;
 public class Book {
 
 	private int id;
-	
 	private String titleBook;
-	
 	private String author;
-	
 	private String publisher;
-
 	private int yearPublishing;
-	
 	private int numberPages;
-	
 	private double price;
-	
 	private String bindingType;
 
-
-	public Book () {
-		
+	public Book () {	
 	}
 	
 	public Book (int id, String titleBook, String author, String publisher, int yearPublishing, int numberPages, double price, String bindingType){
 		
 		this.id = id;
-		
 		this.titleBook = titleBook;
-		
 		this.author = author;
-		
 		this.publisher = publisher;
-		
 		this.yearPublishing = yearPublishing;
-		
 		this.numberPages = numberPages;
-		
 		this.price = price;
-		
 		this.bindingType = bindingType;
 		
 	}
 	
 	public Book (String titleBook, String author, double price) {
-		
 		this(0, titleBook, author, null, 0, 0, price, null);
-		
-	}
+		}
 	
 	public Book (String titleBook, String author, int yearPublishing) {
-		
 		this(0, titleBook, author, null, yearPublishing, 0, 0, null);
-		
-	}
+		}
 	
 	public int getId() {
-		
 		return id;
 	}
 	
 	public void setId(int id) {
-		
 		if (0 <= id && id<= 1000) {
-	    	
 	        this.id = id;}
-	    	
 	    	else {
 	    		System.out.println("Вы ввели неверный id. id должен быть в пределах [0 до 1000]");
 	    	}
@@ -85,7 +61,6 @@ public class Book {
             }
         }
     	else {this.titleBook = titleBook;}
-
 	}
 
 	public String getAuthor() {
@@ -118,7 +93,6 @@ public class Book {
                 }
             }
             else {this.publisher = publisher;}
-		
 	}
 
 	public int getYearPublishing() {
@@ -128,13 +102,10 @@ public class Book {
 	public void setYearPublishing(int yearPublishing) {
 		
 		if (1564 <= yearPublishing && yearPublishing<= 2021) {
-	    	
-	        this.yearPublishing = yearPublishing;}
-	    	
+	    	this.yearPublishing = yearPublishing;}
 	    	else {
 	    		System.out.println("Вы ввели неверный год публикации книги. Год должен быть в пределах [1564 до 2021]");
 	    	}
-		
 	}
 
 	public int getNumberPages() {
@@ -144,13 +115,10 @@ public class Book {
 	public void setNumberPages(int numberPages) {
 		
 		if (4 <= numberPages && numberPages<= 500) {
-	    	
-			this.numberPages = numberPages;}
-	    	
+	    	this.numberPages = numberPages;}
 	    	else {
 	    		System.out.println("Вы ввели неверное количество страниц. Количество должен быть в пределах [4 до 500]");
 	    	}
-
 	}
 
 	public double getPrice() {
@@ -160,13 +128,10 @@ public class Book {
 	public void setPrice(double price) {
 		
 		if (0 <= numberPages && numberPages<= 30_800_000) {
-	    	
-			this.price = price;}
-	    	
+	    	this.price = price;}
 	    	else {
 	    		System.out.println("Вы ввели неверную стоимость книги. Стоимость должна быть в пределах [0 до 30_800_000 $]");
 	    	}
-		
 	}
 
 	public String getBindingType() {
@@ -183,8 +148,6 @@ public class Book {
                 }
             }
             else {this.bindingType = bindingType;}
-		
-		
 	}
 	
 	@Override
@@ -205,15 +168,10 @@ public class Book {
 		sampleBooks [4] = new Book("Скотный двор", "Джордж Оруэлл", 1945);
 		
 		for ( Book book : sampleBooks) {
-			
 			if (book.getAuthor().equals("Джордж Оруэлл")) {
-				
 				System.out.println("Я - " + book.getTitleBook() + ", мой автор - "  + book.getAuthor());
-				
-			}
-			
-		}
-		
+			}	
+		}	
 	}
 	
 }

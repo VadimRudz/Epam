@@ -21,7 +21,6 @@ public class MainTask_Main {
 		
 		House house = new House();
 		house.arrayHouses();
-
 	}
 
 }

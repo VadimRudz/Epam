@@ -3,28 +3,20 @@ package javaClasses_MainTask;
 public class Human {
 
 	private int id;
-	
 	private String surname, name, patronymic;
-
 	private String address;
 	
-	public Human(){
-		
+	public Human(){	
 	}
 	
 	public Human(int id, String surname, String name, String patronymic, String address) {
 	       
 		this.id = id;
-		
 		this.surname = surname;
-		
 		this.name = name;
-		
 		this.patronymic = patronymic; 
-		
 		this.address = address;
-		
-	   }
+	}
 	
 	public int getId() {
         return id;
@@ -33,9 +25,7 @@ public class Human {
     public void setId(int id) {
     	
     	if (0 <= id && id<= 1000) {
-    	
-        this.id = id;}
-    	
+    	this.id = id;}
     	else {
     		System.out.println("Вы ввели неверный id. id должен быть в пределах [0 до 1000]");
     	}
@@ -101,11 +91,9 @@ public class Human {
             }
         }
     	else {this.address = address;}
-  
     }
 
-    public void arrayObjects(){
-    	
+    public void arrayObjects(){ 	
     };
     
 }

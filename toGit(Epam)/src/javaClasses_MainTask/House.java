@@ -3,23 +3,15 @@ package javaClasses_MainTask;
 public class House {
 	
 	private int id;
-	
 	private int apartmentNumber;
-	
 	private double area;
-	
 	private int floor;
-	
 	private int numberRooms;
-	
 	private String street;
-	
 	private String buildingType;
-	
 	private int lifetime;
-
-	public House (){
 	
+	public House (){
 	}
 	
 	public House(int id, int apartmentNumber, double area, int floor, int numberRooms, String street,
@@ -47,11 +39,8 @@ public class House {
 	}
 
 	public void setId(int id) {
-		
 		if (0 <= id && id<= 1000) {
-	    	
 	        this.id = id;}
-	    	
 	    	else {
 	    		System.out.println("Вы ввели неверный id. id должен быть в пределах [0 до 1000]");
 	    	}
@@ -63,9 +52,7 @@ public class House {
 
 	public void setApartmentNumber(int apartmentNumber) {
 		if (1 <= id && id<= 1000) {
-	    	
 			this.apartmentNumber = apartmentNumber;}
-	    	
 	    	else {
 	    		System.out.println("Вы ввели неверный номер квартиры. Номер должен быть в пределах [1 до 49]");
 	    	}
@@ -77,11 +64,8 @@ public class House {
 	}
 
 	public void setArea(double area) {
-		
 		if (0.1 <= id && id<= 320) {
-	    	
 			this.area = area;}
-	    	
 	    	else {
 	    		System.out.println("Вы ввели неверную площадь квартиры. Площадь должна быть в пределах [0.1 до 320]");
 	    	}
@@ -92,15 +76,11 @@ public class House {
 	}
 
 	public void setFloor(int floor) {
-		
 		if (1 <= id && id<= 7) {
-	    	
 			this.floor = floor;}
-	    	
 	    	else {
 	    		System.out.println("Вы ввели неверный этаж дома. Номер должен быть в пределах [1 до 7]");
 	    	}
-		
 	}
 
 	public int getNumberRooms() {
@@ -108,15 +88,11 @@ public class House {
 	}
 
 	public void setNumberRooms(int numberRooms) {
-		
 		if (1 <= id && id<= 5) {
-	    	
 			this.numberRooms = numberRooms;}
-	    	
 	    	else {
 	    		System.out.println("Вы ввели неверное количество комнат. Количество должно быть в пределах [1 до 5]");
 	    	}
-
 	}
 
 	public String getStreet() {
@@ -124,7 +100,6 @@ public class House {
 	}
 
 	public void setStreet(String street) {
-		
 		if (street != null && !street.isEmpty()) {
             for (char c : street.toCharArray()) {
                 if (Character.isDigit(c)) {
@@ -140,7 +115,6 @@ public class House {
 	}
 
 	public void setBuildingType(String buildingType) {
-		
 		if (buildingType != null && !buildingType.isEmpty()) {
             for (char c : buildingType.toCharArray()) {
                 if (Character.isDigit(c)) {
@@ -156,11 +130,8 @@ public class House {
 	}
 
 	public void setLifetime(int lifetime) {
-		
 		if (1 <= id && id<= 100) {
-	    	
 			this.lifetime = lifetime;}
-	    	
 	    	else {
 	    		System.out.println("Вы ввели неверное количество лет эксплуатации. Количество должно быть в пределах[1 до 5]");
 	    	}
@@ -176,9 +147,7 @@ public class House {
 	
 	
 	public void arrayHouses() {
-		
 		House [] sampleHouses = new House [5];
-		
 		sampleHouses [0] = new House(3, 1,"Свободная");
 		sampleHouses [1] = new House(97, 9, 3, 3, "Независимая");
 		sampleHouses [2] = new House(20, 8, "Невероятная");
@@ -186,14 +155,10 @@ public class House {
 		sampleHouses [4] = new House(27, 7, "Тапковая");
 		
 		for ( House house : sampleHouses) {
-			
 			if (house.getStreet().equals("Невероятная")) {
-				
 				System.out.println("Невероятные беларусы");
-				
 			}
-			
-		}
-		
+		}	
 	}
+	
 }
