@@ -1,17 +1,25 @@
 package javaClasses_MainTask;
 
+import java.util.Calendar;
+import java.util.GregorianCalendar;
+import java.util.HashSet;
+
 public class Student extends Human{
 
-	private String dateOfBirth;
+	private GregorianCalendar dateOfBirth;
 	private int telephone; 
 	private String faculty;
 	int course, group;
+	
+	Student [] sampleStudent = new Student [8];
+	HashSet<String> newHashSetFaculty = new HashSet<>();
+	HashSet<Integer> newHashSetGroup = new HashSet<>();
 	
 	public Student(){	
 		super();	
 	}
 	
-	public Student(int id, String surname, String name, String patronymic, String address, String dateOfBirth, int telephone, String faculty, int course, int group){
+	public Student(int id, String surname, String name, String patronymic, String address, GregorianCalendar  dateOfBirth, int telephone, String faculty, int course, int group){
 		
 		super (id, surname, name, patronymic, address);
 		this.dateOfBirth = dateOfBirth;
@@ -38,11 +46,11 @@ public class Student extends Human{
         		+ "дата рождения - " + getDateOfBirth() + ", телефон - " + getTelephone() + ", факультет - " + getFaculty() + ", курс - " + getCourse() + ", группа - " + getGroup() + ";";
      } 
 	
-	public String getDateOfBirth() {
+	public GregorianCalendar getDateOfBirth() {
         return dateOfBirth;
     }
 
-    public void setDateOfBirth(String dateOfBirth) {
+    public void setDateOfBirth(GregorianCalendar dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
     }
     
@@ -80,19 +88,62 @@ public class Student extends Human{
 
 	public void arrayObjects() {
 		
-		Student [] sampleStudent = new Student [5];
-		sampleStudent[0] = new Student(1, "Михеев", "Дмитрий", "Валерьевич", "Проспект строителей, 18", "03-07-1988", 297896614, "Транспортных коммуникаций", 5, 114315);
-		sampleStudent[1] = new Student(2, "Бонадысев", "Дмитрий", "Александрович", "Проспект победителей, 15", "19-11-1987", 33389156, "Транспортных коммуникаций", 3, 114325);
-		sampleStudent[2] = new Student(3, "Климович", "Дмитрий", "Сергееевич", "Якуба Колоса, 12", "05-01-1987", 335569147, "Транспортных коммуникаций", 4, 114335);
-		sampleStudent[3] = new Student(4, "Евменова", "Дарья", "Александровна", "Янки Купалы, 2", "08-03-1987", 297896543, "Транспортных коммуникаций", 2, 114345);
-		sampleStudent[4] = new Student(5, "Билоус", "Виталий", "Дмитриевич", "Мавра, 87", "11-09-1986", 292345678, "Транспортных коммуникаций", 1, 114355);
+		sampleStudent[0] = new Student(1, "Михеев", "Дмитрий", "Валерьевич", "Проспект строителей, 18", new GregorianCalendar(1987, Calendar.FEBRUARY , 23), 297896614, "Транспортных коммуникаций", 5, 114315);
+		sampleStudent[1] = new Student(2, "Бонадысев", "Дмитрий", "Александрович", "Проспект победителей, 15", new GregorianCalendar(1988, Calendar.NOVEMBER , 27), 33389156, "Транспортных коммуникаций", 3, 114315);
+		sampleStudent[2] = new Student(3, "Климович", "Александр", "Сергееевич", "Якуба Колоса, 12", new GregorianCalendar(1986, Calendar.JANUARY , 18), 335569147, "Транспортных коммуникаций", 4, 114335);
+		sampleStudent[3] = new Student(4, "Евменова", "Дарья", "Александровна", "Янки Купалы, 2", new GregorianCalendar(1990, Calendar.APRIL , 3), 297896543, "Транспортных коммуникаций", 2, 114335);
+		sampleStudent[4] = new Student(5, "Билоус", "Виталий", "Дмитриевич", "Мавра, 87", new GregorianCalendar(1991, Calendar.JULY , 15), 292345678, "Транспортных коммуникаций", 1, 114345);
+		sampleStudent[5] = new Student(6, "Аксамит", "Виталий", "Вадимович", "Лидская, 33", new GregorianCalendar(1985, Calendar.AUGUST , 05), 292466378, "Технологий управления и гуманитаризации", 3, 114345);
+		sampleStudent[6] = new Student(7, "Вроцлав", "Василий", "Викторович", "Московская, 12", new GregorianCalendar(1987, Calendar.AUGUST , 21), 292345466, "Информационных технологий", 1, 114125);
+		sampleStudent[7] = new Student(8, "Ивулин", "Александр", "Дмитриевич", "Октябрьская, 1", new GregorianCalendar(1995, Calendar.DECEMBER, 1), 292366545, "Энергоснабжения", 1, 114125);
+	}
+	
+	public void listFacultyStudents (Student [] sampleStudent){ //метод выводит всех студентов одного факультета
 		
+		System.out.println("Список студентов факультета Транспортных коммуникаций: ");
 		for ( Student stdnt : sampleStudent) {
-			
-			if (stdnt.getName().equals("Дмитрий") && stdnt.getCourse() == 3) {
-				System.out.println("Я - " + stdnt.getName() + ", мой курс - "  + stdnt.getCourse());
+			newHashSetFaculty.add(stdnt.getFaculty());
+			newHashSetGroup.add(stdnt.getGroup());
+			if (stdnt.getFaculty().equals("Транспортных коммуникаций")) {
+				System.out.println(stdnt.getSurname());
 			}
-		}	
+		}
+	}
+	
+	public void listStudentsFacultyAndCourse (Student [] sampleStudent){  // метод выводит всех студентов, скомпанованных по факультету 
+		
+		for (String strng : newHashSetFaculty) {
+			System.out.println("Список студентов факультета " + strng + ": ");
+			
+			for ( Student stdnt : sampleStudent) {
+				if (stdnt.getFaculty().equalsIgnoreCase(strng)) {
+					System.out.println(stdnt.getSurname() + ", курс - " + stdnt.getCourse());
+				}
+			}
+		}
+	}
+	
+	public void ListDateSort(Student [] sampleStudent){ // метод выводит студентов, родившихся после 1990 года
+		
+		for (Student stdnt : sampleStudent) { 
+			if (stdnt.getDateOfBirth().get(GregorianCalendar.YEAR) > 1990) {
+				System.out.println(stdnt.getSurname() + ", год рождения - " + stdnt.getDateOfBirth().get(GregorianCalendar.YEAR));
+			}
+		}
+	}
+	
+	public void ListGroupSort (Student [] sampleStudent) {// метод выводит всех студентов, скомпанованных по группам
+		
+		for (int score : newHashSetGroup) {
+			System.out.println("Список студентов группы " + score + ": ");
+			
+			for ( Student stdnt : sampleStudent) {
+				if (stdnt.getGroup() == score) {
+					System.out.println(stdnt.getSurname());
+				}
+			}
+		}
+		
 	}
 	
 }

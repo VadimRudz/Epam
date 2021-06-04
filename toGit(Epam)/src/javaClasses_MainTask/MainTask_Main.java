@@ -6,8 +6,12 @@ public class MainTask_Main {
 		
 		Student stdnt = new Student();
 		stdnt.arrayObjects();
+		stdnt.listFacultyStudents(stdnt.sampleStudent);
+		stdnt.listStudentsFacultyAndCourse(stdnt.sampleStudent);
+		stdnt.ListDateSort(stdnt.sampleStudent);
+		stdnt.ListGroupSort(stdnt.sampleStudent);
     	
-		Customer cstmr = new Customer();
+		/*Customer cstmr = new Customer();
 		cstmr.arrayObjects();
 		
 		Patient ptnt = new Patient();
@@ -20,7 +24,7 @@ public class MainTask_Main {
 		book.arrayBooks();
 		
 		House house = new House();
-		house.arrayHouses();
+		house.arrayHouses();*/
 	}
 
 }
