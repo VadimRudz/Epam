@@ -27,7 +27,7 @@ public class Human {
     	if (0 <= id && id<= 1000) {
     	this.id = id;}
     	else {
-    		System.out.println("Âû ââåëè íåâåðíûé id. id äîëæåí áûòü â ïðåäåëàõ [0 äî 1000]");
+    		System.out.println("Ð’Ñ‹ Ð²Ð²ÐµÐ»Ð¸ Ð½ÐµÐ²ÐµÑ€Ð½Ñ‹Ð¹ id. id Ð´Ð¾Ð»Ð¶ÐµÐ½ Ð±Ñ‹Ñ‚ÑŒ Ð² Ð¿Ñ€ÐµÐ´ÐµÐ»Ð°Ñ… [0 Ð´Ð¾ 1000]");
     	}
     }
 	
@@ -40,7 +40,7 @@ public class Human {
     	if (surname != null && !surname.isEmpty()) {
             for (char c : surname.toCharArray()) {
                 if (Character.isDigit(c)) {
-                	System.out.println("Â âàøåé ôàìèëèè íåäîïóñòèìûå ñèìâîëû (öèôðû)"); break; 
+                	System.out.println("Ð’ Ð²Ð°ÑˆÐµÐ¹ Ñ„Ð°Ð¼Ð¸Ð»Ð¸Ð¸ Ð½ÐµÐ´Ð¾Ð¿ÑƒÑÑ‚Ð¸Ð¼Ñ‹Ðµ ÑÐ¸Ð¼Ð²Ð¾Ð»Ñ‹ (Ñ†Ð¸Ñ„Ñ€Ñ‹)"); break; 
                 }
             }
         }
@@ -55,7 +55,7 @@ public class Human {
     	if (name != null && !name.isEmpty()) {
             for (char c : name.toCharArray()) {
                 if (Character.isDigit(c)) {
-                	System.out.println("Â âàøåì èìåíè íåäîïóñòèìûå ñèìâîëû (öèôðû)"); break; 
+                	System.out.println("Ð’ Ð²Ð°ÑˆÐµÐ¼ Ð¸Ð¼ÐµÐ½Ð¸ Ð½ÐµÐ´Ð¾Ð¿ÑƒÑÑ‚Ð¸Ð¼Ñ‹Ðµ ÑÐ¸Ð¼Ð²Ð¾Ð»Ñ‹ (Ñ†Ð¸Ñ„Ñ€Ñ‹)"); break; 
                 }
             }
         }
@@ -71,7 +71,7 @@ public class Human {
     	if (patronymic != null && !patronymic.isEmpty()) {
             for (char c : patronymic.toCharArray()) {
                 if (Character.isDigit(c)) {
-                	System.out.println("Â âàøåì îò÷åñòâå íåäîïóñòèìûå ñèìâîëû (öèôðû)"); break; 
+                	System.out.println("Ð’ Ð²Ð°ÑˆÐµÐ¼ Ð¾Ñ‚Ñ‡ÐµÑÑ‚Ð²Ðµ Ð½ÐµÐ´Ð¾Ð¿ÑƒÑÑ‚Ð¸Ð¼Ñ‹Ðµ ÑÐ¸Ð¼Ð²Ð¾Ð»Ñ‹ (Ñ†Ð¸Ñ„Ñ€Ñ‹)"); break; 
                 }
             }
         }
@@ -86,7 +86,7 @@ public class Human {
     	if (patronymic != null && !patronymic.isEmpty()) {
             for (char c : patronymic.toCharArray()) {
                 if (Character.isDigit(c)) {
-                	System.out.println("Â âàøåì îò÷åñòâå íåäîïóñòèìûå ñèìâîëû (öèôðû)"); break; 
+                	System.out.println("Ð’ Ð²Ð°ÑˆÐµÐ¼ Ð¾Ñ‚Ñ‡ÐµÑÑ‚Ð²Ðµ Ð½ÐµÐ´Ð¾Ð¿ÑƒÑÑ‚Ð¸Ð¼Ñ‹Ðµ ÑÐ¸Ð¼Ð²Ð¾Ð»Ñ‹ (Ñ†Ð¸Ñ„Ñ€Ñ‹)"); break; 
                 }
             }
         }
