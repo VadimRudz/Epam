@@ -5,7 +5,7 @@ import java.util.Collections;
 
 public class Customer extends Human{
 
-	private int creditĞ¡ardNumber;
+	private int creditÑardNumber;
 	private int bankAccountNumber;
 	
 	Customer [] sampleCustomer = new Customer [5];
@@ -16,9 +16,9 @@ public class Customer extends Human{
 		super();	
 	}
 	
-	public Customer(int id, String surname, String name, String patronymic, String address, int creditĞ¡ardNumber,  int bankAccountNumber){
+	public Customer(int id, String surname, String name, String patronymic, String address, int creditÑardNumber,  int bankAccountNumber){
 		super (id, surname, name, patronymic, address);
-		this.creditĞ¡ardNumber = creditĞ¡ardNumber;
+		this.creditÑardNumber = creditÑardNumber;
 		this.bankAccountNumber = bankAccountNumber;
 		}
 	
@@ -29,24 +29,24 @@ public class Customer extends Human{
 	
 	@Override
 	public String toString() { 
-        return "ĞŸÑ€Ğ¸Ğ²ĞµÑ‚, Ñ ĞºĞ»Ğ¸ĞµĞ½Ñ‚ Ğ±Ğ°Ğ½ĞºĞ°: Id - " + getId() + ", Ñ„Ğ°Ğ¼Ğ¸Ğ»Ğ¸Ñ - " + getSurname() + ", Ğ¸Ğ¼Ñ - " + getName() + ", Ğ¾Ñ‚Ñ‡ĞµÑÑ‚Ğ²Ğ¾ - " + getPatronymic() + ", Ğ°Ğ´Ñ€ĞµÑÑ- " + getAddress() + ", " 
-        		+ " Ğ½Ğ¾Ğ¼ĞµÑ€ ĞºÑ€ĞµĞ´Ğ¸Ñ‚Ğ½Ğ¾Ğ¹ ĞºĞ°Ñ€Ñ‚Ñ‹ - " + getCreditĞ¡ardNumber() + ", Ğ½Ğ¾Ğ¼ĞµÑ€ Ğ±Ğ°Ğ½ĞºĞ¾Ğ²ÑĞºĞ¾Ğ³Ğ¾ ÑÑ‡ĞµÑ‚Ğ° - " + getBankAccountNumber() + ";";
+        return "Ïğèâåò, ÿ êëèåíò áàíêà: Id - " + getId() + ", ôàìèëèÿ - " + getSurname() + ", èìÿ - " + getName() + ", îò÷åñòâî - " + getPatronymic() + ", àäğåññ- " + getAddress() + ", " 
+        		+ " íîìåğ êğåäèòíîé êàğòû - " + getCreditÑardNumber() + ", íîìåğ áàíêîâñêîãî ñ÷åòà - " + getBankAccountNumber() + ";";
      } 
 	
 	public void arrayObjects() {
-		sampleCustomer [0]  = new Customer (1, "Ğ”ÑƒĞ½Ğ¸Ğ½-ĞœĞ°Ñ€Ñ†Ğ¸Ğ½ĞºĞµĞ²Ğ¸Ñ‡", "Ğ’Ğ¸ĞºĞµĞ½Ñ‚Ğ¸Ğ¹", "Ğ˜Ğ²Ğ°Ğ½Ğ¾Ğ²Ğ¸Ñ‡", "Ğ¡Ğ¾Ğ»Ğ¾Ğ¼Ğ¾Ğ²Ğ¾Ğ¹, 15", 12456,  387987456);
-		sampleCustomer [1]  = new Customer (2, "Ğ›ÑƒÑ†ĞµĞ²Ğ¸Ñ‡", "Ğ˜Ğ²Ğ°Ğ½", "Ğ”Ğ¾Ğ¼Ğ¸Ğ½Ğ¸ĞºĞ¾Ğ²Ğ¸Ñ‡", "ĞšÑƒĞ¿Ğ°Ğ»Ñ‹, 83", 11315,  38746856);
-		sampleCustomer [2]  = new Customer (3, "ĞŸÑƒÑˆĞºĞ¸Ğ½", "ĞĞ»ĞµĞºÑĞ°Ğ½Ğ´Ñ€", "Ğ¡ĞµÑ€Ğ³ĞµĞµĞ²Ğ¸Ñ‡", "ĞŸĞ¾Ğ¿Ğ¾Ğ²Ğ¸Ñ‡Ğ°, 18", 13459,  387531456);
-		sampleCustomer [3]  = new Customer (4, "ĞœĞ¸Ñ†ĞºĞµĞ²Ğ¸Ñ‡", "ĞšĞ¾Ğ½ÑÑ‚Ğ°Ğ½Ñ‚Ğ¸Ğ½", "ĞœĞ¸Ñ…Ğ°Ğ¹Ğ»Ğ¾Ğ²Ğ¸Ñ‡", "ĞŸÑ€Ğ¾Ğ»ĞµÑ‚Ğ°Ñ€ÑĞºĞ°Ñ, 3", 17589,  387987447);
-		sampleCustomer [4]  = new Customer (5, "Ğ¤ĞµĞ´Ğ¾Ñ€Ğ¾Ğ²", "Ğ˜Ğ²Ğ°Ğ½", "ĞœĞ¸Ñ…Ğ°Ğ¹Ğ»Ğ¾Ğ²Ğ¸Ñ‡", "Ğ¢Ğ°Ğ²Ğ»Ğ°Ñ, 99", 13556,  38777456);		
+		sampleCustomer [0]  = new Customer (1, "Äóíèí-Ìàğöèíêåâè÷", "Âèêåíòèé", "Èâàíîâè÷", "Ñîëîìîâîé, 15", 12456,  387987456);
+		sampleCustomer [1]  = new Customer (2, "Ëóöåâè÷", "Èâàí", "Äîìèíèêîâè÷", "Êóïàëû, 83", 11315,  38746856);
+		sampleCustomer [2]  = new Customer (3, "Ïóøêèí", "Àëåêñàíäğ", "Ñåğãååâè÷", "Ïîïîâè÷à, 18", 13459,  387531456);
+		sampleCustomer [3]  = new Customer (4, "Ìèöêåâè÷", "Êîíñòàíòèí", "Ìèõàéëîâè÷", "Ïğîëåòàğñêàÿ, 3", 17589,  387987447);
+		sampleCustomer [4]  = new Customer (5, "Ôåäîğîâ", "Èâàí", "Ìèõàéëîâè÷", "Òàâëàÿ, 99", 13556,  38777456);		
 	}
 	
-	public int getCreditĞ¡ardNumber() {
-        return creditĞ¡ardNumber;
+	public int getCreditÑardNumber() {
+        return creditÑardNumber;
     }
 
-    public void setCreditĞ¡ardNumber(int creditĞ¡ardNumber) {
-        this.creditĞ¡ardNumber = creditĞ¡ardNumber;
+    public void setCreditÑardNumber(int creditÑardNumber) {
+        this.creditÑardNumber = creditÑardNumber;
     }
     
     public int getBankAccountNumber() {
@@ -62,15 +62,15 @@ public class Customer extends Human{
     		array_1.add(customer.getSurname());
     		Collections.sort(array_1);
     	}
-    	System.out.println("Ğ¡Ğ¿Ğ¸ÑĞ¾Ğº Ğ¿Ğ¾ĞºÑƒĞ¿Ğ°Ñ‚ĞµĞ»ĞµĞ¹ Ğ² Ğ°Ğ»Ñ„Ğ°Ğ²Ğ¸Ñ‚Ğ½Ğ¾Ğ¼ Ğ¿Ğ¾Ñ€ÑĞ´ĞºĞµ:");
+    	System.out.println("Ñïèñîê ïîêóïàòåëåé â àëôàâèòíîì ïîğÿäêå:");
     		System.out.print(array_1.toString() + ", ");
     } 
     
     public void creditCarInterval(Customer [] sampleCustomer, int intervalMin, int intervalMax){
     	System.out.println();
-    	System.out.println("Ğ¡Ğ¿Ğ¸ÑĞ¾Ğº Ğ¿Ğ¾ĞºÑƒĞ¿Ğ°Ñ‚ĞµĞ»ĞµĞ¹, Ğ¾Ñ‚ÑĞ¾Ñ€Ñ‚Ğ¸Ñ€Ğ¾Ğ²Ğ°Ğ½Ğ½Ñ‹Ñ… Ğ¿Ğ¾ ĞºÑ€ĞµĞ´Ğ¸Ñ‚Ğ½Ğ¾Ğ¹ ĞºĞ°Ñ€Ñ‚Ğµ:");
+    	System.out.println("Ñïèñîê ïîêóïàòåëåé, îòñîğòèğîâàííûõ ïî êğåäèòíîé êàğòå:");
     	for(Customer customer: sampleCustomer) {
-    		if (customer.getCreditĞ¡ardNumber()>intervalMin && customer.getCreditĞ¡ardNumber()<intervalMax){
+    		if (customer.getCreditÑardNumber()>intervalMin && customer.getCreditÑardNumber()<intervalMax){
     			System.out.print(customer.getSurname() + ",");
     		}
     	}

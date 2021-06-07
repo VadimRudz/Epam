@@ -6,7 +6,7 @@ public class MainTask_Main {
 		
 		Student stdnt = new Student();
 		stdnt.arrayObjects();
-		stdnt.listFacultyStudents(stdnt.sampleStudent, "РўСЂР°РЅСЃРїРѕСЂС‚РЅС‹С… РєРѕРјРјСѓРЅРёРєР°С†РёР№");
+		stdnt.listFacultyStudents(stdnt.sampleStudent, "Транспортных коммуникаций");
 		System.out.println("-----");
 		stdnt.listStudentsFacultyAndCourse(stdnt.sampleStudent);
 		System.out.println("-----");
@@ -23,7 +23,7 @@ public class MainTask_Main {
 		
 		Patient ptnt = new Patient();
 		ptnt.arrayObjects();
-		ptnt.sortDiagnosis(ptnt.samplePatient, "СЃС‚СЂРµСЃСЃ");
+		ptnt.sortDiagnosis(ptnt.samplePatient, "стресс");
 		System.out.println("-----");
 		ptnt.medicalCardNumberInterval(ptnt.samplePatient,1500,1650);
 		System.out.println("---------------------------------------------------------------------------------------------");
@@ -37,11 +37,21 @@ public class MainTask_Main {
 		abtrnt.chooseBestAbiturients(abtrnt.sampleAbiturient, 3);
 		System.out.println("---------------------------------------------------------------------------------------------");
 		
-		/*Book book = new Book();
+		Book book = new Book();
 		book.arrayBooks();
+		book.sortByAuthor(book.sampleBooks,"Джордж Оруэлл");
+		System.out.println("-----");
+		book.sortByPublisher(book.sampleBooks,"Past simple");
+		System.out.println("-----");
+		book.sortByYear(book.sampleBooks, 1945);
+		System.out.println("---------------------------------------------------------------------------------------------");
 		
 		House house = new House();
-		house.arrayHouses();*/
+		house.arrayHouses();
+		house.sortingByNumberApartments(house.sampleHouses, 3);
+		System.out.println("-----");
+		house.sortingByNumberApartmentsAndNumberFloor(house.sampleHouses, 2, 1, 3);
+		System.out.println("-----");
 	}
 
 }

@@ -10,6 +10,7 @@ public class House {
 	private String street;
 	private String buildingType;
 	private int lifetime;
+	House [] sampleHouses = new House [5];
 	
 	public House (){
 	}
@@ -55,8 +56,7 @@ public class House {
 			this.apartmentNumber = apartmentNumber;}
 	    	else {
 	    		System.out.println("Вы ввели неверный номер квартиры. Номер должен быть в пределах [1 до 49]");
-	    	}
-		
+	    	}	
 	}
 
 	public double getArea() {
@@ -145,20 +145,33 @@ public class House {
 				+ ", lifetime=" + lifetime + "]";
 	}
 	
-	
 	public void arrayHouses() {
-		House [] sampleHouses = new House [5];
-		sampleHouses [0] = new House(3, 1,"Свободная");
-		sampleHouses [1] = new House(97, 9, 3, 3, "Независимая");
-		sampleHouses [2] = new House(20, 8, "Невероятная");
-		sampleHouses [3] = new House(13, 4, "Колесникова");
-		sampleHouses [4] = new House(27, 7, "Тапковая");
-		
-		for ( House house : sampleHouses) {
-			if (house.getStreet().equals("Невероятная")) {
-				System.out.println("Невероятные беларусы");
-			}
-		}	
+		sampleHouses [0] = new House(3, 56, 4, 2,"Свободная");
+		sampleHouses [1] = new House(97, 9, 3, 2, "Независимая");
+		sampleHouses [2] = new House(20, 83, 4, 3, "Невероятная");
+		sampleHouses [3] = new House(13, 40, 2, 1, "Колесниковой");
+		sampleHouses [4] = new House(27, 78, 7, 4, "Тапковая"); //(int apartmentNumber, double area, int floor, int numberRooms, String street)
 	}
+	
+	public void sortingByNumberApartments(House [] sampleHouses, int numberApartment){
+		System.out.println("Cписок квартир, с числом комнат - " + numberApartment + ":");
+		for(House house : sampleHouses) {
+			if(house.getNumberRooms()==numberApartment){
+				System.out.print(house.getApartmentNumber() + ", ");
+			}
+		}
+		System.out.println();
+	}
+	
+	public void sortingByNumberApartmentsAndNumberFloor(House [] sampleHouses, int numberApartment, int floorNumberMin, int floorNumberMax){
+		System.out.println("Cписок квартир, с числом комнат - " + numberApartment + " и расплоложенных на этажах в заданном промежутке(" + floorNumberMin + "-" + floorNumberMax + ")");
+		for(House house : sampleHouses) {
+			if(house.getNumberRooms()==numberApartment && (house.getNumberRooms()>=floorNumberMin && house.getNumberRooms()<=floorNumberMax)){
+				System.out.print(house.getApartmentNumber() + ", ");
+			}
+		}
+		System.out.println();
+	}
+
 	
 }
