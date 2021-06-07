@@ -46,7 +46,11 @@ public class Customer extends Human{
     }
 
     public void setCreditÑardNumber(int creditÑardNumber) {
-        this.creditÑardNumber = creditÑardNumber;
+    	if(0<=creditÑardNumber && creditÑardNumber<=1_000_000_000){
+    		this.creditÑardNumber = creditÑardNumber;}
+    		else {
+    			System.out.println("Âû ââåëè íåâåğíûé íîìåğ êğåäèòíîé êàğòû. Íîìåğ äîëæåí áûòü â ïğåäåëàõ [0 äî 1_000_000_000]");
+    		}
     }
     
     public int getBankAccountNumber() {

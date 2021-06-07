@@ -10,7 +10,6 @@ public class Human {
 	}
 	
 	public Human(int id, String surname, String name, String patronymic, String address) {
-	       
 		this.id = id;
 		this.surname = surname;
 		this.name = name;
@@ -23,7 +22,6 @@ public class Human {
     }
 
     public void setId(int id) {
-    	
     	if (0 <= id && id<= 1000) {
     	this.id = id;}
     	else {
@@ -67,7 +65,6 @@ public class Human {
     }
 
     public void setPatronymic(String patronymic) {
-    	
     	if (patronymic != null && !patronymic.isEmpty()) {
             for (char c : patronymic.toCharArray()) {
                 if (Character.isDigit(c)) {
@@ -82,7 +79,6 @@ public class Human {
     }
 
     public void setAddress(String address) {
-    	
     	if (patronymic != null && !patronymic.isEmpty()) {
             for (char c : patronymic.toCharArray()) {
                 if (Character.isDigit(c)) {

@@ -51,7 +51,16 @@ public class MainTask_Main {
 		house.sortingByNumberApartments(house.sampleHouses, 3);
 		System.out.println("-----");
 		house.sortingByNumberApartmentsAndNumberFloor(house.sampleHouses, 2, 1, 3);
+		System.out.println("---------------------------------------------------------------------------------------------");
+		
+		Phone phone = new Phone();
+		phone.arrayPhones();
+		phone.sortByTimeCity(phone.sampleSubscriber, 10000);
 		System.out.println("-----");
+		phone.sortByTimeIntercity(phone.sampleSubscriber);
+		System.out.println("-----");
+		phone.alphabet(phone.arraySurname);
+		System.out.println("---------------------------------------------------------------------------------------------");
 	}
 
 }
