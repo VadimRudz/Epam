@@ -61,6 +61,15 @@ public class MainTask_Main {
 		System.out.println("-----");
 		phone.alphabet(phone.arraySurname);
 		System.out.println("---------------------------------------------------------------------------------------------");
+		
+		Car car = new Car();
+		car.arrayCars();
+		car.sortByBrand(car.sampleCars, "Volkswagen");
+		System.out.println("-----");
+		car.sortByModelAndYear(car.sampleCars, "Niva", 10);
+		System.out.println("-----");
+		car.sortByYearAndPrice(car.sampleCars, 2006, 5000);
+		System.out.println("---------------------------------------------------------------------------------------------");
 	}
 
 }
