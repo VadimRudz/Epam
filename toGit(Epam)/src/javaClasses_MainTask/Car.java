@@ -63,14 +63,7 @@ public class Car {
 		return carModel;
 	}
 	public void setCarModel(String carModel) {
-		if (carModel != null && !carModel.isEmpty()) {
-	        for (char c : carModel.toCharArray()) {
-	            if (Character.isDigit(c)) {
-	            	System.out.println("В названии марки автомобиля недопустимые символы (цифры)"); break; 
-	            }
-	        }
-	    }
-		else {this.carModel = carModel;}
+		this.carModel = carModel;
 	}
 	public int getYearIssue() {
 		return yearIssue;

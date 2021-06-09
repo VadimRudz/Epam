@@ -70,6 +70,15 @@ public class MainTask_Main {
 		System.out.println("-----");
 		car.sortByYearAndPrice(car.sampleCars, 2006, 5000);
 		System.out.println("---------------------------------------------------------------------------------------------");
+		
+		Product product = new Product();
+		product.arrayProducts();
+		product.sortByName(product.sampleProducts, "Виноградный сок");
+		System.out.println("-----");
+		product.sortByNameAndPrice(product.sampleProducts, 15, "Печенье с арахисом", "Апельсин", "Макароны звездочка");
+		System.out.println("-----");
+		product.sortByShelflifeDays(product.sampleProducts, 20);
+		System.out.println("---------------------------------------------------------------------------------------------");
 	}
 
 }
