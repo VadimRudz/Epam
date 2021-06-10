@@ -79,6 +79,10 @@ public class MainTask_Main {
 		System.out.println("-----");
 		product.sortByShelflifeDays(product.sampleProducts, 20);
 		System.out.println("---------------------------------------------------------------------------------------------");
+		
+		Train train = new Train();
+		train.arrayTrains();
+		
 	}
 
 }
