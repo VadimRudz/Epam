@@ -7,7 +7,7 @@ public class Train {
 	private String destination;
 	private int trainNumber;
 	private LocalTime dispatchTime;
-	private int commonÑarriage;
+	private int numberÑarriageSeat;
 	private int numberÑompartmentSeat;
 	private int numberReservedSeat;
 	private int numberLuxSeat;
@@ -22,7 +22,7 @@ public class Train {
 		this.destination = destination;
 		this.trainNumber = trainNumber;
 		this.dispatchTime = dispatchTime;
-		this.commonÑarriage = commonÑarriage;
+		this.numberÑarriageSeat = commonÑarriage;
 		this.numberÑompartmentSeat = numberÑompartmentSeat;
 		this.numberReservedSeat = numberReservedSeat;
 		this.numberLuxSeat = numberLuxSeat;
@@ -37,7 +37,6 @@ public class Train {
 	}
 
 	public String getDestination() {
-		
 		return destination;
 	}
 	
@@ -69,16 +68,16 @@ public class Train {
 	}
 	
 	public void setDispatchTime(int hour, int minute) {
-		this.dispatchTime.of(hour, minute);
+		LocalTime.of(hour, minute);
 	}
 	
-	public int getCommonÑarriage() {
-		return commonÑarriage;
+	public int getNumberÑarriageSeat() {
+		return numberÑarriageSeat;
 	}
 	
-	public void setCommonÑarriage(int commonÑarriage) {
+	public void setNumberÑarriageSeat(int commonÑarriage) {
 		if (0 <= commonÑarriage && commonÑarriage<= 80) {
-			this.commonÑarriage = commonÑarriage;}
+			this.numberÑarriageSeat = commonÑarriage;}
 	    	else {
 	    		System.out.println("Âû ââåëè íåâåğíîå êîëè÷åñòâî ìåñò â îáùåì âàãîíå. Êîëè÷åñòâî äîëæíî áûòü â ïğåäåëàõ [0 äî 80]");
 	    	}	
@@ -123,7 +122,7 @@ public class Train {
 	@Override
 	public String toString() {
 		return "Train [Destination=" + destination + ", trainNumber=" + trainNumber + ", dispatchTime=" + dispatchTime
-				+ ", commonÑarriage=" + commonÑarriage + ", numberÑompartmentSeat=" + numberÑompartmentSeat
+				+ ", numberÑarriageSeat=" + numberÑarriageSeat + ", numberÑompartmentSeat=" + numberÑompartmentSeat
 				+ ", numberReservedSeat=" + numberReservedSeat + ", numberLuxSeat=" + numberLuxSeat + "]";
 	}
 	
@@ -138,5 +137,35 @@ public class Train {
 		sampleTrains [7]  = new Train ("Ğóæàíû", 106, LocalTime.of(5,45), 26);
 		sampleTrains [8]  = new Train ("Ãàíöåâè÷è", 109, LocalTime.of(7,18), 11);
 		sampleTrains [9]  = new Train ("Áàğàíîâè÷è", 107, LocalTime.of(17,03), 24);
+	}
+	
+	public void trainDestination(Train [] sampleTrains, String destination){
+		System.out.println("Íîìåğà ïîåçäîâ, êîòîğûå åäóò äî " + destination + ":");
+		for(Train train : sampleTrains) {
+			if(train.getDestination().equals(destination)){
+				System.out.print(train.getTrainNumber() + "(ïóíêò íàçíà÷åíèÿ - " + train.getDestination() + ")" + ", ");
+			}
+		}
+		System.out.println();
+	}
+	
+	public void trainDispatchTime(Train [] sampleTrains, LocalTime dispatchTime){
+		System.out.println("Íîìåğà ïîåçäîâ, êîòîğûå îòïğàâëÿşòñÿ ïîñëå " + dispatchTime.toString() +  ":");
+		for(Train train : sampleTrains) {
+			if((train.dispatchTime.getHour()==dispatchTime.getHour() && train.dispatchTime.getMinute() > dispatchTime.getMinute())|| train.dispatchTime.getHour()>dispatchTime.getHour()){
+				System.out.print(train.getTrainNumber() + "(âğåìÿ îòïğàâëåíèÿ-" + train.dispatchTime.toString() + "), ");
+			}
+		}
+		System.out.println();
+	}
+
+	public void seatsInCommonCarriage(Train [] sampleTrains, int seats){
+		System.out.println("Íîìåğà ïîåçäîâ, ó êîòîğûõ ÷èñëî ñâîáîäíûõ ìåñò â îáùåì âàãîíå >= " + seats +  ":");
+		for(Train train : sampleTrains) {
+			if(train.getNumberÑarriageSeat()>=seats){
+				System.out.print(train.getTrainNumber() + "(÷èñëî ìåñò â îáùåì âàãîíå - " + train.getNumberÑarriageSeat() + "), ");
+			}
+		}
+		System.out.println();
 	}
 }

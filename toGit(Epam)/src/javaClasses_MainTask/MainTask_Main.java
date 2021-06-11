@@ -1,5 +1,7 @@
 package javaClasses_MainTask;
 
+import java.time.LocalTime;
+
 public class MainTask_Main {
 
 	public static void main(String[] args) {
@@ -82,7 +84,12 @@ public class MainTask_Main {
 		
 		Train train = new Train();
 		train.arrayTrains();
-		
+		train.trainDestination(train.sampleTrains, "Береза");
+		System.out.println("-----");
+		train.trainDispatchTime(train.sampleTrains, LocalTime.of(10, 0)); 
+		System.out.println("-----");
+		train.seatsInCommonCarriage(train.sampleTrains, 40);
+		System.out.println("---------------------------------------------------------------------------------------------");
 	}
 
 }
