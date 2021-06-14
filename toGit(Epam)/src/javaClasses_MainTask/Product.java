@@ -16,7 +16,8 @@ public class Product {
 	public Product() {
 	}
 
-	public Product(long id, String name, int upc, String brand, double price, int shelflifeDays, double quantity) {
+	public Product(long id, String name, int upc, String brand, 
+			double price, int shelflifeDays, double quantity) {
 		this.id = id;
 		this.name = name;
 		this.upc = upc;
@@ -129,9 +130,9 @@ public class Product {
 		sampleProducts [14]  = new Product (674159, "Рис пропаренный", 3.89, 120);
 	}
 	
-	public void sortByName(Product [] sampleProducts, String name){
+	public void sortByName(Product [] sampleProducts, String name) {
 		System.out.println("Cписок товаров(id) для наименования товара " + name + ":");
-		for(Product product : sampleProducts){
+		for (Product product : sampleProducts){
 			if(product.name.equals(name)){
 				System.out.print(product.getId() + ", ");
 			}
@@ -139,22 +140,22 @@ public class Product {
 		System.out.println();
 	}
 	
-	public void sortByNameAndPrice(Product [] sampleProducts, double price, String... name ){
+	public void sortByNameAndPrice(Product [] sampleProducts, double price, String... name ) {
 		ArrayList <String> array = new ArrayList<String>();
-		for(String strings : name){
+		for (String strings : name){
 			array.add(strings);
 		}
 		System.out.println("Cписок товаров(id) для товаров " + array.toString()  + " и ценой менее " + price + ":" );
-		for(Product product : sampleProducts){
-			if(checkNameEquals(product.name, name) && product.price<price){
+		for(Product product : sampleProducts) {
+			if((checkNameEquals(product.name, name)) && (product.price<price)){
 				System.out.print(product.getId() + ", ");
 				}
 			}
 		System.out.println();
 	}
 	
-	public boolean checkNameEquals(String productName, String...name){
-		for(String strng : name) {
+	public boolean checkNameEquals(String productName, String...name) {
+		for (String strng : name) {
 			if (strng.equals(productName)){
 				return true;
 			}
@@ -162,9 +163,9 @@ public class Product {
 		return false;
 	}
 	
-	public void sortByShelflifeDays(Product [] sampleProducts, int shelflifeDays){
+	public void sortByShelflifeDays(Product [] sampleProducts, int shelflifeDays) {
 		System.out.println("Cписок товаров, срок хранения которых больше " + shelflifeDays + ", дней:");
-		for(Product product : sampleProducts){
+		for (Product product : sampleProducts) {
 			if(product.shelflifeDays>shelflifeDays){
 				System.out.println(product.name + ", ");
 			}

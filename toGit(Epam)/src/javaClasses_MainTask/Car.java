@@ -50,7 +50,7 @@ public class Car {
 		return brand;
 	}
 	public void setBrand(String brand) {
-		if (brand != null && !brand.isEmpty()) {
+		if ((brand != null) && (!brand.isEmpty())) {
 	        for (char c : brand.toCharArray()) {
 	            if (Character.isDigit(c)) {
 	            	System.out.println("В названии марки автомобиля недопустимые символы (цифры)"); break; 
@@ -79,7 +79,7 @@ public class Car {
 		return color;
 	}
 	public void setColor(String color) {
-		if (color != null && !color.isEmpty()) {
+		if ((color != null) && (!color.isEmpty())) {
 	        for (char c : color.toCharArray()) {
 	            if (Character.isDigit(c)) {
 	            	System.out.println("В названии цвета автомобиля недопустимые символы (цифры)"); break; 
@@ -92,7 +92,7 @@ public class Car {
 		return price;
 	}
 	public void setPrice(double price) {
-		if (0<= yearIssue && yearIssue<= 100_000_000) {
+		if ((0<= yearIssue) && (yearIssue<= 100_000_000)) {
 			this.price = price;}
 	    	else {
 	    		System.out.println("Вы ввели неверную стоимость автомобиля. Стоимость должна быть в пределах [0 до 100_000_000]");
@@ -102,7 +102,7 @@ public class Car {
 		return registrationNumber;
 	}
 	public void setRegistrationNumber(String registrationNumber) {
-		if(registrationNumber.length()<9 || registrationNumber.length()>9) {
+		if((registrationNumber.length()<9) || (registrationNumber.length()>9)) {
 			System.out.println("Введите регистрационный номер машины в формате \"1111 AA-1\"");
 		}
 		else {this.registrationNumber = registrationNumber;}
@@ -121,9 +121,9 @@ public class Car {
 		sampleCars [9]  = new Car (17, "Lada", "Niva", 2018, 12000);
 	}
 
-	public void sortByBrand(Car [] sampleCars, String brand){
+	public void sortByBrand(Car [] sampleCars, String brand) {
 		System.out.println("Список моделей(марка - " + brand + ") :");
-		for(Car car : sampleCars){
+		for (Car car : sampleCars) {
 			if(car.getBrand().equals(brand)){
 				System.out.print(car.getCarModel() + ", ");
 			}
@@ -131,20 +131,20 @@ public class Car {
 		System.out.println();
 	}
 	
-	public void sortByModelAndYear(Car [] sampleCars, String model, int year){
+	public void sortByModelAndYear(Car [] sampleCars, String model, int year) {
 		System.out.println("Id автомобилей, у которых модель " + model + " и которые эксплуатируются более " + year + " лет:");
-		for(Car car : sampleCars){
-			if(car.getCarModel().equals(model) && (2021- car.yearIssue) <= year) {
+		for (Car car : sampleCars) {
+			if((car.getCarModel().equals(model)) && ((2021- car.yearIssue) <= year)) {
 				System.out.print(car.getId() + ", ");
 			}
 		}
 		System.out.println();
 	}
 	
-	public void sortByYearAndPrice(Car [] sampleCars, int year, double price){
+	public void sortByYearAndPrice(Car [] sampleCars, int year, double price) {
 		System.out.println("Марка и модель автомобиля, у которого год выпуска " + year + " и стоимость больше " + price + "$:");
-		for(Car car : sampleCars){
-			if(car.getYearIssue()==year && car.getPrice()>price){
+		for (Car car : sampleCars) {
+			if((car.getYearIssue()==year) && (car.getPrice()>price)){
 				System.out.print(car.getBrand() + " " + car.getCarModel() +  ", ");
 			}
 		}

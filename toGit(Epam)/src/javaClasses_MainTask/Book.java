@@ -15,7 +15,8 @@ public class Book {
 	public Book () {	
 	}
 	
-	public Book (int id, String titleBook, String author, String publisher, int yearPublishing, int numberPages, double price, String bindingType){
+	public Book (int id, String titleBook, String author, String publisher, int yearPublishing, 
+			int numberPages, double price, String bindingType) {
 		this.id = id;
 		this.titleBook = titleBook;
 		this.author = author;
@@ -39,7 +40,7 @@ public class Book {
 	}
 	
 	public void setId(int id) {
-		if (0 <= id && id<= 1000) {
+		if ((0 <= id) && (id<= 1000)) {
 	        this.id = id;}
 	    	else {
 	    		System.out.println("Вы ввели неверный id. id должен быть в пределах [0 до 1000]");
@@ -51,7 +52,7 @@ public class Book {
 	}
 
 	public void setTitleBook(String titleBook) {
-		if (titleBook != null && !titleBook.isEmpty()) {
+		if ((titleBook != null) && (!titleBook.isEmpty())) {
             for (char c : titleBook.toCharArray()) {
                 if (Character.isDigit(c)) {
                 	System.out.println("В вашей фамилии недопустимые символы (цифры)"); break; 
@@ -66,7 +67,7 @@ public class Book {
 	}
 
 	public void setAuthor(String author) {
-		if (author != null && !author.isEmpty()) {
+		if ((author != null) && (!author.isEmpty())) {
             for (char c : titleBook.toCharArray()) {
                 if (Character.isDigit(c)) {
                 	System.out.println("В фамилии автора недопустимые символы (цифры)"); break; 
@@ -81,7 +82,7 @@ public class Book {
 	}
 
 	public void setPublisher(String publisher) {
-		if (publisher != null && !publisher.isEmpty()) {
+		if ((publisher != null) && (!publisher.isEmpty())) {
             for (char c : titleBook.toCharArray()) {
                 if (Character.isDigit(c)) {
                 	System.out.println("В названии издательства недопустимые символы (цифры)"); break; 
@@ -96,7 +97,7 @@ public class Book {
 	}
 
 	public void setYearPublishing(int yearPublishing) {
-		if (1564 <= yearPublishing && yearPublishing<= 2021) {
+		if ((1564 <= yearPublishing) && (yearPublishing<= 2021)) {
 	    	this.yearPublishing = yearPublishing;}
 	    	else {
 	    		System.out.println("Вы ввели неверный год публикации книги. Год должен быть в пределах [1564 до 2021]");
@@ -120,7 +121,7 @@ public class Book {
 	}
 
 	public void setPrice(double price) {
-		if (0 <= numberPages && numberPages<= 30_800_000) {
+		if ((0 <= numberPages) && (numberPages<= 30_800_000)) {
 	    	this.price = price;}
 	    	else {
 	    		System.out.println("Вы ввели неверную стоимость книги. Стоимость должна быть в пределах [0 до 30_800_000 $]");
@@ -132,7 +133,7 @@ public class Book {
 	}
 
 	public void setBindingType(String bindingType) {
-		if (bindingType != null && !bindingType.isEmpty()) {
+		if ((bindingType != null) && (!bindingType.isEmpty())) {
             for (char c : bindingType.toCharArray()) {
                 if (Character.isDigit(c)) {
                 	System.out.println("В названии переплета недопустимые символы (цифры)"); break; 
@@ -157,30 +158,30 @@ public class Book {
 		sampleBooks [4] = new Book("Скотный двор", "Джордж Оруэлл", "Past simple", 1945);
 	}	
 	//String titleBook, String author, String publisher, int yearPublishing
-	public void sortByAuthor(Book [] sampleBooks, String author){
+	public void sortByAuthor(Book [] sampleBooks, String author) {
 		System.out.println("Список книг автора(" + author + "):");
 		for (Book book : sampleBooks) {
-			if(book.getAuthor().equalsIgnoreCase(author)){
+			if (book.getAuthor().equalsIgnoreCase(author)){
 				System.out.print(book.getTitleBook() + ", ");
 			}
 		}
 		System.out.println();
 	}
 	
-	public void sortByPublisher(Book [] sampleBooks, String publisher){
+	public void sortByPublisher(Book [] sampleBooks, String publisher) {
 		System.out.println("Список книг издательства(" + publisher + "):");
-		for(Book book : sampleBooks){
-			if(book.getPublisher().equalsIgnoreCase(publisher)){
+		for (Book book : sampleBooks) {
+			if(book.getPublisher().equalsIgnoreCase(publisher)) {
 				System.out.print(book.getTitleBook() + ", ");
 			}
 		}
 		System.out.println();
 	}
 	
-	public void sortByYear(Book [] sampleBooks, int year){
+	public void sortByYear(Book [] sampleBooks, int year) {
 		System.out.println("Список книг, изданных после " + year + " года:");
-		for(Book book : sampleBooks){ 
-			if(book.getYearPublishing()>=year){
+		for (Book book : sampleBooks) { 
+			if(book.getYearPublishing()>=year) {
 				System.out.print("\"" + book.getTitleBook() + "\", ");
 			}
 		}

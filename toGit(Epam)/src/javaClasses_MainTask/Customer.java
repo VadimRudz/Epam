@@ -16,7 +16,8 @@ public class Customer extends Human{
 		super();	
 	}
 	
-	public Customer(int id, String surname, String name, String patronymic, String address, int creditÑardNumber,  int bankAccountNumber){
+	public Customer(int id, String surname, String name, String patronymic, 
+			String address, int creditÑardNumber,  int bankAccountNumber) {
 		super (id, surname, name, patronymic, address);
 		this.creditÑardNumber = creditÑardNumber;
 		this.bankAccountNumber = bankAccountNumber;
@@ -29,8 +30,10 @@ public class Customer extends Human{
 	
 	@Override
 	public String toString() { 
-        return "Ïğèâåò, ÿ êëèåíò áàíêà: Id - " + getId() + ", ôàìèëèÿ - " + getSurname() + ", èìÿ - " + getName() + ", îò÷åñòâî - " + getPatronymic() + ", àäğåññ- " + getAddress() + ", " 
-        		+ " íîìåğ êğåäèòíîé êàğòû - " + getCreditÑardNumber() + ", íîìåğ áàíêîâñêîãî ñ÷åòà - " + getBankAccountNumber() + ";";
+        return "Ïğèâåò, ÿ êëèåíò áàíêà: Id - " + getId() + ", ôàìèëèÿ - " + getSurname() + ", èìÿ - " 
+	+ getName() + ", îò÷åñòâî - " + getPatronymic() + ", àäğåññ- " + getAddress() + ", " 
+        		+ " íîìåğ êğåäèòíîé êàğòû - " + getCreditÑardNumber() 
+        		+ ", íîìåğ áàíêîâñêîãî ñ÷åòà - " + getBankAccountNumber() + ";";
      } 
 	
 	public void arrayObjects() {
@@ -46,10 +49,11 @@ public class Customer extends Human{
     }
 
     public void setCreditÑardNumber(int creditÑardNumber) {
-    	if(0<=creditÑardNumber && creditÑardNumber<=1_000_000_000){
+    	if((0<=creditÑardNumber) && (creditÑardNumber<=1_000_000_000)){
     		this.creditÑardNumber = creditÑardNumber;}
     		else {
-    			System.out.println("Âû ââåëè íåâåğíûé íîìåğ êğåäèòíîé êàğòû. Íîìåğ äîëæåí áûòü â ïğåäåëàõ [0 äî 1_000_000_000]");
+    			System.out.println("Âû ââåëè íåâåğíûé íîìåğ êğåäèòíîé êàğòû. "
+    					+ "Íîìåğ äîëæåí áûòü â ïğåäåëàõ [0 äî 1_000_000_000]");
     		}
     }
     
@@ -61,7 +65,7 @@ public class Customer extends Human{
         this.bankAccountNumber = bankAccountNumber;
     }
     
-    public void alphabetOrder (Customer [] sampleCustomer){
+    public void alphabetOrder (Customer [] sampleCustomer) {
     	for (Customer customer: sampleCustomer) {
     		array_1.add(customer.getSurname());
     		Collections.sort(array_1);
@@ -70,11 +74,11 @@ public class Customer extends Human{
     		System.out.print(array_1.toString() + ", ");
     } 
     
-    public void creditCarInterval(Customer [] sampleCustomer, int intervalMin, int intervalMax){
+    public void creditCarInterval(Customer [] sampleCustomer, int intervalMin, int intervalMax) {
     	System.out.println();
     	System.out.println("Ñïèñîê ïîêóïàòåëåé, îòñîğòèğîâàííûõ ïî êğåäèòíîé êàğòå:");
-    	for(Customer customer: sampleCustomer) {
-    		if (customer.getCreditÑardNumber()>intervalMin && customer.getCreditÑardNumber()<intervalMax){
+    	for (Customer customer: sampleCustomer) {
+    		if ((customer.getCreditÑardNumber()>intervalMin) && (customer.getCreditÑardNumber()<intervalMax)){
     			System.out.print(customer.getSurname() + ",");
     		}
     	}

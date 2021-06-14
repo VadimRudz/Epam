@@ -15,8 +15,8 @@ public class House {
 	public House (){
 	}
 	
-	public House(int id, int apartmentNumber, double area, int floor, int numberRooms, String street,
-			String buildingType, int lifetime) {
+	public House(int id, int apartmentNumber, double area, int floor, int numberRooms, 
+			String street, String buildingType, int lifetime) {
 		this.id = id;
 		this.apartmentNumber = apartmentNumber;
 		this.area = area;
@@ -55,7 +55,8 @@ public class House {
 		if (1 <= id && id<= 1000) {
 			this.apartmentNumber = apartmentNumber;}
 	    	else {
-	    		System.out.println("Вы ввели неверный номер квартиры. Номер должен быть в пределах [1 до 49]");
+	    		System.out.println("Вы ввели неверный номер квартиры. "
+	    				+ "Номер должен быть в пределах [1 до 49]");
 	    	}	
 	}
 
@@ -67,7 +68,8 @@ public class House {
 		if (0.1 <= id && id<= 320) {
 			this.area = area;}
 	    	else {
-	    		System.out.println("Вы ввели неверную площадь квартиры. Площадь должна быть в пределах [0.1 до 320]");
+	    		System.out.println("Вы ввели неверную площадь квартиры. "
+	    				+ "Площадь должна быть в пределах [0.1 до 320]");
 	    	}
 	}
 
@@ -79,7 +81,8 @@ public class House {
 		if (1 <= id && id<= 7) {
 			this.floor = floor;}
 	    	else {
-	    		System.out.println("Вы ввели неверный этаж дома. Номер должен быть в пределах [1 до 7]");
+	    		System.out.println("Вы ввели неверный этаж дома. "
+	    				+ "Номер должен быть в пределах [1 до 7]");
 	    	}
 	}
 
@@ -88,10 +91,11 @@ public class House {
 	}
 
 	public void setNumberRooms(int numberRooms) {
-		if (1 <= id && id<= 5) {
+		if ((1 <= id) && (id<= 5)) {
 			this.numberRooms = numberRooms;}
 	    	else {
-	    		System.out.println("Вы ввели неверное количество комнат. Количество должно быть в пределах [1 до 5]");
+	    		System.out.println("Вы ввели неверное количество комнат. "
+	    				+ "Количество должно быть в пределах [1 до 5]");
 	    	}
 	}
 
@@ -100,7 +104,7 @@ public class House {
 	}
 
 	public void setStreet(String street) {
-		if (street != null && !street.isEmpty()) {
+		if ((street != null) && (!street.isEmpty())) {
             for (char c : street.toCharArray()) {
                 if (Character.isDigit(c)) {
                 	System.out.println("В названии вашей улицы недопустимые символы (цифры)"); break; 
@@ -115,7 +119,7 @@ public class House {
 	}
 
 	public void setBuildingType(String buildingType) {
-		if (buildingType != null && !buildingType.isEmpty()) {
+		if ((buildingType != null) && (!buildingType.isEmpty())) {
             for (char c : buildingType.toCharArray()) {
                 if (Character.isDigit(c)) {
                 	System.out.println("В названии типа зданий и сооружений недопустимые символы (цифры)"); break; 
@@ -130,10 +134,11 @@ public class House {
 	}
 
 	public void setLifetime(int lifetime) {
-		if (1 <= id && id<= 100) {
+		if ((1 <= id) && (id<= 100)) {
 			this.lifetime = lifetime;}
 	    	else {
-	    		System.out.println("Вы ввели неверное количество лет эксплуатации. Количество должно быть в пределах[1 до 5]");
+	    		System.out.println("Вы ввели неверное количество лет эксплуатации. "
+	    				+ "Количество должно быть в пределах[1 до 5]");
 	    	}
 
 	}
@@ -155,7 +160,7 @@ public class House {
 	
 	public void sortingByNumberApartments(House [] sampleHouses, int numberApartment){
 		System.out.println("Cписок квартир, с числом комнат - " + numberApartment + ":");
-		for(House house : sampleHouses) {
+		for (House house : sampleHouses) {
 			if(house.getNumberRooms()==numberApartment){
 				System.out.print(house.getApartmentNumber() + ", ");
 			}
@@ -164,8 +169,9 @@ public class House {
 	}
 	
 	public void sortingByNumberApartmentsAndNumberFloor(House [] sampleHouses, int numberApartment, int floorNumberMin, int floorNumberMax){
-		System.out.println("Cписок квартир, с числом комнат - " + numberApartment + " и расплоложенных на этажах в заданном промежутке(" + floorNumberMin + "-" + floorNumberMax + ")");
-		for(House house : sampleHouses) {
+		System.out.println("Cписок квартир, с числом комнат - " + numberApartment 
+				+ " и расплоложенных на этажах в заданном промежутке(" + floorNumberMin + "-" + floorNumberMax + ")");
+		for (House house : sampleHouses) {
 			if(house.getNumberRooms()==numberApartment && (house.getNumberRooms()>=floorNumberMin && house.getNumberRooms()<=floorNumberMax)){
 				System.out.print(house.getApartmentNumber() + ", ");
 			}

@@ -19,7 +19,9 @@ public class Student extends Human{
 		super();	
 	}
 	
-	public Student(int id, String surname, String name, String patronymic, String address, GregorianCalendar  dateOfBirth, int telephone, String faculty, int course, int group){
+	public Student(int id, String surname, String name, String patronymic, 
+			String address, GregorianCalendar  dateOfBirth, 
+			int telephone, String faculty, int course, int group){
 		super (id, surname, name, patronymic, address);
 		this.dateOfBirth = dateOfBirth;
 		this.telephone = telephone;
@@ -28,18 +30,21 @@ public class Student extends Human{
 		this.group = group;
 	}
 	
-	public Student(int id, String surname, String name, String patronymic, String address){
+	public Student(int id, String surname, String name, String patronymic, String address) {
 		this (id, surname, name, patronymic, address, null, 0, null, 0, 0);
 	}
 	
-	public Student(String surname, String name, String patronymic){
+	public Student(String surname, String name, String patronymic) {
 		this (0, surname, name, patronymic, null, null, 0, null, 0, 0);
 	}
 	
 	@Override
 	public String toString() { 
-        return "Привет, я - студент: Id - " + getId() + ", фамилия - " + getSurname() + ", имя - " + getName() + ", отчество - " + getPatronymic() + ", адресс- " + getAddress() + ", " 
-        		+ "дата рождения - " + getDateOfBirth() + ", телефон - " + getTelephone() + ", факультет - " + getFaculty() + ", курс - " + getCourse() + ", группа - " + getGroup() + ";";
+        return "Привет, я - студент: Id - " + getId() + ", фамилия - " + getSurname() 
+        + ", имя - " + getName() + ", отчество - " + getPatronymic() + ", адресс- " 
+        + getAddress() + ", " + "дата рождения - " + getDateOfBirth() + ", телефон - " 
+        + getTelephone() + ", факультет - " + getFaculty() + ", курс - " + getCourse() 
+        + ", группа - " + getGroup() + ";";
      } 
 	
 	public GregorianCalendar getDateOfBirth() {
@@ -93,7 +98,7 @@ public class Student extends Human{
 		sampleStudent[7] = new Student(8, "Ивулин", "Александр", "Дмитриевич", "Октябрьская, 1", new GregorianCalendar(1995, Calendar.DECEMBER, 1), 292366545, "Энергоснабжения", 1, 114125);
 	}
 	
-	public void listFacultyStudents (Student [] sampleStudent, String faculty){ //метод выводит всех студентов одного факультета
+	public void listFacultyStudents (Student [] sampleStudent, String faculty) { //метод выводит всех студентов одного факультета
 		System.out.println("Список студентов факультета " + faculty + ":");
 		for ( Student stdnt : sampleStudent) {
 			newHashSetFaculty.add(stdnt.getFaculty());

@@ -59,7 +59,8 @@ public class Train {
 		if (100 <= trainNumber && trainNumber<= 1000) {
 			this.trainNumber = trainNumber;}
 	    	else {
-	    		System.out.println("Вы ввели неверный номер поезда. Номер должен быть в пределах [100 до 1000]");
+	    		System.out.println("Вы ввели неверный номер поезда. "
+	    				+ "Номер должен быть в пределах [100 до 1000]");
 	    	}
 	}
 	
@@ -79,7 +80,8 @@ public class Train {
 		if (0 <= commonСarriage && commonСarriage<= 80) {
 			this.numberСarriageSeat = commonСarriage;}
 	    	else {
-	    		System.out.println("Вы ввели неверное количество мест в общем вагоне. Количество должно быть в пределах [0 до 80]");
+	    		System.out.println("Вы ввели неверное количество мест в общем вагоне. "
+	    				+ "Количество должно быть в пределах [0 до 80]");
 	    	}	
 	}
 	
@@ -91,7 +93,8 @@ public class Train {
 		if (0 <= numberСompartmentSeat && numberСompartmentSeat<= 60) {
 			this.numberСompartmentSeat = numberСompartmentSeat;}
 	    	else {
-	    		System.out.println("Вы ввели неверное количество мест в вагоне-купе. Количество должно быть в пределах [0 до 60]");
+	    		System.out.println("Вы ввели неверное количество мест в вагоне-купе. "
+	    				+ "Количество должно быть в пределах [0 до 60]");
 	    	}
 	}
 	
@@ -103,7 +106,8 @@ public class Train {
 		if (0 <= numberReservedSeat && numberReservedSeat<= 100) {
 			this.numberReservedSeat = numberReservedSeat;}
 	    	else {
-	    		System.out.println("Вы ввели неверное количество мест в вагоне-плацкарте. Количество должно быть в пределах [0 до 100]");
+	    		System.out.println("Вы ввели неверное количество мест в вагоне-плацкарте. "
+	    				+ "Количество должно быть в пределах [0 до 100]");
 	    	}
 	}
 	
@@ -115,7 +119,8 @@ public class Train {
 		if (0 <= numberLuxSeat && numberLuxSeat<= 40) {
 			this.numberReservedSeat = numberLuxSeat;}
 	    	else {
-	    		System.out.println("Вы ввели неверное количество мест в вагоне класса люкс. Количество должно быть в пределах [0 до 40]");
+	    		System.out.println("Вы ввели неверное количество мест в вагоне класса люкс. "
+	    				+ "Количество должно быть в пределах [0 до 40]");
 	    	}
 	}
 	
@@ -139,29 +144,30 @@ public class Train {
 		sampleTrains [9]  = new Train ("Барановичи", 107, LocalTime.of(17,03), 24);
 	}
 	
-	public void trainDestination(Train [] sampleTrains, String destination){
+	public void trainDestination(Train [] sampleTrains, String destination) {
 		System.out.println("Номера поездов, которые едут до " + destination + ":");
-		for(Train train : sampleTrains) {
-			if(train.getDestination().equals(destination)){
+		for (Train train : sampleTrains) {
+			if (train.getDestination().equals(destination)){
 				System.out.print(train.getTrainNumber() + "(пункт назначения - " + train.getDestination() + ")" + ", ");
 			}
 		}
 		System.out.println();
 	}
 	
-	public void trainDispatchTime(Train [] sampleTrains, LocalTime dispatchTime){
+	public void trainDispatchTime(Train [] sampleTrains, LocalTime dispatchTime) {
 		System.out.println("Номера поездов, которые отправляются после " + dispatchTime.toString() +  ":");
-		for(Train train : sampleTrains) {
-			if((train.dispatchTime.getHour()==dispatchTime.getHour() && train.dispatchTime.getMinute() > dispatchTime.getMinute())|| train.dispatchTime.getHour()>dispatchTime.getHour()){
+		for (Train train : sampleTrains) {
+			if((train.dispatchTime.getHour()==dispatchTime.getHour() && train.dispatchTime.getMinute() > dispatchTime.getMinute())
+					|| train.dispatchTime.getHour()>dispatchTime.getHour()){
 				System.out.print(train.getTrainNumber() + "(время отправления-" + train.dispatchTime.toString() + "), ");
 			}
 		}
 		System.out.println();
 	}
 
-	public void seatsInCommonCarriage(Train [] sampleTrains, int seats){
+	public void seatsInCommonCarriage(Train [] sampleTrains, int seats) {
 		System.out.println("Номера поездов, у которых число свободных мест в общем вагоне >= " + seats +  ":");
-		for(Train train : sampleTrains) {
+		for (Train train : sampleTrains) {
 			if(train.getNumberСarriageSeat()>=seats){
 				System.out.print(train.getTrainNumber() + "(число мест в общем вагоне - " + train.getNumberСarriageSeat() + "), ");
 			}

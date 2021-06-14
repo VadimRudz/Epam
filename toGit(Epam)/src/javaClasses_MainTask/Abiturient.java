@@ -14,20 +14,22 @@ public class Abiturient extends Human{
 		super();	
 	}
 	
-	public Abiturient(int id, String surname, String name, String patronymic, String address, int telephone,  double averageScore){
+	public Abiturient(int id, String surname, String name, String patronymic, 
+			String address, int telephone,  double averageScore) {
 		super (id, surname, name, patronymic, address);
 		 this.telephone = telephone;
 		this.averageScore = averageScore;
 		}
 	
-	public Abiturient(String surname, String name, double averageScore){
+	public Abiturient(String surname, String name, double averageScore) {
 		this(0, surname, name, null, null, 0, averageScore);
 		}
 	
 	@Override
 	public String toString() { 
-        return "Привет, я абитуриент: Id - " + getId() + ", фамилия - " + getSurname() + ", имя - " + getName() + ", отчество - " + getPatronymic() + ", адресс- " + getAddress() + ", " 
-        		+ " номер телефона - " + getTelephone() + ", мой средний балл - " + getAverageScore() + ";";
+        return "Привет, я абитуриент: Id - " + getId() + ", фамилия - " + getSurname() + ", имя - " + getName() 
+        + ", отчество - " + getPatronymic() + ", адресс- " + getAddress() + ", " 
+        + " номер телефона - " + getTelephone() + ", мой средний балл - " + getAverageScore() + ";";
      }
 	
 	public void arrayObjects() { 
@@ -54,9 +56,9 @@ public class Abiturient extends Human{
         this.averageScore = averageScore;
     }
     
-    public void badMarks(Abiturient [] sampleAbiturient, double mark){
+    public void badMarks(Abiturient [] sampleAbiturient, double mark) {
     	System.out.println("Cписок абитуриентов с неудовлетворительным средним баллом(<" + mark + "):");
-    	for(Abiturient abiturient : sampleAbiturient) {
+    	for (Abiturient abiturient : sampleAbiturient) {
     		arrayMarks.add(abiturient.getAverageScore());
     		if(abiturient.getAverageScore()<mark) {
     			System.out.print(abiturient.getSurname()+", ");
@@ -65,9 +67,9 @@ public class Abiturient extends Human{
     	System.out.println();
     }
     
-    public void goodMarks(Abiturient [] sampleAbiturient, double mark){
+    public void goodMarks(Abiturient [] sampleAbiturient, double mark) {
     	System.out.println("Cписок абитуриентов с удовлетворительным средним баллом(>" + mark + "):");
-    	for(Abiturient abiturient : sampleAbiturient) {
+    	for (Abiturient abiturient : sampleAbiturient) {
     		if(abiturient.getAverageScore()>mark) {
     			System.out.print(abiturient.getSurname()+", ");
     		}
@@ -75,18 +77,18 @@ public class Abiturient extends Human{
     	System.out.println();
     }
     
-   public void chooseBestAbiturients(Abiturient [] sampleAbiturient, int numberSelected){
+   public void chooseBestAbiturients(Abiturient [] sampleAbiturient, int numberSelected) {
 	   System.out.println("Список студентов с лучшим средним балом(количество-" + numberSelected + ")");
 	   ArrayList<Abiturient>arrayStudentsMin = new ArrayList();
 	   Collections.sort(arrayMarks);
-	   for (int i = arrayMarks.size()-1; i>=arrayMarks.size()-numberSelected; i--){
-		   for(Abiturient abiturient : sampleAbiturient) {
+	   for (int i = arrayMarks.size()-1; i>=arrayMarks.size()-numberSelected; i--) {
+		   for (Abiturient abiturient : sampleAbiturient) {
 			   if(abiturient.getAverageScore()==arrayMarks.get(i)){
 				   arrayStudentsMin.add(abiturient);
 			   }
 		   }
 	   }
-	   for(int i = arrayStudentsMin.size()-1; i>=arrayStudentsMin.size()-numberSelected; i--){
+	   for (int i = arrayStudentsMin.size()-1; i>=arrayStudentsMin.size()-numberSelected; i--) {
 		   System.out.print(arrayStudentsMin.get(i).getSurname()+"(средний балл - " + arrayStudentsMin.get(i).getAverageScore() + "), ");
 	   }
 	   System.out.println();

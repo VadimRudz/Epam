@@ -18,7 +18,8 @@ ArrayList <String> arraySurname = new ArrayList<String>();
 public Phone(){
 }
 
-public Phone(int id, String surname, String name, String patronymic, String address, int creditСardNumber, double debit,
+public Phone(int id, String surname, String name, String patronymic,
+		String address, int creditСardNumber, double debit,
 		double credit, long talkTimeCity, long talkTimeIntercity) {
 	this.id = id;
 	this.surname = surname;
@@ -52,7 +53,7 @@ public int getId() {
 }
 
 public void setId(int id) {
-	if (0 <= id && id<= 1_000_000) {
+	if ((0 <= id) && (id<= 1_000_000)) {
     	this.id = id;}
     	else {
     		System.out.println("Вы ввели неверный id. id должен быть в пределах [0 до 1_000_000]");
@@ -64,7 +65,7 @@ public String getSurname() {
 }
 
 public void setSurname(String surname) {
-	if (surname != null && !surname.isEmpty()) {
+	if ((surname != null) && (!surname.isEmpty())) {
         for (char c : surname.toCharArray()) {
             if (Character.isDigit(c)) {
             	System.out.println("В вашей фамилии недопустимые символы (цифры)"); break; 
@@ -79,7 +80,7 @@ public String getName() {
 }
 
 public void setName(String name) {
-	if (name != null && !name.isEmpty()) {
+	if ((name != null) && (!name.isEmpty())) {
         for (char c : name.toCharArray()) {
             if (Character.isDigit(c)) {
             	System.out.println("В вашем имени недопустимые символы (цифры)"); break; 
@@ -94,7 +95,7 @@ public String getPatronymic() {
 }
 
 public void setPatronymic(String patronymic) {
-	if (patronymic != null && !patronymic.isEmpty()) {
+	if ((patronymic != null) && (!patronymic.isEmpty())) {
         for (char c : patronymic.toCharArray()) {
             if (Character.isDigit(c)) {
             	System.out.println("В вашем отчестве недопустимые символы (цифры)"); break; 
@@ -109,7 +110,7 @@ public String getAddress() {
 }
 
 public void setAddress(String address) {
-	if (patronymic != null && !patronymic.isEmpty()) {
+	if ((patronymic != null) && (!patronymic.isEmpty())) {
         for (char c : patronymic.toCharArray()) {
             if (Character.isDigit(c)) {
             	System.out.println("В вашем отчестве недопустимые символы (цифры)"); break; 
@@ -124,10 +125,11 @@ public int getCreditСardNumber() {
 }
 
 public void setCreditСardNumber(int creditСardNumber) {
-	if(0<=creditСardNumber && creditСardNumber<=1_000_000_000){
+	if ((0<=creditСardNumber) && (creditСardNumber<=1_000_000_000)){
 	this.creditСardNumber = creditСardNumber;}
 	else {
-		System.out.println("Вы ввели неверный номер кредитной карты. Номер должен быть в пределах [0 до 1_000_000_000]");
+		System.out.println("Вы ввели неверный номер кредитной карты. "
+				+ "Номер должен быть в пределах [0 до 1_000_000_000]");
 	}
 }
 
@@ -136,7 +138,7 @@ public double getDebit() {
 }
 
 public void setDebit(double debit) {
-	if(debit>=0){
+	if (debit>=0){
 	this.debit = debit;}
 	else {
 		System.out.println("Вы ввели отрицательную сумму дебита.");
@@ -148,7 +150,7 @@ public double getCredit() {
 }
 
 public void setCredit(double credit) {
-	if(credit>=0){
+	if (credit>=0){
 	this.credit = credit;}
 	else {
 		System.out.println("Вы ввели отрицательную сумму кредита.");
@@ -160,7 +162,7 @@ public long getTalkTimeCity() {
 }
 
 public void setTalkTimeCity(long talkTimeCity) {
-	if(talkTimeCity>=0){
+	if (talkTimeCity>=0){
 	this.talkTimeCity = talkTimeCity;}
 	else {
 		System.out.println("Время разговоров(городских) не может быть отрицательным");
@@ -173,7 +175,7 @@ public long getTalkTimeIntercity() {
 }
 
 public void setTalkTimeIntercity(long talkTimeIntercity) {
-	if(talkTimeIntercity>=0){
+	if (talkTimeIntercity>=0){
 	this.talkTimeIntercity = talkTimeIntercity;}
 	else {
 		System.out.println("Время разговоров(междугородних) не может быть отрицательным");
@@ -190,10 +192,11 @@ public void arrayPhones() {
 }
 
 public void sortByTimeCity(Phone [] sampleSubscriber, long timeMin){
-	System.out.println("Cписок абонентов, со временем внутригородских разговоров, превышающих время " + timeMin + ",милисекунд:");
-	for(Phone phone : sampleSubscriber) {
+	System.out.println("Cписок абонентов, со временем внутригородских разговоров, превышающих время " 
+			+ timeMin + ",милисекунд:");
+	for (Phone phone : sampleSubscriber) {
 		arraySurname.add(phone.getSurname());
-		if(phone.getTalkTimeCity()>timeMin){
+		if (phone.getTalkTimeCity()>timeMin) {
 			System.out.print(phone.getSurname() + ", ");
 		}
 	}
@@ -202,8 +205,8 @@ public void sortByTimeCity(Phone [] sampleSubscriber, long timeMin){
 
 public void sortByTimeIntercity(Phone [] sampleSubscriber){
 	System.out.println("Cписок абонентов, которые пользовались междугородней связью: ");
-	for(Phone phone : sampleSubscriber) {
-		if(phone.getTalkTimeIntercity()>0){
+	for (Phone phone : sampleSubscriber) {
+		if (phone.getTalkTimeIntercity()>0){
 			System.out.print(phone.getSurname() + ", ");
 		}
 	}

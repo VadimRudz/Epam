@@ -35,7 +35,7 @@ public class Human {
 
     public void setSurname(String surname) {
     
-    	if (surname != null && !surname.isEmpty()) {
+    	if ((surname != null) && (!surname.isEmpty())) {
             for (char c : surname.toCharArray()) {
                 if (Character.isDigit(c)) {
                 	System.out.println("В вашей фамилии недопустимые символы (цифры)"); break; 
@@ -50,7 +50,7 @@ public class Human {
 
     public void setName(String name) {
     	
-    	if (name != null && !name.isEmpty()) {
+    	if ((name != null) && (!name.isEmpty())) {
             for (char c : name.toCharArray()) {
                 if (Character.isDigit(c)) {
                 	System.out.println("В вашем имени недопустимые символы (цифры)"); break; 
@@ -65,7 +65,7 @@ public class Human {
     }
 
     public void setPatronymic(String patronymic) {
-    	if (patronymic != null && !patronymic.isEmpty()) {
+    	if ((patronymic != null) && (!patronymic.isEmpty())) {
             for (char c : patronymic.toCharArray()) {
                 if (Character.isDigit(c)) {
                 	System.out.println("В вашем отчестве недопустимые символы (цифры)"); break; 
@@ -79,7 +79,7 @@ public class Human {
     }
 
     public void setAddress(String address) {
-    	if (patronymic != null && !patronymic.isEmpty()) {
+    	if ((patronymic != null) && (!patronymic.isEmpty())) {
             for (char c : patronymic.toCharArray()) {
                 if (Character.isDigit(c)) {
                 	System.out.println("В вашем отчестве недопустимые символы (цифры)"); break; 

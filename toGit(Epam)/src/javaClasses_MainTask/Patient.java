@@ -12,7 +12,8 @@ public class Patient extends Human{
 		super();	
 	}
 	
-	public Patient(int id, String surname, String name, String patronymic, String address, int telephone,  int medicalCardNumber, String diagnosis){
+	public Patient(int id, String surname, String name, String patronymic, String address, 
+			int telephone,  int medicalCardNumber, String diagnosis) {
 		super (id, surname, name, patronymic, address);
 		this.telephone = telephone;
 		this.medicalCardNumber = medicalCardNumber;
@@ -26,8 +27,10 @@ public class Patient extends Human{
 	
 	@Override
 	public String toString() { 
-        return "Привет, я пациент: Id - " + getId() + ", фамилия - " + getSurname() + ", имя - " + getName() + ", отчество - " + getPatronymic() + ", адресс- " + getAddress() + ", " 
-        		+ " телефон - " + getTelephone() + ", номер медицинской карты - " + getMedicalCardNumber() + ", диагноз - " + getDiagnosis() + ";";
+        return "Привет, я пациент: Id - " + getId() + ", фамилия - " + getSurname() + ", имя - " + getName() 
+        + ", отчество - " + getPatronymic() + ", адресс- " + getAddress() + ", " 
+        		+ " телефон - " + getTelephone() + ", номер медицинской карты - " 
+        + getMedicalCardNumber() + ", диагноз - " + getDiagnosis() + ";";
      } 
 	
 	public void arrayObjects() { 
@@ -64,8 +67,8 @@ public class Patient extends Human{
     
     public void sortDiagnosis(Patient [] samplePatient, String diagnosis){
     	System.out.println("Cписок пациентов с диагнозом " + diagnosis + ":");
-    	for(Patient patient: samplePatient) {
-    		if(patient.getDiagnosis().equals(diagnosis)){
+    	for (Patient patient: samplePatient) {
+    		if (patient.getDiagnosis().equals(diagnosis)){
     			System.out.print(patient.getSurname()+", ");
     		}
     	}
@@ -74,8 +77,8 @@ public class Patient extends Human{
     
     public void medicalCardNumberInterval(Patient [] samplePatient, int numberMin, int numberMax){
     	System.out.println("Список пациентов, отсортированных по номеру медицинской карты:");
-    	for(Patient patient : samplePatient) {
-    		if(patient.getMedicalCardNumber()>numberMin && patient.getMedicalCardNumber()<numberMax){
+    	for (Patient patient : samplePatient) {
+    		if ((patient.getMedicalCardNumber()>numberMin) && (patient.getMedicalCardNumber()<numberMax)) {
     			System.out.print(patient.getSurname()+", ");
     		}
     	}
