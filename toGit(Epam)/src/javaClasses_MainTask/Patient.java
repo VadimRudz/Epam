@@ -1,5 +1,6 @@
 package javaClasses_MainTask;
 
+import java.util.Arrays;
 
 public class Patient extends Human{
 
@@ -26,12 +27,14 @@ public class Patient extends Human{
 	}
 	
 	@Override
-	public String toString() { 
-        return "Привет, я пациент: Id - " + getId() + ", фамилия - " + getSurname() + ", имя - " + getName() 
-        + ", отчество - " + getPatronymic() + ", адресс- " + getAddress() + ", " 
-        		+ " телефон - " + getTelephone() + ", номер медицинской карты - " 
-        + getMedicalCardNumber() + ", диагноз - " + getDiagnosis() + ";";
-     } 
+	public String toString() {
+		return "Patient [telephone=" + telephone + ", medicalCardNumber=" + medicalCardNumber + ", diagnosis="
+				+ diagnosis + ", samplePatient=" + Arrays.toString(samplePatient) + ", getTelephone()=" + getTelephone()
+				+ ", getMedicalCardNumber()=" + getMedicalCardNumber() + ", getDiagnosis()=" + getDiagnosis()
+				+ ", getId()=" + getId() + ", getSurname()=" + getSurname() + ", getName()=" + getName()
+				+ ", getPatronymic()=" + getPatronymic() + ", getAddress()=" + getAddress() + ", getClass()="
+				+ getClass() + ", hashCode()=" + hashCode() + ", toString()=" + super.toString() + "]";
+	} 
 	
 	public void arrayObjects() { 
 		samplePatient [0]  = new Patient (15, "Паркер", 1547, "депрессия");
@@ -65,7 +68,7 @@ public class Patient extends Human{
         this.diagnosis = diagnosis;
     }
     
-    public void sortDiagnosis(Patient [] samplePatient, String diagnosis){
+    public void outputPatientsSortedByDiagnosis(Patient [] samplePatient, String diagnosis){
     	System.out.println("Cписок пациентов с диагнозом " + diagnosis + ":");
     	for (Patient patient: samplePatient) {
     		if (patient.getDiagnosis().equals(diagnosis)){
@@ -75,7 +78,7 @@ public class Patient extends Human{
     	System.out.println();
     }
     
-    public void medicalCardNumberInterval(Patient [] samplePatient, int numberMin, int numberMax){
+    public void outputPatientsSortedByMedicalCardNumberInterval(Patient [] samplePatient, int numberMin, int numberMax){
     	System.out.println("Список пациентов, отсортированных по номеру медицинской карты:");
     	for (Patient patient : samplePatient) {
     		if ((patient.getMedicalCardNumber()>numberMin) && (patient.getMedicalCardNumber()<numberMax)) {

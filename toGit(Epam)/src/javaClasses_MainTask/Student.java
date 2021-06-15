@@ -9,7 +9,7 @@ public class Student extends Human{
 	private GregorianCalendar dateOfBirth;
 	private int telephone; 
 	private String faculty;
-	int course, group;
+	private int course, group;
 	
 	Student [] sampleStudent = new Student [8];
 	HashSet<String> newHashSetFaculty = new HashSet<>();
@@ -98,7 +98,7 @@ public class Student extends Human{
 		sampleStudent[7] = new Student(8, "Ивулин", "Александр", "Дмитриевич", "Октябрьская, 1", new GregorianCalendar(1995, Calendar.DECEMBER, 1), 292366545, "Энергоснабжения", 1, 114125);
 	}
 	
-	public void listFacultyStudents (Student [] sampleStudent, String faculty) { //метод выводит всех студентов одного факультета
+	public void outputStudentsSortedByFaculty (Student [] sampleStudent, String faculty) { //метод выводит всех студентов одного факультета
 		System.out.println("Список студентов факультета " + faculty + ":");
 		for ( Student stdnt : sampleStudent) {
 			newHashSetFaculty.add(stdnt.getFaculty());
@@ -110,7 +110,7 @@ public class Student extends Human{
 		System.out.print("");
 	}
 	
-	public void listStudentsFacultyAndCourse (Student [] sampleStudent){  // метод выводит всех студентов, скомпанованных по факультету 
+	public void outputStudentsSortedByFacultyAndCourse (Student [] sampleStudent){  // метод выводит всех студентов, скомпанованных по факультету 
 		
 		for (String strng : newHashSetFaculty) {
 			System.out.println("Список студентов факультета " + strng + ": ");
@@ -123,7 +123,7 @@ public class Student extends Human{
 		}
 	}
 	
-	public void ListDateSort(Student [] sampleStudent, int year){ // метод выводит студентов, родившихся после 1990 года
+	public void outputStudentsSortedByDateOfBirth(Student [] sampleStudent, int year){ // метод выводит студентов, родившихся после 1990 года
 		for (Student stdnt : sampleStudent) { 
 			if (stdnt.getDateOfBirth().get(GregorianCalendar.YEAR) > year) {
 				System.out.println(stdnt.getSurname() + ", год рождения - " + stdnt.getDateOfBirth().get(GregorianCalendar.YEAR));
@@ -131,7 +131,7 @@ public class Student extends Human{
 		}
 	}
 	
-	public void ListGroupSort (Student [] sampleStudent) {// метод выводит всех студентов, скомпанованных по группам
+	public void outputStudentsSortedByGroup (Student [] sampleStudent) {// метод выводит всех студентов, скомпанованных по группам
 		for (int score : newHashSetGroup) {
 			System.out.println("Список студентов группы " + score + ": ");
 			

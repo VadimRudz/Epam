@@ -34,6 +34,12 @@ public class Product {
 	public Product(long id, String name, String brand, double price, double quantity) {
 		this(id, name, 0, brand, price, 0, quantity);
 	}
+	
+	@Override
+	public String toString() {
+		return "Product [id=" + id + ", name=" + name + ", upc=" + upc + ", brand=" + brand + ", price=" + price
+				+ ", shelflifeDays=" + shelflifeDays + ", quantity=" + quantity + "]";
+	}
 
 	public long getId() {
 		return id;
@@ -106,12 +112,6 @@ public class Product {
 		else{this.quantity = quantity;}
 	}
 	
-	@Override
-	public String toString() {
-		return "Product [id=" + id + ", name=" + name + ", upc=" + upc + ", brand=" + brand + ", price=" + price
-				+ ", shelflifeDays=" + shelflifeDays + ", quantity=" + quantity + "]";
-	}
-	
 	public void arrayProducts() { 
 		sampleProducts [0]  = new Product (124568, "Творог", 3.15, 14);
 		sampleProducts [1]  = new Product (239745, "Сметана", 3.60, 15);
@@ -130,7 +130,7 @@ public class Product {
 		sampleProducts [14]  = new Product (674159, "Рис пропаренный", 3.89, 120);
 	}
 	
-	public void sortByName(Product [] sampleProducts, String name) {
+	public void outputProductsSortedByName(Product [] sampleProducts, String name) {
 		System.out.println("Cписок товаров(id) для наименования товара " + name + ":");
 		for (Product product : sampleProducts){
 			if(product.name.equals(name)){
@@ -140,7 +140,7 @@ public class Product {
 		System.out.println();
 	}
 	
-	public void sortByNameAndPrice(Product [] sampleProducts, double price, String... name ) {
+	public void outputProductsSortedByNameAndPrice(Product [] sampleProducts, double price, String... name ) {
 		ArrayList <String> array = new ArrayList<String>();
 		for (String strings : name){
 			array.add(strings);
@@ -163,7 +163,7 @@ public class Product {
 		return false;
 	}
 	
-	public void sortByShelflifeDays(Product [] sampleProducts, int shelflifeDays) {
+	public void outputProductsSortedByShelflifeDays(Product [] sampleProducts, int shelflifeDays) {
 		System.out.println("Cписок товаров, срок хранения которых больше " + shelflifeDays + ", дней:");
 		for (Product product : sampleProducts) {
 			if(product.shelflifeDays>shelflifeDays){

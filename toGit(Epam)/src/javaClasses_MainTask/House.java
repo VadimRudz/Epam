@@ -35,6 +35,13 @@ public class House {
 		this(0, apartmentNumber, 0, floor, 0, street, null, 0);
 	}
 	
+	@Override
+	public String toString() {
+		return "House [id=" + id + ", apartmentNumber=" + apartmentNumber + ", area=" + area + ", floor=" + floor
+				+ ", numberRooms=" + numberRooms + ", street=" + street + ", buildingType=" + buildingType
+				+ ", lifetime=" + lifetime + "]";
+	}
+	
 	public int getId() {
 		return id;
 	}
@@ -143,13 +150,6 @@ public class House {
 
 	}
 
-	@Override
-	public String toString() {
-		return "House [id=" + id + ", apartmentNumber=" + apartmentNumber + ", area=" + area + ", floor=" + floor
-				+ ", numberRooms=" + numberRooms + ", street=" + street + ", buildingType=" + buildingType
-				+ ", lifetime=" + lifetime + "]";
-	}
-	
 	public void arrayHouses() {
 		sampleHouses [0] = new House(3, 56, 4, 2,"Свободная");
 		sampleHouses [1] = new House(97, 9, 3, 2, "Независимая");
@@ -158,7 +158,7 @@ public class House {
 		sampleHouses [4] = new House(27, 78, 7, 4, "Тапковая"); //(int apartmentNumber, double area, int floor, int numberRooms, String street)
 	}
 	
-	public void sortingByNumberApartments(House [] sampleHouses, int numberApartment){
+	public void outputHousesSortedByNumberApartments(House [] sampleHouses, int numberApartment){
 		System.out.println("Cписок квартир, с числом комнат - " + numberApartment + ":");
 		for (House house : sampleHouses) {
 			if(house.getNumberRooms()==numberApartment){
@@ -168,7 +168,7 @@ public class House {
 		System.out.println();
 	}
 	
-	public void sortingByNumberApartmentsAndNumberFloor(House [] sampleHouses, int numberApartment, int floorNumberMin, int floorNumberMax){
+	public void outputHousesSortedByNumberApartmentsAndNumberFloor(House [] sampleHouses, int numberApartment, int floorNumberMin, int floorNumberMax){
 		System.out.println("Cписок квартир, с числом комнат - " + numberApartment 
 				+ " и расплоложенных на этажах в заданном промежутке(" + floorNumberMin + "-" + floorNumberMax + ")");
 		for (House house : sampleHouses) {

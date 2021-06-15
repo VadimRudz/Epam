@@ -121,7 +121,7 @@ public class Car {
 		sampleCars [9]  = new Car (17, "Lada", "Niva", 2018, 12000);
 	}
 
-	public void sortByBrand(Car [] sampleCars, String brand) {
+	public void outputCarsSortedByBrand(Car [] sampleCars, String brand) {
 		System.out.println("—писок моделей(марка - " + brand + ") :");
 		for (Car car : sampleCars) {
 			if(car.getBrand().equals(brand)){
@@ -131,7 +131,7 @@ public class Car {
 		System.out.println();
 	}
 	
-	public void sortByModelAndYear(Car [] sampleCars, String model, int year) {
+	public void outputCarssortedByModelAndYear(Car [] sampleCars, String model, int year) {
 		System.out.println("Id автомобилей, у которых модель " + model + " и которые эксплуатируютс€ более " + year + " лет:");
 		for (Car car : sampleCars) {
 			if((car.getCarModel().equals(model)) && ((2021- car.yearIssue) <= year)) {
@@ -141,7 +141,7 @@ public class Car {
 		System.out.println();
 	}
 	
-	public void sortByYearAndPrice(Car [] sampleCars, int year, double price) {
+	public void outputCarsSortedByYearAndPrice(Car [] sampleCars, int year, double price) {
 		System.out.println("ћарка и модель автомобил€, у которого год выпуска " + year + " и стоимость больше " + price + "$:");
 		for (Car car : sampleCars) {
 			if((car.getYearIssue()==year) && (car.getPrice()>price)){

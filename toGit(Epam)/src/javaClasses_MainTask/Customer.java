@@ -1,6 +1,7 @@
 package javaClasses_MainTask;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 
 public class Customer extends Human{
@@ -10,7 +11,7 @@ public class Customer extends Human{
 	
 	Customer [] sampleCustomer = new Customer [5];
 	
-	ArrayList<String> array_1 = new ArrayList();
+	ArrayList<String> array_1 = new ArrayList<String>();
 	
 	public Customer(){	
 		super();	
@@ -29,12 +30,15 @@ public class Customer extends Human{
 		}
 	
 	@Override
-	public String toString() { 
-        return "Привет, я клиент банка: Id - " + getId() + ", фамилия - " + getSurname() + ", имя - " 
-	+ getName() + ", отчество - " + getPatronymic() + ", адресс- " + getAddress() + ", " 
-        		+ " номер кредитной карты - " + getCreditСardNumber() 
-        		+ ", номер банковского счета - " + getBankAccountNumber() + ";";
-     } 
+	public String toString() {
+		return "Customer [creditСardNumber=" + creditСardNumber + ", bankAccountNumber=" + bankAccountNumber
+				+ ", sampleCustomer=" + Arrays.toString(sampleCustomer) + ", array_1=" + array_1
+				+ ", getCreditСardNumber()=" + getCreditСardNumber() + ", getBankAccountNumber()="
+				+ getBankAccountNumber() + ", getId()=" + getId() + ", getSurname()=" + getSurname() + ", getName()="
+				+ getName() + ", getPatronymic()=" + getPatronymic() + ", getAddress()=" + getAddress()
+				+ ", getClass()=" + getClass() + ", hashCode()=" + hashCode() + ", toString()=" + super.toString()
+				+ "]";
+	} 
 	
 	public void arrayObjects() {
 		sampleCustomer [0]  = new Customer (1, "Дунин-Марцинкевич", "Викентий", "Иванович", "Соломовой, 15", 12456,  387987456);
@@ -65,7 +69,7 @@ public class Customer extends Human{
         this.bankAccountNumber = bankAccountNumber;
     }
     
-    public void alphabetOrder (Customer [] sampleCustomer) {
+    public void outputCustomersSortedByAlphabetOrder (Customer [] sampleCustomer) {
     	for (Customer customer: sampleCustomer) {
     		array_1.add(customer.getSurname());
     		Collections.sort(array_1);
@@ -74,7 +78,7 @@ public class Customer extends Human{
     		System.out.print(array_1.toString() + ", ");
     } 
     
-    public void creditCarInterval(Customer [] sampleCustomer, int intervalMin, int intervalMax) {
+    public void outputCustomersSortedByCreditCarInterval(Customer [] sampleCustomer, int intervalMin, int intervalMax) {
     	System.out.println();
     	System.out.println("Список покупателей, отсортированных по кредитной карте:");
     	for (Customer customer: sampleCustomer) {

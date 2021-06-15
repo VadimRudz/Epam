@@ -25,7 +25,7 @@ public class RandomNumbers {
 	}
 
 	
-	public void read () {
+	public void read() {
 		
 		System.out.println("Enter quantity");
 		

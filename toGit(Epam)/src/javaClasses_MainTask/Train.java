@@ -36,6 +36,13 @@ public class Train {
 		this(destination, trainNumber, dispatchTime, commonÑarriage, 60, 100, 40);
 	}
 
+	@Override
+	public String toString() {
+		return "Train [Destination=" + destination + ", trainNumber=" + trainNumber + ", dispatchTime=" + dispatchTime
+				+ ", numberÑarriageSeat=" + numberÑarriageSeat + ", numberÑompartmentSeat=" + numberÑompartmentSeat
+				+ ", numberReservedSeat=" + numberReservedSeat + ", numberLuxSeat=" + numberLuxSeat + "]";
+	}
+	
 	public String getDestination() {
 		return destination;
 	}
@@ -124,13 +131,6 @@ public class Train {
 	    	}
 	}
 	
-	@Override
-	public String toString() {
-		return "Train [Destination=" + destination + ", trainNumber=" + trainNumber + ", dispatchTime=" + dispatchTime
-				+ ", numberÑarriageSeat=" + numberÑarriageSeat + ", numberÑompartmentSeat=" + numberÑompartmentSeat
-				+ ", numberReservedSeat=" + numberReservedSeat + ", numberLuxSeat=" + numberLuxSeat + "]";
-	}
-	
 	public void arrayTrains() { 
 		sampleTrains [0]  = new Train ("Áåğåçà", 101, LocalTime.of(10,22), 35);
 		sampleTrains [1]  = new Train ("Áğåñò", 100, LocalTime.of(15,45), 18);
@@ -144,7 +144,7 @@ public class Train {
 		sampleTrains [9]  = new Train ("Áàğàíîâè÷è", 107, LocalTime.of(17,03), 24);
 	}
 	
-	public void trainDestination(Train [] sampleTrains, String destination) {
+	public void outputTrainsByDestination(Train [] sampleTrains, String destination) {
 		System.out.println("Íîìåğà ïîåçäîâ, êîòîğûå åäóò äî " + destination + ":");
 		for (Train train : sampleTrains) {
 			if (train.getDestination().equals(destination)){
@@ -154,7 +154,7 @@ public class Train {
 		System.out.println();
 	}
 	
-	public void trainDispatchTime(Train [] sampleTrains, LocalTime dispatchTime) {
+	public void outputTrainsByDispatchTime(Train [] sampleTrains, LocalTime dispatchTime) {
 		System.out.println("Íîìåğà ïîåçäîâ, êîòîğûå îòïğàâëÿşòñÿ ïîñëå " + dispatchTime.toString() +  ":");
 		for (Train train : sampleTrains) {
 			if((train.dispatchTime.getHour()==dispatchTime.getHour() && train.dispatchTime.getMinute() > dispatchTime.getMinute())
@@ -165,7 +165,7 @@ public class Train {
 		System.out.println();
 	}
 
-	public void seatsInCommonCarriage(Train [] sampleTrains, int seats) {
+	public void outputTrainsBySeatsInCommonCarriage(Train [] sampleTrains, int seats) {
 		System.out.println("Íîìåğà ïîåçäîâ, ó êîòîğûõ ÷èñëî ñâîáîäíûõ ìåñò â îáùåì âàãîíå >= " + seats +  ":");
 		for (Train train : sampleTrains) {
 			if(train.getNumberÑarriageSeat()>=seats){

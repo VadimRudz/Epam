@@ -28,7 +28,7 @@ public class SumComposition {
 		
 	}
 
-	public void read () {
+	public void read() {
 
 		String someText = "";
 		

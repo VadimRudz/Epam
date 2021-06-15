@@ -191,7 +191,7 @@ public void arrayPhones() {
 	sampleSubscriber [5]  = new Phone ("Вишневская", 0.1, 6452, 0);
 }
 
-public void sortByTimeCity(Phone [] sampleSubscriber, long timeMin){
+public void outputPhonesSortedByTimeCity(Phone [] sampleSubscriber, long timeMin){
 	System.out.println("Cписок абонентов, со временем внутригородских разговоров, превышающих время " 
 			+ timeMin + ",милисекунд:");
 	for (Phone phone : sampleSubscriber) {
@@ -203,7 +203,7 @@ public void sortByTimeCity(Phone [] sampleSubscriber, long timeMin){
 	System.out.println();
 }
 
-public void sortByTimeIntercity(Phone [] sampleSubscriber){
+public void outputPhonesSortedByTimeIntercity(Phone [] sampleSubscriber){
 	System.out.println("Cписок абонентов, которые пользовались междугородней связью: ");
 	for (Phone phone : sampleSubscriber) {
 		if (phone.getTalkTimeIntercity()>0){
@@ -213,7 +213,7 @@ public void sortByTimeIntercity(Phone [] sampleSubscriber){
 	System.out.println();
 }
 
-public void alphabet(ArrayList <String> arraySurname){
+public void outputPhonesSortedByAlphabetOrder(ArrayList <String> arraySurname){
 	Collections.sort(arraySurname);
 	System.out.println("Cписок абонентов в алфавитном порядке: ");
 	System.out.println(arraySurname.toString());

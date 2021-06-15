@@ -35,6 +35,13 @@ public class Book {
 		this(0, titleBook, author, publisher, yearPublishing, 0, 0, null);
 		}
 	
+	@Override
+	public String toString() {
+		return "Book [id=" + id + ", titleBook=" + titleBook + ", author=" + author + ", publisher=" + publisher
+				+ ", yearPublishing=" + yearPublishing + ", numberPages=" + numberPages + ", price=" + price
+				+ ", bindingType=" + bindingType + "]";
+	}
+	
 	public int getId() {
 		return id;
 	}
@@ -143,22 +150,15 @@ public class Book {
             else {this.bindingType = bindingType;}
 	}
 	
-	@Override
-	public String toString() {
-		return "Book [id=" + id + ", titleBook=" + titleBook + ", author=" + author + ", publisher=" + publisher
-				+ ", yearPublishing=" + yearPublishing + ", numberPages=" + numberPages + ", price=" + price
-				+ ", bindingType=" + bindingType + "]";
-	}
-	
-	public void arrayBooks() {
+	public void createArrayBooks() {
 		sampleBooks [0] = new Book("Ìåğòâàÿ âîäà. Îò ñîöèîëîãèè ê æèçíåğå÷åíèş", "Âíóòğåííèé Ïğåäèêòîğ ÑÑÑĞ", "Äîáğàÿ êíèãà", 2004);
 		sampleBooks [1] = new Book("Àííà Êàğåíèíà", "Ë.Í.Òîëñòîé","Ìàíí, Èâàíîâ è Ôåğáåğ", 1873);
 		sampleBooks [2] = new Book("Ìû", "Åâãåíèé Çàìÿòèí", "Äîáğàÿ êíèãà", 1974);
 		sampleBooks [3] = new Book("1984", "Äæîğäæ Îğóıëë", "Past simple", 1949);
 		sampleBooks [4] = new Book("Ñêîòíûé äâîğ", "Äæîğäæ Îğóıëë", "Past simple", 1945);
 	}	
-	//String titleBook, String author, String publisher, int yearPublishing
-	public void sortByAuthor(Book [] sampleBooks, String author) {
+	
+	public void outputBooksSortedByAuthor(Book [] sampleBooks, String author) {
 		System.out.println("Ñïèñîê êíèã àâòîğà(" + author + "):");
 		for (Book book : sampleBooks) {
 			if (book.getAuthor().equalsIgnoreCase(author)){
@@ -168,7 +168,7 @@ public class Book {
 		System.out.println();
 	}
 	
-	public void sortByPublisher(Book [] sampleBooks, String publisher) {
+	public void outputBooksSortedByPublisher(Book [] sampleBooks, String publisher) {
 		System.out.println("Ñïèñîê êíèã èçäàòåëüñòâà(" + publisher + "):");
 		for (Book book : sampleBooks) {
 			if(book.getPublisher().equalsIgnoreCase(publisher)) {
@@ -178,7 +178,7 @@ public class Book {
 		System.out.println();
 	}
 	
-	public void sortByYear(Book [] sampleBooks, int year) {
+	public void outputBooksSortedByYear(Book [] sampleBooks, int year) {
 		System.out.println("Ñïèñîê êíèã, èçäàííûõ ïîñëå " + year + " ãîäà:");
 		for (Book book : sampleBooks) { 
 			if(book.getYearPublishing()>=year) {
