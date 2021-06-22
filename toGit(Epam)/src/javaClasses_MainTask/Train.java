@@ -7,8 +7,8 @@ public class Train {
 	private String destination;
 	private int trainNumber;
 	private LocalTime dispatchTime;
-	private int numberÑarriageSeat;
-	private int numberÑompartmentSeat;
+	private int numberĞ¡arriageSeat;
+	private int numberĞ¡ompartmentSeat;
 	private int numberReservedSeat;
 	private int numberLuxSeat;
 	
@@ -17,13 +17,13 @@ public class Train {
 	public Train(){
 	}
 	
-	public Train(String destination, int trainNumber, LocalTime dispatchTime, int commonÑarriage,
-			int numberÑompartmentSeat, int numberReservedSeat, int numberLuxSeat) {
+	public Train(String destination, int trainNumber, LocalTime dispatchTime, int commonĞ¡arriage,
+			int numberĞ¡ompartmentSeat, int numberReservedSeat, int numberLuxSeat) {
 		this.destination = destination;
 		this.trainNumber = trainNumber;
 		this.dispatchTime = dispatchTime;
-		this.numberÑarriageSeat = commonÑarriage;
-		this.numberÑompartmentSeat = numberÑompartmentSeat;
+		this.numberĞ¡arriageSeat = commonĞ¡arriage;
+		this.numberĞ¡ompartmentSeat = numberĞ¡ompartmentSeat;
 		this.numberReservedSeat = numberReservedSeat;
 		this.numberLuxSeat = numberLuxSeat;
 	}
@@ -32,14 +32,14 @@ public class Train {
 		this(destination, trainNumber, dispatchTime, 80, 60, 100, 40);
 	}
 
-	public Train(String destination, int trainNumber, LocalTime dispatchTime, int commonÑarriage) {
-		this(destination, trainNumber, dispatchTime, commonÑarriage, 60, 100, 40);
+	public Train(String destination, int trainNumber, LocalTime dispatchTime, int commonĞ¡arriage) {
+		this(destination, trainNumber, dispatchTime, commonĞ¡arriage, 60, 100, 40);
 	}
 
 	@Override
 	public String toString() {
 		return "Train [Destination=" + destination + ", trainNumber=" + trainNumber + ", dispatchTime=" + dispatchTime
-				+ ", numberÑarriageSeat=" + numberÑarriageSeat + ", numberÑompartmentSeat=" + numberÑompartmentSeat
+				+ ", numberĞ¡arriageSeat=" + numberĞ¡arriageSeat + ", numberĞ¡ompartmentSeat=" + numberĞ¡ompartmentSeat
 				+ ", numberReservedSeat=" + numberReservedSeat + ", numberLuxSeat=" + numberLuxSeat + "]";
 	}
 	
@@ -51,7 +51,7 @@ public class Train {
 		if (destination != null && !destination.isEmpty()) {
 	        for (char c : destination.toCharArray()) {
 	            if (Character.isDigit(c)) {
-	            	System.out.println("Â íàçâàíèè ïóíêòà íàçíà÷åíèÿ íåäîïóñòèìûå ñèìâîëû (öèôğû)"); break; 
+	            	System.out.println("Ğ’ Ğ½Ğ°Ğ·Ğ²Ğ°Ğ½Ğ¸Ğ¸ Ğ¿ÑƒĞ½ĞºÑ‚Ğ° Ğ½Ğ°Ğ·Ğ½Ğ°Ñ‡ĞµĞ½Ğ¸Ñ Ğ½ĞµĞ´Ğ¾Ğ¿ÑƒÑÑ‚Ğ¸Ğ¼Ñ‹Ğµ ÑĞ¸Ğ¼Ğ²Ğ¾Ğ»Ñ‹ (Ñ†Ğ¸Ñ„Ñ€Ñ‹)"); break; 
 	            }
 	        }
 	    }
@@ -66,8 +66,8 @@ public class Train {
 		if (100 <= trainNumber && trainNumber<= 1000) {
 			this.trainNumber = trainNumber;}
 	    	else {
-	    		System.out.println("Âû ââåëè íåâåğíûé íîìåğ ïîåçäà. "
-	    				+ "Íîìåğ äîëæåí áûòü â ïğåäåëàõ [100 äî 1000]");
+	    		System.out.println("Ğ’Ñ‹ Ğ²Ğ²ĞµĞ»Ğ¸ Ğ½ĞµĞ²ĞµÑ€Ğ½Ñ‹Ğ¹ Ğ½Ğ¾Ğ¼ĞµÑ€ Ğ¿Ğ¾ĞµĞ·Ğ´Ğ°. "
+	    				+ "ĞĞ¾Ğ¼ĞµÑ€ Ğ´Ğ¾Ğ»Ğ¶ĞµĞ½ Ğ±Ñ‹Ñ‚ÑŒ Ğ² Ğ¿Ñ€ĞµĞ´ĞµĞ»Ğ°Ñ… [100 Ğ´Ğ¾ 1000]");
 	    	}
 	}
 	
@@ -79,29 +79,29 @@ public class Train {
 		LocalTime.of(hour, minute);
 	}
 	
-	public int getNumberÑarriageSeat() {
-		return numberÑarriageSeat;
+	public int getNumberĞ¡arriageSeat() {
+		return numberĞ¡arriageSeat;
 	}
 	
-	public void setNumberÑarriageSeat(int commonÑarriage) {
-		if (0 <= commonÑarriage && commonÑarriage<= 80) {
-			this.numberÑarriageSeat = commonÑarriage;}
+	public void setNumberĞ¡arriageSeat(int commonĞ¡arriage) {
+		if (0 <= commonĞ¡arriage && commonĞ¡arriage<= 80) {
+			this.numberĞ¡arriageSeat = commonĞ¡arriage;}
 	    	else {
-	    		System.out.println("Âû ââåëè íåâåğíîå êîëè÷åñòâî ìåñò â îáùåì âàãîíå. "
-	    				+ "Êîëè÷åñòâî äîëæíî áûòü â ïğåäåëàõ [0 äî 80]");
+	    		System.out.println("Ğ’Ñ‹ Ğ²Ğ²ĞµĞ»Ğ¸ Ğ½ĞµĞ²ĞµÑ€Ğ½Ğ¾Ğµ ĞºĞ¾Ğ»Ğ¸Ñ‡ĞµÑÑ‚Ğ²Ğ¾ Ğ¼ĞµÑÑ‚ Ğ² Ğ¾Ğ±Ñ‰ĞµĞ¼ Ğ²Ğ°Ğ³Ğ¾Ğ½Ğµ. "
+	    				+ "ĞšĞ¾Ğ»Ğ¸Ñ‡ĞµÑÑ‚Ğ²Ğ¾ Ğ´Ğ¾Ğ»Ğ¶Ğ½Ğ¾ Ğ±Ñ‹Ñ‚ÑŒ Ğ² Ğ¿Ñ€ĞµĞ´ĞµĞ»Ğ°Ñ… [0 Ğ´Ğ¾ 80]");
 	    	}	
 	}
 	
-	public int getNumberÑompartmentSeat() {
-		return numberÑompartmentSeat;
+	public int getNumberĞ¡ompartmentSeat() {
+		return numberĞ¡ompartmentSeat;
 	}
 	
-	public void setNumberÑompartmentSeat(int numberÑompartmentSeat) {
-		if (0 <= numberÑompartmentSeat && numberÑompartmentSeat<= 60) {
-			this.numberÑompartmentSeat = numberÑompartmentSeat;}
+	public void setNumberĞ¡ompartmentSeat(int numberĞ¡ompartmentSeat) {
+		if (0 <= numberĞ¡ompartmentSeat && numberĞ¡ompartmentSeat<= 60) {
+			this.numberĞ¡ompartmentSeat = numberĞ¡ompartmentSeat;}
 	    	else {
-	    		System.out.println("Âû ââåëè íåâåğíîå êîëè÷åñòâî ìåñò â âàãîíå-êóïå. "
-	    				+ "Êîëè÷åñòâî äîëæíî áûòü â ïğåäåëàõ [0 äî 60]");
+	    		System.out.println("Ğ’Ñ‹ Ğ²Ğ²ĞµĞ»Ğ¸ Ğ½ĞµĞ²ĞµÑ€Ğ½Ğ¾Ğµ ĞºĞ¾Ğ»Ğ¸Ñ‡ĞµÑÑ‚Ğ²Ğ¾ Ğ¼ĞµÑÑ‚ Ğ² Ğ²Ğ°Ğ³Ğ¾Ğ½Ğµ-ĞºÑƒĞ¿Ğµ. "
+	    				+ "ĞšĞ¾Ğ»Ğ¸Ñ‡ĞµÑÑ‚Ğ²Ğ¾ Ğ´Ğ¾Ğ»Ğ¶Ğ½Ğ¾ Ğ±Ñ‹Ñ‚ÑŒ Ğ² Ğ¿Ñ€ĞµĞ´ĞµĞ»Ğ°Ñ… [0 Ğ´Ğ¾ 60]");
 	    	}
 	}
 	
@@ -113,8 +113,8 @@ public class Train {
 		if (0 <= numberReservedSeat && numberReservedSeat<= 100) {
 			this.numberReservedSeat = numberReservedSeat;}
 	    	else {
-	    		System.out.println("Âû ââåëè íåâåğíîå êîëè÷åñòâî ìåñò â âàãîíå-ïëàöêàğòå. "
-	    				+ "Êîëè÷åñòâî äîëæíî áûòü â ïğåäåëàõ [0 äî 100]");
+	    		System.out.println("Ğ’Ñ‹ Ğ²Ğ²ĞµĞ»Ğ¸ Ğ½ĞµĞ²ĞµÑ€Ğ½Ğ¾Ğµ ĞºĞ¾Ğ»Ğ¸Ñ‡ĞµÑÑ‚Ğ²Ğ¾ Ğ¼ĞµÑÑ‚ Ğ² Ğ²Ğ°Ğ³Ğ¾Ğ½Ğµ-Ğ¿Ğ»Ğ°Ñ†ĞºĞ°Ñ€Ñ‚Ğµ. "
+	    				+ "ĞšĞ¾Ğ»Ğ¸Ñ‡ĞµÑÑ‚Ğ²Ğ¾ Ğ´Ğ¾Ğ»Ğ¶Ğ½Ğ¾ Ğ±Ñ‹Ñ‚ÑŒ Ğ² Ğ¿Ñ€ĞµĞ´ĞµĞ»Ğ°Ñ… [0 Ğ´Ğ¾ 100]");
 	    	}
 	}
 	
@@ -126,50 +126,50 @@ public class Train {
 		if (0 <= numberLuxSeat && numberLuxSeat<= 40) {
 			this.numberReservedSeat = numberLuxSeat;}
 	    	else {
-	    		System.out.println("Âû ââåëè íåâåğíîå êîëè÷åñòâî ìåñò â âàãîíå êëàññà ëşêñ. "
-	    				+ "Êîëè÷åñòâî äîëæíî áûòü â ïğåäåëàõ [0 äî 40]");
+	    		System.out.println("Ğ’Ñ‹ Ğ²Ğ²ĞµĞ»Ğ¸ Ğ½ĞµĞ²ĞµÑ€Ğ½Ğ¾Ğµ ĞºĞ¾Ğ»Ğ¸Ñ‡ĞµÑÑ‚Ğ²Ğ¾ Ğ¼ĞµÑÑ‚ Ğ² Ğ²Ğ°Ğ³Ğ¾Ğ½Ğµ ĞºĞ»Ğ°ÑÑĞ° Ğ»ÑĞºÑ. "
+	    				+ "ĞšĞ¾Ğ»Ğ¸Ñ‡ĞµÑÑ‚Ğ²Ğ¾ Ğ´Ğ¾Ğ»Ğ¶Ğ½Ğ¾ Ğ±Ñ‹Ñ‚ÑŒ Ğ² Ğ¿Ñ€ĞµĞ´ĞµĞ»Ğ°Ñ… [0 Ğ´Ğ¾ 40]");
 	    	}
 	}
 	
 	public void arrayTrains() { 
-		sampleTrains [0]  = new Train ("Áåğåçà", 101, LocalTime.of(10,22), 35);
-		sampleTrains [1]  = new Train ("Áğåñò", 100, LocalTime.of(15,45), 18);
-		sampleTrains [2]  = new Train ("Ïèíñê", 102, LocalTime.of(9,20), 46);
-		sampleTrains [3]  = new Train ("Èâàöåâè÷è", 105, LocalTime.of(22,22), 20);
-		sampleTrains [4]  = new Train ("Êîáğèí", 108, LocalTime.of(23,45), 59);
-		sampleTrains [5]  = new Train ("Ïğóæàíû", 103, LocalTime.of(1,05), 16);
-		sampleTrains [6]  = new Train ("Æàáèíêà", 104, LocalTime.of(3,15), 13);
-		sampleTrains [7]  = new Train ("Ğóæàíû", 106, LocalTime.of(5,45), 26);
-		sampleTrains [8]  = new Train ("Ãàíöåâè÷è", 109, LocalTime.of(7,18), 11);
-		sampleTrains [9]  = new Train ("Áàğàíîâè÷è", 107, LocalTime.of(17,03), 24);
+		sampleTrains [0]  = new Train ("Ğ‘ĞµÑ€ĞµĞ·Ğ°", 101, LocalTime.of(10,22), 35);
+		sampleTrains [1]  = new Train ("Ğ‘Ñ€ĞµÑÑ‚", 100, LocalTime.of(15,45), 18);
+		sampleTrains [2]  = new Train ("ĞŸĞ¸Ğ½ÑĞº", 102, LocalTime.of(9,20), 46);
+		sampleTrains [3]  = new Train ("Ğ˜Ğ²Ğ°Ñ†ĞµĞ²Ğ¸Ñ‡Ğ¸", 105, LocalTime.of(22,22), 20);
+		sampleTrains [4]  = new Train ("ĞšĞ¾Ğ±Ñ€Ğ¸Ğ½", 108, LocalTime.of(23,45), 59);
+		sampleTrains [5]  = new Train ("ĞŸÑ€ÑƒĞ¶Ğ°Ğ½Ñ‹", 103, LocalTime.of(1,05), 16);
+		sampleTrains [6]  = new Train ("Ğ–Ğ°Ğ±Ğ¸Ğ½ĞºĞ°", 104, LocalTime.of(3,15), 13);
+		sampleTrains [7]  = new Train ("Ğ ÑƒĞ¶Ğ°Ğ½Ñ‹", 106, LocalTime.of(5,45), 26);
+		sampleTrains [8]  = new Train ("Ğ“Ğ°Ğ½Ñ†ĞµĞ²Ğ¸Ñ‡Ğ¸", 109, LocalTime.of(7,18), 11);
+		sampleTrains [9]  = new Train ("Ğ‘Ğ°Ñ€Ğ°Ğ½Ğ¾Ğ²Ğ¸Ñ‡Ğ¸", 107, LocalTime.of(17,03), 24);
 	}
 	
 	public void outputTrainsByDestination(Train [] sampleTrains, String destination) {
-		System.out.println("Íîìåğà ïîåçäîâ, êîòîğûå åäóò äî " + destination + ":");
+		System.out.println("ĞĞ¾Ğ¼ĞµÑ€Ğ° Ğ¿Ğ¾ĞµĞ·Ğ´Ğ¾Ğ², ĞºĞ¾Ñ‚Ğ¾Ñ€Ñ‹Ğµ ĞµĞ´ÑƒÑ‚ Ğ´Ğ¾ " + destination + ":");
 		for (Train train : sampleTrains) {
 			if (train.getDestination().equals(destination)){
-				System.out.print(train.getTrainNumber() + "(ïóíêò íàçíà÷åíèÿ - " + train.getDestination() + ")" + ", ");
+				System.out.print(train.getTrainNumber() + "(Ğ¿ÑƒĞ½ĞºÑ‚ Ğ½Ğ°Ğ·Ğ½Ğ°Ñ‡ĞµĞ½Ğ¸Ñ - " + train.getDestination() + ")" + ", ");
 			}
 		}
 		System.out.println();
 	}
 	
 	public void outputTrainsByDispatchTime(Train [] sampleTrains, LocalTime dispatchTime) {
-		System.out.println("Íîìåğà ïîåçäîâ, êîòîğûå îòïğàâëÿşòñÿ ïîñëå " + dispatchTime.toString() +  ":");
+		System.out.println("ĞĞ¾Ğ¼ĞµÑ€Ğ° Ğ¿Ğ¾ĞµĞ·Ğ´Ğ¾Ğ², ĞºĞ¾Ñ‚Ğ¾Ñ€Ñ‹Ğµ Ğ¾Ñ‚Ğ¿Ñ€Ğ°Ğ²Ğ»ÑÑÑ‚ÑÑ Ğ¿Ğ¾ÑĞ»Ğµ " + dispatchTime.toString() +  ":");
 		for (Train train : sampleTrains) {
 			if((train.dispatchTime.getHour()==dispatchTime.getHour() && train.dispatchTime.getMinute() > dispatchTime.getMinute())
 					|| train.dispatchTime.getHour()>dispatchTime.getHour()){
-				System.out.print(train.getTrainNumber() + "(âğåìÿ îòïğàâëåíèÿ-" + train.dispatchTime.toString() + "), ");
+				System.out.print(train.getTrainNumber() + "(Ğ²Ñ€ĞµĞ¼Ñ Ğ¾Ñ‚Ğ¿Ñ€Ğ°Ğ²Ğ»ĞµĞ½Ğ¸Ñ-" + train.dispatchTime.toString() + "), ");
 			}
 		}
 		System.out.println();
 	}
 
 	public void outputTrainsBySeatsInCommonCarriage(Train [] sampleTrains, int seats) {
-		System.out.println("Íîìåğà ïîåçäîâ, ó êîòîğûõ ÷èñëî ñâîáîäíûõ ìåñò â îáùåì âàãîíå >= " + seats +  ":");
+		System.out.println("ĞĞ¾Ğ¼ĞµÑ€Ğ° Ğ¿Ğ¾ĞµĞ·Ğ´Ğ¾Ğ², Ñƒ ĞºĞ¾Ñ‚Ğ¾Ñ€Ñ‹Ñ… Ñ‡Ğ¸ÑĞ»Ğ¾ ÑĞ²Ğ¾Ğ±Ğ¾Ğ´Ğ½Ñ‹Ñ… Ğ¼ĞµÑÑ‚ Ğ² Ğ¾Ğ±Ñ‰ĞµĞ¼ Ğ²Ğ°Ğ³Ğ¾Ğ½Ğµ >= " + seats +  ":");
 		for (Train train : sampleTrains) {
-			if(train.getNumberÑarriageSeat()>=seats){
-				System.out.print(train.getTrainNumber() + "(÷èñëî ìåñò â îáùåì âàãîíå - " + train.getNumberÑarriageSeat() + "), ");
+			if(train.getNumberĞ¡arriageSeat()>=seats){
+				System.out.print(train.getTrainNumber() + "(Ñ‡Ğ¸ÑĞ»Ğ¾ Ğ¼ĞµÑÑ‚ Ğ² Ğ¾Ğ±Ñ‰ĞµĞ¼ Ğ²Ğ°Ğ³Ğ¾Ğ½Ğµ - " + train.getNumberĞ¡arriageSeat() + "), ");
 			}
 		}
 		System.out.println();
