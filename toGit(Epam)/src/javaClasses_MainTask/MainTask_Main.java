@@ -8,7 +8,7 @@ public class MainTask_Main {
 		
 		Student stdnt = new Student();
 		stdnt.arrayObjects();
-		stdnt.outputStudentsSortedByFaculty(stdnt.sampleStudent, "Транспортных коммуникаций");
+		stdnt.outputStudentsSortedByFaculty(stdnt.sampleStudent, "РўСЂР°РЅСЃРїРѕСЂС‚РЅС‹С… РєРѕРјРјСѓРЅРёРєР°С†РёР№");
 		System.out.println("-----");
 		stdnt.outputStudentsSortedByFacultyAndCourse(stdnt.sampleStudent);
 		System.out.println("-----");
@@ -25,7 +25,7 @@ public class MainTask_Main {
 		
 		Patient ptnt = new Patient();
 		ptnt.arrayObjects();
-		ptnt.outputPatientsSortedByDiagnosis(ptnt.samplePatient, "стресс");
+		ptnt.outputPatientsSortedByDiagnosis(ptnt.samplePatient, "СЃС‚СЂРµСЃСЃ");
 		System.out.println("-----");
 		ptnt.outputPatientsSortedByMedicalCardNumberInterval(ptnt.samplePatient,1500,1650);
 		System.out.println("---------------------------------------------------------------------------------------------");
@@ -41,7 +41,7 @@ public class MainTask_Main {
 		
 		Book book = new Book();
 		book.createArrayBooks();
-		book.outputBooksSortedByAuthor(book.sampleBooks,"Джордж Оруэлл");
+		book.outputBooksSortedByAuthor(book.sampleBooks,"Р”Р¶РѕСЂРґР¶ РћСЂСѓСЌР»Р»");
 		System.out.println("-----");
 		book.outputBooksSortedByPublisher(book.sampleBooks,"Past simple");
 		System.out.println("-----");
@@ -75,16 +75,16 @@ public class MainTask_Main {
 		
 		Product product = new Product();
 		product.arrayProducts();
-		product.outputProductsSortedByName(product.sampleProducts, "Виноградный сок");
+		product.outputProductsSortedByName(product.sampleProducts, "Р’РёРЅРѕРіСЂР°РґРЅС‹Р№ СЃРѕРє");
 		System.out.println("-----");
-		product.outputProductsSortedByNameAndPrice(product.sampleProducts, 15, "Печенье с арахисом", "Апельсин", "Макароны звездочка");
+		product.outputProductsSortedByNameAndPrice(product.sampleProducts, 15, "РџРµС‡РµРЅСЊРµ СЃ Р°СЂР°С…РёСЃРѕРј", "РђРїРµР»СЊСЃРёРЅ", "РњР°РєР°СЂРѕРЅС‹ Р·РІРµР·РґРѕС‡РєР°");
 		System.out.println("-----");
 		product.outputProductsSortedByShelflifeDays(product.sampleProducts, 20);
 		System.out.println("---------------------------------------------------------------------------------------------");
 		
 		Train train = new Train();
 		train.arrayTrains();
-		train.outputTrainsByDestination(train.sampleTrains, "Береза");
+		train.outputTrainsByDestination(train.sampleTrains, "Р‘РµСЂРµР·Р°");
 		System.out.println("-----");
 		train.outputTrainsByDispatchTime(train.sampleTrains, LocalTime.of(10, 0)); 
 		System.out.println("-----");
