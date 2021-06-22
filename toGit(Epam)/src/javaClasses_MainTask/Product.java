@@ -47,7 +47,7 @@ public class Product {
 
 	public void setId(long id) {
 		if(id<0){
-			System.out.println("id íå ìîæåò áûòü ìåíüøå 0");
+			System.out.println("id Ð½Ðµ Ð¼Ð¾Ð¶ÐµÑ‚ Ð±Ñ‹Ñ‚ÑŒ Ð¼ÐµÐ½ÑŒÑˆÐµ 0");
 		}
 		else {this.id = id;}
 	}
@@ -66,7 +66,7 @@ public class Product {
 
 	public void setUPC(int upc) {
 		if(upc<0){
-			System.out.println("upc íå ìîæåò áûòü ìåíüøå 0");
+			System.out.println("upc Ð½Ðµ Ð¼Ð¾Ð¶ÐµÑ‚ Ð±Ñ‹Ñ‚ÑŒ Ð¼ÐµÐ½ÑŒÑˆÐµ 0");
 		}
 		this.upc = upc;
 	}
@@ -85,7 +85,7 @@ public class Product {
 
 	public void setPrice(double price) {
 		if(price<0){
-			System.out.println("öåíà íå ìîæåò áûòü ìåíüøå 0");
+			System.out.println("Ñ†ÐµÐ½Ð° Ð½Ðµ Ð¼Ð¾Ð¶ÐµÑ‚ Ð±Ñ‹Ñ‚ÑŒ Ð¼ÐµÐ½ÑŒÑˆÐµ 0");
 		}
 		else{this.price = price;}
 	}
@@ -96,7 +96,7 @@ public class Product {
 
 	public void setShelflifeDays(int shelflifeDays) {
 		if(shelflifeDays<0){
-			System.out.println("ñðîê ãîäíîñòè íå ìîæåò áûòü ìåíüøå 0");
+			System.out.println("ÑÑ€Ð¾Ðº Ð³Ð¾Ð´Ð½Ð¾ÑÑ‚Ð¸ Ð½Ðµ Ð¼Ð¾Ð¶ÐµÑ‚ Ð±Ñ‹Ñ‚ÑŒ Ð¼ÐµÐ½ÑŒÑˆÐµ 0");
 		}
 		else{this.shelflifeDays = shelflifeDays;}
 	}
@@ -107,31 +107,31 @@ public class Product {
 
 	public void setQuantity(double quantity) {
 		if(quantity<0){
-			System.out.println("êîëè÷åñòâî íå ìîæåò áûòü ìåíüøå 0");
+			System.out.println("ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ Ð½Ðµ Ð¼Ð¾Ð¶ÐµÑ‚ Ð±Ñ‹Ñ‚ÑŒ Ð¼ÐµÐ½ÑŒÑˆÐµ 0");
 		}
 		else{this.quantity = quantity;}
 	}
 	
 	public void arrayProducts() { 
-		sampleProducts [0]  = new Product (124568, "Òâîðîã", 3.15, 14);
-		sampleProducts [1]  = new Product (239745, "Ñìåòàíà", 3.60, 15);
-		sampleProducts [2]  = new Product (987463, "Àïåëüñèí", 2.78, 21);
-		sampleProducts [3]  = new Product (456871, "Áàíàí", 4.18, 15);
-		sampleProducts [4]  = new Product (974662, "Îãóðåö", 5.17, 16);
-		sampleProducts [5]  = new Product (971455, "Ïîìèäîð", 6.89, 16);
-		sampleProducts [6]  = new Product (748698, "ßáëî÷íûé ñîê", 4.32, 60);
-		sampleProducts [7]  = new Product (112365, "Âèíîãðàäíûé ñîê", 4.57, 60);
-		sampleProducts [8]  = new Product (336547, "Ïå÷åíüå ñ àðàõèñîì", 8.45, 60);
-		sampleProducts [9]  = new Product (447568, "Ïå÷åíüå ñ ìàíãî", 7.99, 65);
-		sampleProducts [10]  = new Product (699874, "Ìîðîæåííîå 50 êîïååê", 1.12, 60);
-		sampleProducts [11]  = new Product (634789, "Ìîðîæåííîå Ìàãíàò", 2.87, 60);
-		sampleProducts [12]  = new Product (974654, "Ìîðîæåííîå Àë¸íêà", 1.57, 60);
-		sampleProducts [13]  = new Product (667455, "Ìàêàðîíû çâåçäî÷êà", 4.15, 120);
-		sampleProducts [14]  = new Product (674159, "Ðèñ ïðîïàðåííûé", 3.89, 120);
+		sampleProducts [0]  = new Product (124568, "Ð¢Ð²Ð¾Ñ€Ð¾Ð³", 3.15, 14);
+		sampleProducts [1]  = new Product (239745, "Ð¡Ð¼ÐµÑ‚Ð°Ð½Ð°", 3.60, 15);
+		sampleProducts [2]  = new Product (987463, "ÐÐ¿ÐµÐ»ÑŒÑÐ¸Ð½", 2.78, 21);
+		sampleProducts [3]  = new Product (456871, "Ð‘Ð°Ð½Ð°Ð½", 4.18, 15);
+		sampleProducts [4]  = new Product (974662, "ÐžÐ³ÑƒÑ€ÐµÑ†", 5.17, 16);
+		sampleProducts [5]  = new Product (971455, "ÐŸÐ¾Ð¼Ð¸Ð´Ð¾Ñ€", 6.89, 16);
+		sampleProducts [6]  = new Product (748698, "Ð¯Ð±Ð»Ð¾Ñ‡Ð½Ñ‹Ð¹ ÑÐ¾Ðº", 4.32, 60);
+		sampleProducts [7]  = new Product (112365, "Ð’Ð¸Ð½Ð¾Ð³Ñ€Ð°Ð´Ð½Ñ‹Ð¹ ÑÐ¾Ðº", 4.57, 60);
+		sampleProducts [8]  = new Product (336547, "ÐŸÐµÑ‡ÐµÐ½ÑŒÐµ Ñ Ð°Ñ€Ð°Ñ…Ð¸ÑÐ¾Ð¼", 8.45, 60);
+		sampleProducts [9]  = new Product (447568, "ÐŸÐµÑ‡ÐµÐ½ÑŒÐµ Ñ Ð¼Ð°Ð½Ð³Ð¾", 7.99, 65);
+		sampleProducts [10]  = new Product (699874, "ÐœÐ¾Ñ€Ð¾Ð¶ÐµÐ½Ð½Ð¾Ðµ 50 ÐºÐ¾Ð¿ÐµÐµÐº", 1.12, 60);
+		sampleProducts [11]  = new Product (634789, "ÐœÐ¾Ñ€Ð¾Ð¶ÐµÐ½Ð½Ð¾Ðµ ÐœÐ°Ð³Ð½Ð°Ñ‚", 2.87, 60);
+		sampleProducts [12]  = new Product (974654, "ÐœÐ¾Ñ€Ð¾Ð¶ÐµÐ½Ð½Ð¾Ðµ ÐÐ»Ñ‘Ð½ÐºÐ°", 1.57, 60);
+		sampleProducts [13]  = new Product (667455, "ÐœÐ°ÐºÐ°Ñ€Ð¾Ð½Ñ‹ Ð·Ð²ÐµÐ·Ð´Ð¾Ñ‡ÐºÐ°", 4.15, 120);
+		sampleProducts [14]  = new Product (674159, "Ð Ð¸Ñ Ð¿Ñ€Ð¾Ð¿Ð°Ñ€ÐµÐ½Ð½Ñ‹Ð¹", 3.89, 120);
 	}
 	
 	public void outputProductsSortedByName(Product [] sampleProducts, String name) {
-		System.out.println("Cïèñîê òîâàðîâ(id) äëÿ íàèìåíîâàíèÿ òîâàðà " + name + ":");
+		System.out.println("CÐ¿Ð¸ÑÐ¾Ðº Ñ‚Ð¾Ð²Ð°Ñ€Ð¾Ð²(id) Ð´Ð»Ñ Ð½Ð°Ð¸Ð¼ÐµÐ½Ð¾Ð²Ð°Ð½Ð¸Ñ Ñ‚Ð¾Ð²Ð°Ñ€Ð° " + name + ":");
 		for (Product product : sampleProducts){
 			if(product.name.equals(name)){
 				System.out.print(product.getId() + ", ");
@@ -145,7 +145,7 @@ public class Product {
 		for (String strings : name){
 			array.add(strings);
 		}
-		System.out.println("Cïèñîê òîâàðîâ(id) äëÿ òîâàðîâ " + array.toString()  + " è öåíîé ìåíåå " + price + ":" );
+		System.out.println("CÐ¿Ð¸ÑÐ¾Ðº Ñ‚Ð¾Ð²Ð°Ñ€Ð¾Ð²(id) Ð´Ð»Ñ Ñ‚Ð¾Ð²Ð°Ñ€Ð¾Ð² " + array.toString()  + " Ð¸ Ñ†ÐµÐ½Ð¾Ð¹ Ð¼ÐµÐ½ÐµÐµ " + price + ":" );
 		for(Product product : sampleProducts) {
 			if((checkNameEquals(product.name, name)) && (product.price<price)){
 				System.out.print(product.getId() + ", ");
@@ -164,7 +164,7 @@ public class Product {
 	}
 	
 	public void outputProductsSortedByShelflifeDays(Product [] sampleProducts, int shelflifeDays) {
-		System.out.println("Cïèñîê òîâàðîâ, ñðîê õðàíåíèÿ êîòîðûõ áîëüøå " + shelflifeDays + ", äíåé:");
+		System.out.println("CÐ¿Ð¸ÑÐ¾Ðº Ñ‚Ð¾Ð²Ð°Ñ€Ð¾Ð², ÑÑ€Ð¾Ðº Ñ…Ñ€Ð°Ð½ÐµÐ½Ð¸Ñ ÐºÐ¾Ñ‚Ð¾Ñ€Ñ‹Ñ… Ð±Ð¾Ð»ÑŒÑˆÐµ " + shelflifeDays + ", Ð´Ð½ÐµÐ¹:");
 		for (Product product : sampleProducts) {
 			if(product.shelflifeDays>shelflifeDays){
 				System.out.println(product.name + ", ");
