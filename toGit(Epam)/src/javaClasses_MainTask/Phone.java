@@ -7,7 +7,7 @@ public class Phone {
 private int id;
 private String surname, name, patronymic;
 private String address;
-private int creditÑardNumber;
+private int creditĞ¡ardNumber;
 private double debit, credit;
 private long talkTimeCity;
 private long talkTimeIntercity;
@@ -19,14 +19,14 @@ public Phone(){
 }
 
 public Phone(int id, String surname, String name, String patronymic,
-		String address, int creditÑardNumber, double debit,
+		String address, int creditĞ¡ardNumber, double debit,
 		double credit, long talkTimeCity, long talkTimeIntercity) {
 	this.id = id;
 	this.surname = surname;
 	this.name = name;
 	this.patronymic = patronymic;
 	this.address = address;
-	this.creditÑardNumber = creditÑardNumber;
+	this.creditĞ¡ardNumber = creditĞ¡ardNumber;
 	this.debit = debit;
 	this.credit = credit;
 	this.talkTimeCity = talkTimeCity;
@@ -44,7 +44,7 @@ public Phone(String surname, double credit, long talkTimeCity, long talkTimeInte
 @Override
 public String toString() {
 	return "Phone [id=" + id + ", surname=" + surname + ", name=" + name + ", patronymic=" + patronymic + ", address="
-			+ address + ", creditÑardNumber=" + creditÑardNumber + ", debit=" + debit + ", credit=" + credit
+			+ address + ", creditĞ¡ardNumber=" + creditĞ¡ardNumber + ", debit=" + debit + ", credit=" + credit
 			+ ", talkTime=" + talkTimeCity + "]";
 }
 
@@ -56,7 +56,7 @@ public void setId(int id) {
 	if ((0 <= id) && (id<= 1_000_000)) {
     	this.id = id;}
     	else {
-    		System.out.println("Âû ââåëè íåâåğíûé id. id äîëæåí áûòü â ïğåäåëàõ [0 äî 1_000_000]");
+    		System.out.println("Ğ’Ñ‹ Ğ²Ğ²ĞµĞ»Ğ¸ Ğ½ĞµĞ²ĞµÑ€Ğ½Ñ‹Ğ¹ id. id Ğ´Ğ¾Ğ»Ğ¶ĞµĞ½ Ğ±Ñ‹Ñ‚ÑŒ Ğ² Ğ¿Ñ€ĞµĞ´ĞµĞ»Ğ°Ñ… [0 Ğ´Ğ¾ 1_000_000]");
     	}
 }
 
@@ -68,7 +68,7 @@ public void setSurname(String surname) {
 	if ((surname != null) && (!surname.isEmpty())) {
         for (char c : surname.toCharArray()) {
             if (Character.isDigit(c)) {
-            	System.out.println("Â âàøåé ôàìèëèè íåäîïóñòèìûå ñèìâîëû (öèôğû)"); break; 
+            	System.out.println("Ğ’ Ğ²Ğ°ÑˆĞµĞ¹ Ñ„Ğ°Ğ¼Ğ¸Ğ»Ğ¸Ğ¸ Ğ½ĞµĞ´Ğ¾Ğ¿ÑƒÑÑ‚Ğ¸Ğ¼Ñ‹Ğµ ÑĞ¸Ğ¼Ğ²Ğ¾Ğ»Ñ‹ (Ñ†Ğ¸Ñ„Ñ€Ñ‹)"); break; 
             }
         }
     }
@@ -83,7 +83,7 @@ public void setName(String name) {
 	if ((name != null) && (!name.isEmpty())) {
         for (char c : name.toCharArray()) {
             if (Character.isDigit(c)) {
-            	System.out.println("Â âàøåì èìåíè íåäîïóñòèìûå ñèìâîëû (öèôğû)"); break; 
+            	System.out.println("Ğ’ Ğ²Ğ°ÑˆĞµĞ¼ Ğ¸Ğ¼ĞµĞ½Ğ¸ Ğ½ĞµĞ´Ğ¾Ğ¿ÑƒÑÑ‚Ğ¸Ğ¼Ñ‹Ğµ ÑĞ¸Ğ¼Ğ²Ğ¾Ğ»Ñ‹ (Ñ†Ğ¸Ñ„Ñ€Ñ‹)"); break; 
             }
         }
     }
@@ -98,7 +98,7 @@ public void setPatronymic(String patronymic) {
 	if ((patronymic != null) && (!patronymic.isEmpty())) {
         for (char c : patronymic.toCharArray()) {
             if (Character.isDigit(c)) {
-            	System.out.println("Â âàøåì îò÷åñòâå íåäîïóñòèìûå ñèìâîëû (öèôğû)"); break; 
+            	System.out.println("Ğ’ Ğ²Ğ°ÑˆĞµĞ¼ Ğ¾Ñ‚Ñ‡ĞµÑÑ‚Ğ²Ğµ Ğ½ĞµĞ´Ğ¾Ğ¿ÑƒÑÑ‚Ğ¸Ğ¼Ñ‹Ğµ ÑĞ¸Ğ¼Ğ²Ğ¾Ğ»Ñ‹ (Ñ†Ğ¸Ñ„Ñ€Ñ‹)"); break; 
             }
         }
     }
@@ -113,23 +113,23 @@ public void setAddress(String address) {
 	if ((patronymic != null) && (!patronymic.isEmpty())) {
         for (char c : patronymic.toCharArray()) {
             if (Character.isDigit(c)) {
-            	System.out.println("Â âàøåì îò÷åñòâå íåäîïóñòèìûå ñèìâîëû (öèôğû)"); break; 
+            	System.out.println("Ğ’ Ğ²Ğ°ÑˆĞµĞ¼ Ğ¾Ñ‚Ñ‡ĞµÑÑ‚Ğ²Ğµ Ğ½ĞµĞ´Ğ¾Ğ¿ÑƒÑÑ‚Ğ¸Ğ¼Ñ‹Ğµ ÑĞ¸Ğ¼Ğ²Ğ¾Ğ»Ñ‹ (Ñ†Ğ¸Ñ„Ñ€Ñ‹)"); break; 
             }
         }
     }
 	else {this.address = address;}
 }
 
-public int getCreditÑardNumber() {
-	return creditÑardNumber;
+public int getCreditĞ¡ardNumber() {
+	return creditĞ¡ardNumber;
 }
 
-public void setCreditÑardNumber(int creditÑardNumber) {
-	if ((0<=creditÑardNumber) && (creditÑardNumber<=1_000_000_000)){
-	this.creditÑardNumber = creditÑardNumber;}
+public void setCreditĞ¡ardNumber(int creditĞ¡ardNumber) {
+	if ((0<=creditĞ¡ardNumber) && (creditĞ¡ardNumber<=1_000_000_000)){
+	this.creditĞ¡ardNumber = creditĞ¡ardNumber;}
 	else {
-		System.out.println("Âû ââåëè íåâåğíûé íîìåğ êğåäèòíîé êàğòû. "
-				+ "Íîìåğ äîëæåí áûòü â ïğåäåëàõ [0 äî 1_000_000_000]");
+		System.out.println("Ğ’Ñ‹ Ğ²Ğ²ĞµĞ»Ğ¸ Ğ½ĞµĞ²ĞµÑ€Ğ½Ñ‹Ğ¹ Ğ½Ğ¾Ğ¼ĞµÑ€ ĞºÑ€ĞµĞ´Ğ¸Ñ‚Ğ½Ğ¾Ğ¹ ĞºĞ°Ñ€Ñ‚Ñ‹. "
+				+ "ĞĞ¾Ğ¼ĞµÑ€ Ğ´Ğ¾Ğ»Ğ¶ĞµĞ½ Ğ±Ñ‹Ñ‚ÑŒ Ğ² Ğ¿Ñ€ĞµĞ´ĞµĞ»Ğ°Ñ… [0 Ğ´Ğ¾ 1_000_000_000]");
 	}
 }
 
@@ -141,7 +141,7 @@ public void setDebit(double debit) {
 	if (debit>=0){
 	this.debit = debit;}
 	else {
-		System.out.println("Âû ââåëè îòğèöàòåëüíóş ñóììó äåáèòà.");
+		System.out.println("Ğ’Ñ‹ Ğ²Ğ²ĞµĞ»Ğ¸ Ğ¾Ñ‚Ñ€Ğ¸Ñ†Ğ°Ñ‚ĞµĞ»ÑŒĞ½ÑƒÑ ÑÑƒĞ¼Ğ¼Ñƒ Ğ´ĞµĞ±Ğ¸Ñ‚Ğ°.");
 	}
 }
 
@@ -153,7 +153,7 @@ public void setCredit(double credit) {
 	if (credit>=0){
 	this.credit = credit;}
 	else {
-		System.out.println("Âû ââåëè îòğèöàòåëüíóş ñóììó êğåäèòà.");
+		System.out.println("Ğ’Ñ‹ Ğ²Ğ²ĞµĞ»Ğ¸ Ğ¾Ñ‚Ñ€Ğ¸Ñ†Ğ°Ñ‚ĞµĞ»ÑŒĞ½ÑƒÑ ÑÑƒĞ¼Ğ¼Ñƒ ĞºÑ€ĞµĞ´Ğ¸Ñ‚Ğ°.");
 	}
 }
 
@@ -165,7 +165,7 @@ public void setTalkTimeCity(long talkTimeCity) {
 	if (talkTimeCity>=0){
 	this.talkTimeCity = talkTimeCity;}
 	else {
-		System.out.println("Âğåìÿ ğàçãîâîğîâ(ãîğîäñêèõ) íå ìîæåò áûòü îòğèöàòåëüíûì");
+		System.out.println("Ğ’Ñ€ĞµĞ¼Ñ Ñ€Ğ°Ğ·Ğ³Ğ¾Ğ²Ğ¾Ñ€Ğ¾Ğ²(Ğ³Ğ¾Ñ€Ğ¾Ğ´ÑĞºĞ¸Ñ…) Ğ½Ğµ Ğ¼Ğ¾Ğ¶ĞµÑ‚ Ğ±Ñ‹Ñ‚ÑŒ Ğ¾Ñ‚Ñ€Ğ¸Ñ†Ğ°Ñ‚ĞµĞ»ÑŒĞ½Ñ‹Ğ¼");
 	}
 }
 
@@ -178,22 +178,22 @@ public void setTalkTimeIntercity(long talkTimeIntercity) {
 	if (talkTimeIntercity>=0){
 	this.talkTimeIntercity = talkTimeIntercity;}
 	else {
-		System.out.println("Âğåìÿ ğàçãîâîğîâ(ìåæäóãîğîäíèõ) íå ìîæåò áûòü îòğèöàòåëüíûì");
+		System.out.println("Ğ’Ñ€ĞµĞ¼Ñ Ñ€Ğ°Ğ·Ğ³Ğ¾Ğ²Ğ¾Ñ€Ğ¾Ğ²(Ğ¼ĞµĞ¶Ğ´ÑƒĞ³Ğ¾Ñ€Ğ¾Ğ´Ğ½Ğ¸Ñ…) Ğ½Ğµ Ğ¼Ğ¾Ğ¶ĞµÑ‚ Ğ±Ñ‹Ñ‚ÑŒ Ğ¾Ñ‚Ñ€Ğ¸Ñ†Ğ°Ñ‚ĞµĞ»ÑŒĞ½Ñ‹Ğ¼");
 	}
 }
 
 public void arrayPhones() { 
-	sampleSubscriber [0]  = new Phone ("Ğóäü", 0.1, 20542, 15);
-	sampleSubscriber [1]  = new Phone ("Ãîëîâà÷èê", 3.5, 15162, 154);
-	sampleSubscriber [2]  = new Phone ("Ğàäåâè÷", 0.5, 10112, 23);
-	sampleSubscriber [3]  = new Phone ("Ñòàíêåâè÷", 2.2, 8352, 11);
-	sampleSubscriber [4]  = new Phone ("Äóáèê", 0.2, 35425, 142);
-	sampleSubscriber [5]  = new Phone ("Âèøíåâñêàÿ", 0.1, 6452, 0);
+	sampleSubscriber [0]  = new Phone ("Ğ ÑƒĞ´ÑŒ", 0.1, 20542, 15);
+	sampleSubscriber [1]  = new Phone ("Ğ“Ğ¾Ğ»Ğ¾Ğ²Ğ°Ñ‡Ğ¸Ğº", 3.5, 15162, 154);
+	sampleSubscriber [2]  = new Phone ("Ğ Ğ°Ğ´ĞµĞ²Ğ¸Ñ‡", 0.5, 10112, 23);
+	sampleSubscriber [3]  = new Phone ("Ğ¡Ñ‚Ğ°Ğ½ĞºĞµĞ²Ğ¸Ñ‡", 2.2, 8352, 11);
+	sampleSubscriber [4]  = new Phone ("Ğ”ÑƒĞ±Ğ¸Ğº", 0.2, 35425, 142);
+	sampleSubscriber [5]  = new Phone ("Ğ’Ğ¸ÑˆĞ½ĞµĞ²ÑĞºĞ°Ñ", 0.1, 6452, 0);
 }
 
 public void outputPhonesSortedByTimeCity(Phone [] sampleSubscriber, long timeMin){
-	System.out.println("Cïèñîê àáîíåíòîâ, ñî âğåìåíåì âíóòğèãîğîäñêèõ ğàçãîâîğîâ, ïğåâûøàşùèõ âğåìÿ " 
-			+ timeMin + ",ìèëèñåêóíä:");
+	System.out.println("CĞ¿Ğ¸ÑĞ¾Ğº Ğ°Ğ±Ğ¾Ğ½ĞµĞ½Ñ‚Ğ¾Ğ², ÑĞ¾ Ğ²Ñ€ĞµĞ¼ĞµĞ½ĞµĞ¼ Ğ²Ğ½ÑƒÑ‚Ñ€Ğ¸Ğ³Ğ¾Ñ€Ğ¾Ğ´ÑĞºĞ¸Ñ… Ñ€Ğ°Ğ·Ğ³Ğ¾Ğ²Ğ¾Ñ€Ğ¾Ğ², Ğ¿Ñ€ĞµĞ²Ñ‹ÑˆĞ°ÑÑ‰Ğ¸Ñ… Ğ²Ñ€ĞµĞ¼Ñ " 
+			+ timeMin + ",Ğ¼Ğ¸Ğ»Ğ¸ÑĞµĞºÑƒĞ½Ğ´:");
 	for (Phone phone : sampleSubscriber) {
 		arraySurname.add(phone.getSurname());
 		if (phone.getTalkTimeCity()>timeMin) {
@@ -204,7 +204,7 @@ public void outputPhonesSortedByTimeCity(Phone [] sampleSubscriber, long timeMin
 }
 
 public void outputPhonesSortedByTimeIntercity(Phone [] sampleSubscriber){
-	System.out.println("Cïèñîê àáîíåíòîâ, êîòîğûå ïîëüçîâàëèñü ìåæäóãîğîäíåé ñâÿçüş: ");
+	System.out.println("CĞ¿Ğ¸ÑĞ¾Ğº Ğ°Ğ±Ğ¾Ğ½ĞµĞ½Ñ‚Ğ¾Ğ², ĞºĞ¾Ñ‚Ğ¾Ñ€Ñ‹Ğµ Ğ¿Ğ¾Ğ»ÑŒĞ·Ğ¾Ğ²Ğ°Ğ»Ğ¸ÑÑŒ Ğ¼ĞµĞ¶Ğ´ÑƒĞ³Ğ¾Ñ€Ğ¾Ğ´Ğ½ĞµĞ¹ ÑĞ²ÑĞ·ÑŒÑ: ");
 	for (Phone phone : sampleSubscriber) {
 		if (phone.getTalkTimeIntercity()>0){
 			System.out.print(phone.getSurname() + ", ");
@@ -215,7 +215,7 @@ public void outputPhonesSortedByTimeIntercity(Phone [] sampleSubscriber){
 
 public void outputPhonesSortedByAlphabetOrder(ArrayList <String> arraySurname){
 	Collections.sort(arraySurname);
-	System.out.println("Cïèñîê àáîíåíòîâ â àëôàâèòíîì ïîğÿäêå: ");
+	System.out.println("CĞ¿Ğ¸ÑĞ¾Ğº Ğ°Ğ±Ğ¾Ğ½ĞµĞ½Ñ‚Ğ¾Ğ² Ğ² Ğ°Ğ»Ñ„Ğ°Ğ²Ğ¸Ñ‚Ğ½Ğ¾Ğ¼ Ğ¿Ğ¾Ñ€ÑĞ´ĞºĞµ: ");
 	System.out.println(arraySurname.toString());
 	}
 
