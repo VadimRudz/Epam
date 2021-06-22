@@ -37,11 +37,11 @@ public class Patient extends Human{
 	} 
 	
 	public void arrayObjects() { 
-		samplePatient [0]  = new Patient (15, "Ïàğêåğ", 1547, "äåïğåññèÿ");
-		samplePatient [1]  = new Patient (16, "Áıííåğ", 1574, "ñòğåññ");
-		samplePatient [2]  = new Patient (17, "Ñòğıíäæ", 1637, "ğàñòğîéñòâî ëè÷íîñòè");
-		samplePatient [3]  = new Patient (18, "Ñàììåğñ", 1333, "ñòğåññ");
-		samplePatient [4]  = new Patient (19, "Îêòàâèóñ", 1987, "ïğîôôåñèàíàëüíîå âûãîğàíèå");
+		samplePatient [0]  = new Patient (15, "ĞŸĞ°Ñ€ĞºĞµÑ€", 1547, "Ğ´ĞµĞ¿Ñ€ĞµÑÑĞ¸Ñ");
+		samplePatient [1]  = new Patient (16, "Ğ‘ÑĞ½Ğ½ĞµÑ€", 1574, "ÑÑ‚Ñ€ĞµÑÑ");
+		samplePatient [2]  = new Patient (17, "Ğ¡Ñ‚Ñ€ÑĞ½Ğ´Ğ¶", 1637, "Ñ€Ğ°ÑÑ‚Ñ€Ğ¾Ğ¹ÑÑ‚Ğ²Ğ¾ Ğ»Ğ¸Ñ‡Ğ½Ğ¾ÑÑ‚Ğ¸");
+		samplePatient [3]  = new Patient (18, "Ğ¡Ğ°Ğ¼Ğ¼ĞµÑ€Ñ", 1333, "ÑÑ‚Ñ€ĞµÑÑ");
+		samplePatient [4]  = new Patient (19, "ĞĞºÑ‚Ğ°Ğ²Ğ¸ÑƒÑ", 1987, "Ğ¿Ñ€Ğ¾Ñ„Ñ„ĞµÑĞ¸Ğ°Ğ½Ğ°Ğ»ÑŒĞ½Ğ¾Ğµ Ğ²Ñ‹Ğ³Ğ¾Ñ€Ğ°Ğ½Ğ¸Ğµ");
 	}
 	
 	public int getTelephone() {
@@ -69,7 +69,7 @@ public class Patient extends Human{
     }
     
     public void outputPatientsSortedByDiagnosis(Patient [] samplePatient, String diagnosis){
-    	System.out.println("Cïèñîê ïàöèåíòîâ ñ äèàãíîçîì " + diagnosis + ":");
+    	System.out.println("CĞ¿Ğ¸ÑĞ¾Ğº Ğ¿Ğ°Ñ†Ğ¸ĞµĞ½Ñ‚Ğ¾Ğ² Ñ Ğ´Ğ¸Ğ°Ğ³Ğ½Ğ¾Ğ·Ğ¾Ğ¼ " + diagnosis + ":");
     	for (Patient patient: samplePatient) {
     		if (patient.getDiagnosis().equals(diagnosis)){
     			System.out.print(patient.getSurname()+", ");
@@ -79,7 +79,7 @@ public class Patient extends Human{
     }
     
     public void outputPatientsSortedByMedicalCardNumberInterval(Patient [] samplePatient, int numberMin, int numberMax){
-    	System.out.println("Ñïèñîê ïàöèåíòîâ, îòñîğòèğîâàííûõ ïî íîìåğó ìåäèöèíñêîé êàğòû:");
+    	System.out.println("Ğ¡Ğ¿Ğ¸ÑĞ¾Ğº Ğ¿Ğ°Ñ†Ğ¸ĞµĞ½Ñ‚Ğ¾Ğ², Ğ¾Ñ‚ÑĞ¾Ñ€Ñ‚Ğ¸Ñ€Ğ¾Ğ²Ğ°Ğ½Ğ½Ñ‹Ñ… Ğ¿Ğ¾ Ğ½Ğ¾Ğ¼ĞµÑ€Ñƒ Ğ¼ĞµĞ´Ğ¸Ñ†Ğ¸Ğ½ÑĞºĞ¾Ğ¹ ĞºĞ°Ñ€Ñ‚Ñ‹:");
     	for (Patient patient : samplePatient) {
     		if ((patient.getMedicalCardNumber()>numberMin) && (patient.getMedicalCardNumber()<numberMax)) {
     			System.out.print(patient.getSurname()+", ");
