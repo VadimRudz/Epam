@@ -39,11 +39,11 @@ public class Abiturient extends Human{
 	}
 	
 	public void createArrayObjects() { 
-		sampleAbiturient [0]  = new Abiturient ("Box", "Антон", 3.8);
-		sampleAbiturient [1]  = new Abiturient ("lollipop21k", "Игорь", 8.9);
-		sampleAbiturient [2]  = new Abiturient ("Jyo", "Расим", 5.3);
-		sampleAbiturient [3]  = new Abiturient ("iDisbalance", "Артем", 6.5);
-		sampleAbiturient [4]  = new Abiturient ("mds", "Александр", 3.5);
+		sampleAbiturient [0]  = new Abiturient ("Box", "РђРЅС‚РѕРЅ", 3.8);
+		sampleAbiturient [1]  = new Abiturient ("lollipop21k", "РРіРѕСЂСЊ", 8.9);
+		sampleAbiturient [2]  = new Abiturient ("Jyo", "Р Р°СЃРёРј", 5.3);
+		sampleAbiturient [3]  = new Abiturient ("iDisbalance", "РђСЂС‚РµРј", 6.5);
+		sampleAbiturient [4]  = new Abiturient ("mds", "РђР»РµРєСЃР°РЅРґСЂ", 3.5);
 	}
 	
 	public int getTelephoneAbiturient() {
@@ -63,7 +63,7 @@ public class Abiturient extends Human{
     }
     
     public void outputAbiturientsWithBadGrades(Abiturient [] sampleAbiturient, double mark) { 
-    	System.out.println("Cписок абитуриентов с неудовлетворительным средним баллом(<" + mark + "):");
+    	System.out.println("CРїРёСЃРѕРє Р°Р±РёС‚СѓСЂРёРµРЅС‚РѕРІ СЃ РЅРµСѓРґРѕРІР»РµС‚РІРѕСЂРёС‚РµР»СЊРЅС‹Рј СЃСЂРµРґРЅРёРј Р±Р°Р»Р»РѕРј(<" + mark + "):");
     	for (Abiturient abiturient : sampleAbiturient) {
     		arrayMarksAbiturient.add(abiturient.getAverageScoreAbiturient());
     		if(abiturient.getAverageScoreAbiturient()<mark) {
@@ -74,7 +74,7 @@ public class Abiturient extends Human{
     }
     
     public void outputAbiturientsWithGoodGrades(Abiturient [] sampleAbiturient, double mark) { 
-    	System.out.println("Cписок абитуриентов с удовлетворительным средним баллом(>" + mark + "):");
+    	System.out.println("CРїРёСЃРѕРє Р°Р±РёС‚СѓСЂРёРµРЅС‚РѕРІ СЃ СѓРґРѕРІР»РµС‚РІРѕСЂРёС‚РµР»СЊРЅС‹Рј СЃСЂРµРґРЅРёРј Р±Р°Р»Р»РѕРј(>" + mark + "):");
     	for (Abiturient abiturient : sampleAbiturient) {
     		if(abiturient.getAverageScoreAbiturient()>mark) {
     			System.out.print(abiturient.getSurname()+", ");
@@ -84,7 +84,7 @@ public class Abiturient extends Human{
     }
     
    public void outputAbiturientsWhithBestAverage(Abiturient [] sampleAbiturient, int numberSelected) {
-	   System.out.println("Список студентов с лучшим средним балом(количество-" + numberSelected + ")");
+	   System.out.println("РЎРїРёСЃРѕРє СЃС‚СѓРґРµРЅС‚РѕРІ СЃ Р»СѓС‡С€РёРј СЃСЂРµРґРЅРёРј Р±Р°Р»РѕРј(РєРѕР»РёС‡РµСЃС‚РІРѕ-" + numberSelected + ")");
 	   ArrayList<Abiturient>arrayStudentsMin = new ArrayList<Abiturient>();
 	   Collections.sort(arrayMarksAbiturient);
 	   for (int i = arrayMarksAbiturient.size()-1; i>=arrayMarksAbiturient.size()-numberSelected; i--) {
@@ -95,7 +95,7 @@ public class Abiturient extends Human{
 		   }
 	   }
 	   for (int i = arrayStudentsMin.size()-1; i>=arrayStudentsMin.size()-numberSelected; i--) {
-		   System.out.print(arrayStudentsMin.get(i).getSurname()+"(средний балл - " + arrayStudentsMin.get(i).getAverageScoreAbiturient() + "), ");
+		   System.out.print(arrayStudentsMin.get(i).getSurname()+"(СЃСЂРµРґРЅРёР№ Р±Р°Р»Р» - " + arrayStudentsMin.get(i).getAverageScoreAbiturient() + "), ");
 	   }
 	   System.out.println();
    }
