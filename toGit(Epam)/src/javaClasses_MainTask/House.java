@@ -50,7 +50,7 @@ public class House {
 		if (0 <= id && id<= 1000) {
 	        this.id = id;}
 	    	else {
-	    		System.out.println("Âû ââåëè íåâåðíûé id. id äîëæåí áûòü â ïðåäåëàõ [0 äî 1000]");
+	    		System.out.println("Ð’Ñ‹ Ð²Ð²ÐµÐ»Ð¸ Ð½ÐµÐ²ÐµÑ€Ð½Ñ‹Ð¹ id. id Ð´Ð¾Ð»Ð¶ÐµÐ½ Ð±Ñ‹Ñ‚ÑŒ Ð² Ð¿Ñ€ÐµÐ´ÐµÐ»Ð°Ñ… [0 Ð´Ð¾ 1000]");
 	    	}
 	}
 
@@ -62,8 +62,8 @@ public class House {
 		if (1 <= id && id<= 1000) {
 			this.apartmentNumber = apartmentNumber;}
 	    	else {
-	    		System.out.println("Âû ââåëè íåâåðíûé íîìåð êâàðòèðû. "
-	    				+ "Íîìåð äîëæåí áûòü â ïðåäåëàõ [1 äî 49]");
+	    		System.out.println("Ð’Ñ‹ Ð²Ð²ÐµÐ»Ð¸ Ð½ÐµÐ²ÐµÑ€Ð½Ñ‹Ð¹ Ð½Ð¾Ð¼ÐµÑ€ ÐºÐ²Ð°Ñ€Ñ‚Ð¸Ñ€Ñ‹. "
+	    				+ "ÐÐ¾Ð¼ÐµÑ€ Ð´Ð¾Ð»Ð¶ÐµÐ½ Ð±Ñ‹Ñ‚ÑŒ Ð² Ð¿Ñ€ÐµÐ´ÐµÐ»Ð°Ñ… [1 Ð´Ð¾ 49]");
 	    	}	
 	}
 
@@ -75,8 +75,8 @@ public class House {
 		if (0.1 <= id && id<= 320) {
 			this.area = area;}
 	    	else {
-	    		System.out.println("Âû ââåëè íåâåðíóþ ïëîùàäü êâàðòèðû. "
-	    				+ "Ïëîùàäü äîëæíà áûòü â ïðåäåëàõ [0.1 äî 320]");
+	    		System.out.println("Ð’Ñ‹ Ð²Ð²ÐµÐ»Ð¸ Ð½ÐµÐ²ÐµÑ€Ð½ÑƒÑŽ Ð¿Ð»Ð¾Ñ‰Ð°Ð´ÑŒ ÐºÐ²Ð°Ñ€Ñ‚Ð¸Ñ€Ñ‹. "
+	    				+ "ÐŸÐ»Ð¾Ñ‰Ð°Ð´ÑŒ Ð´Ð¾Ð»Ð¶Ð½Ð° Ð±Ñ‹Ñ‚ÑŒ Ð² Ð¿Ñ€ÐµÐ´ÐµÐ»Ð°Ñ… [0.1 Ð´Ð¾ 320]");
 	    	}
 	}
 
@@ -88,8 +88,8 @@ public class House {
 		if (1 <= id && id<= 7) {
 			this.floor = floor;}
 	    	else {
-	    		System.out.println("Âû ââåëè íåâåðíûé ýòàæ äîìà. "
-	    				+ "Íîìåð äîëæåí áûòü â ïðåäåëàõ [1 äî 7]");
+	    		System.out.println("Ð’Ñ‹ Ð²Ð²ÐµÐ»Ð¸ Ð½ÐµÐ²ÐµÑ€Ð½Ñ‹Ð¹ ÑÑ‚Ð°Ð¶ Ð´Ð¾Ð¼Ð°. "
+	    				+ "ÐÐ¾Ð¼ÐµÑ€ Ð´Ð¾Ð»Ð¶ÐµÐ½ Ð±Ñ‹Ñ‚ÑŒ Ð² Ð¿Ñ€ÐµÐ´ÐµÐ»Ð°Ñ… [1 Ð´Ð¾ 7]");
 	    	}
 	}
 
@@ -101,8 +101,8 @@ public class House {
 		if ((1 <= id) && (id<= 5)) {
 			this.numberRooms = numberRooms;}
 	    	else {
-	    		System.out.println("Âû ââåëè íåâåðíîå êîëè÷åñòâî êîìíàò. "
-	    				+ "Êîëè÷åñòâî äîëæíî áûòü â ïðåäåëàõ [1 äî 5]");
+	    		System.out.println("Ð’Ñ‹ Ð²Ð²ÐµÐ»Ð¸ Ð½ÐµÐ²ÐµÑ€Ð½Ð¾Ðµ ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ ÐºÐ¾Ð¼Ð½Ð°Ñ‚. "
+	    				+ "ÐšÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ Ð´Ð¾Ð»Ð¶Ð½Ð¾ Ð±Ñ‹Ñ‚ÑŒ Ð² Ð¿Ñ€ÐµÐ´ÐµÐ»Ð°Ñ… [1 Ð´Ð¾ 5]");
 	    	}
 	}
 
@@ -114,7 +114,7 @@ public class House {
 		if ((street != null) && (!street.isEmpty())) {
             for (char c : street.toCharArray()) {
                 if (Character.isDigit(c)) {
-                	System.out.println("Â íàçâàíèè âàøåé óëèöû íåäîïóñòèìûå ñèìâîëû (öèôðû)"); break; 
+                	System.out.println("Ð’ Ð½Ð°Ð·Ð²Ð°Ð½Ð¸Ð¸ Ð²Ð°ÑˆÐµÐ¹ ÑƒÐ»Ð¸Ñ†Ñ‹ Ð½ÐµÐ´Ð¾Ð¿ÑƒÑÑ‚Ð¸Ð¼Ñ‹Ðµ ÑÐ¸Ð¼Ð²Ð¾Ð»Ñ‹ (Ñ†Ð¸Ñ„Ñ€Ñ‹)"); break; 
                 }
             }
         }
@@ -129,7 +129,7 @@ public class House {
 		if ((buildingType != null) && (!buildingType.isEmpty())) {
             for (char c : buildingType.toCharArray()) {
                 if (Character.isDigit(c)) {
-                	System.out.println("Â íàçâàíèè òèïà çäàíèé è ñîîðóæåíèé íåäîïóñòèìûå ñèìâîëû (öèôðû)"); break; 
+                	System.out.println("Ð’ Ð½Ð°Ð·Ð²Ð°Ð½Ð¸Ð¸ Ñ‚Ð¸Ð¿Ð° Ð·Ð´Ð°Ð½Ð¸Ð¹ Ð¸ ÑÐ¾Ð¾Ñ€ÑƒÐ¶ÐµÐ½Ð¸Ð¹ Ð½ÐµÐ´Ð¾Ð¿ÑƒÑÑ‚Ð¸Ð¼Ñ‹Ðµ ÑÐ¸Ð¼Ð²Ð¾Ð»Ñ‹ (Ñ†Ð¸Ñ„Ñ€Ñ‹)"); break; 
                 }
             }
         }
@@ -144,22 +144,22 @@ public class House {
 		if ((1 <= id) && (id<= 100)) {
 			this.lifetime = lifetime;}
 	    	else {
-	    		System.out.println("Âû ââåëè íåâåðíîå êîëè÷åñòâî ëåò ýêñïëóàòàöèè. "
-	    				+ "Êîëè÷åñòâî äîëæíî áûòü â ïðåäåëàõ[1 äî 5]");
+	    		System.out.println("Ð’Ñ‹ Ð²Ð²ÐµÐ»Ð¸ Ð½ÐµÐ²ÐµÑ€Ð½Ð¾Ðµ ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ Ð»ÐµÑ‚ ÑÐºÑÐ¿Ð»ÑƒÐ°Ñ‚Ð°Ñ†Ð¸Ð¸. "
+	    				+ "ÐšÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ Ð´Ð¾Ð»Ð¶Ð½Ð¾ Ð±Ñ‹Ñ‚ÑŒ Ð² Ð¿Ñ€ÐµÐ´ÐµÐ»Ð°Ñ…[1 Ð´Ð¾ 5]");
 	    	}
 
 	}
 
 	public void arrayHouses() {
-		sampleHouses [0] = new House(3, 56, 4, 2,"Ñâîáîäíàÿ");
-		sampleHouses [1] = new House(97, 9, 3, 2, "Íåçàâèñèìàÿ");
-		sampleHouses [2] = new House(20, 83, 4, 3, "Íåâåðîÿòíàÿ");
-		sampleHouses [3] = new House(13, 40, 2, 1, "Êîëåñíèêîâîé");
-		sampleHouses [4] = new House(27, 78, 7, 4, "Òàïêîâàÿ"); //(int apartmentNumber, double area, int floor, int numberRooms, String street)
+		sampleHouses [0] = new House(3, 56, 4, 2,"Ð¡Ð²Ð¾Ð±Ð¾Ð´Ð½Ð°Ñ");
+		sampleHouses [1] = new House(97, 9, 3, 2, "ÐÐµÐ·Ð°Ð²Ð¸ÑÐ¸Ð¼Ð°Ñ");
+		sampleHouses [2] = new House(20, 83, 4, 3, "ÐÐµÐ²ÐµÑ€Ð¾ÑÑ‚Ð½Ð°Ñ");
+		sampleHouses [3] = new House(13, 40, 2, 1, "ÐšÐ¾Ð»ÐµÑÐ½Ð¸ÐºÐ¾Ð²Ð¾Ð¹");
+		sampleHouses [4] = new House(27, 78, 7, 4, "Ð¢Ð°Ð¿ÐºÐ¾Ð²Ð°Ñ"); //(int apartmentNumber, double area, int floor, int numberRooms, String street)
 	}
 	
 	public void outputHousesSortedByNumberApartments(House [] sampleHouses, int numberApartment){
-		System.out.println("Cïèñîê êâàðòèð, ñ ÷èñëîì êîìíàò - " + numberApartment + ":");
+		System.out.println("CÐ¿Ð¸ÑÐ¾Ðº ÐºÐ²Ð°Ñ€Ñ‚Ð¸Ñ€, Ñ Ñ‡Ð¸ÑÐ»Ð¾Ð¼ ÐºÐ¾Ð¼Ð½Ð°Ñ‚ - " + numberApartment + ":");
 		for (House house : sampleHouses) {
 			if(house.getNumberRooms()==numberApartment){
 				System.out.print(house.getApartmentNumber() + ", ");
@@ -169,8 +169,8 @@ public class House {
 	}
 	
 	public void outputHousesSortedByNumberApartmentsAndNumberFloor(House [] sampleHouses, int numberApartment, int floorNumberMin, int floorNumberMax){
-		System.out.println("Cïèñîê êâàðòèð, ñ ÷èñëîì êîìíàò - " + numberApartment 
-				+ " è ðàñïëîëîæåííûõ íà ýòàæàõ â çàäàííîì ïðîìåæóòêå(" + floorNumberMin + "-" + floorNumberMax + ")");
+		System.out.println("CÐ¿Ð¸ÑÐ¾Ðº ÐºÐ²Ð°Ñ€Ñ‚Ð¸Ñ€, Ñ Ñ‡Ð¸ÑÐ»Ð¾Ð¼ ÐºÐ¾Ð¼Ð½Ð°Ñ‚ - " + numberApartment 
+				+ " Ð¸ Ñ€Ð°ÑÐ¿Ð»Ð¾Ð»Ð¾Ð¶ÐµÐ½Ð½Ñ‹Ñ… Ð½Ð° ÑÑ‚Ð°Ð¶Ð°Ñ… Ð² Ð·Ð°Ð´Ð°Ð½Ð½Ð¾Ð¼ Ð¿Ñ€Ð¾Ð¼ÐµÐ¶ÑƒÑ‚ÐºÐµ(" + floorNumberMin + "-" + floorNumberMax + ")");
 		for (House house : sampleHouses) {
 			if(house.getNumberRooms()==numberApartment && (house.getNumberRooms()>=floorNumberMin && house.getNumberRooms()<=floorNumberMax)){
 				System.out.print(house.getApartmentNumber() + ", ");
