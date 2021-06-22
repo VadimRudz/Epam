@@ -53,7 +53,7 @@ public class Car {
 		if ((brand != null) && (!brand.isEmpty())) {
 	        for (char c : brand.toCharArray()) {
 	            if (Character.isDigit(c)) {
-	            	System.out.println("В названии марки автомобиля недопустимые символы (цифры)"); break; 
+	            	System.out.println("Р’ РЅР°Р·РІР°РЅРёРё РјР°СЂРєРё Р°РІС‚РѕРјРѕР±РёР»СЏ РЅРµРґРѕРїСѓСЃС‚РёРјС‹Рµ СЃРёРјРІРѕР»С‹ (С†РёС„СЂС‹)"); break; 
 	            }
 	        }
 	    }
@@ -72,7 +72,7 @@ public class Car {
 		if (1886 <= yearIssue && yearIssue<= 2021) {
 			this.yearIssue = yearIssue;}
 	    	else {
-	    		System.out.println("Вы ввели неверный год выпуска автомобиля. Год должен быть в пределах [1886 до 2021]");
+	    		System.out.println("Р’С‹ РІРІРµР»Рё РЅРµРІРµСЂРЅС‹Р№ РіРѕРґ РІС‹РїСѓСЃРєР° Р°РІС‚РѕРјРѕР±РёР»СЏ. Р“РѕРґ РґРѕР»Р¶РµРЅ Р±С‹С‚СЊ РІ РїСЂРµРґРµР»Р°С… [1886 РґРѕ 2021]");
 	    	}
 	}
 	public String getColor() {
@@ -82,7 +82,7 @@ public class Car {
 		if ((color != null) && (!color.isEmpty())) {
 	        for (char c : color.toCharArray()) {
 	            if (Character.isDigit(c)) {
-	            	System.out.println("В названии цвета автомобиля недопустимые символы (цифры)"); break; 
+	            	System.out.println("Р’ РЅР°Р·РІР°РЅРёРё С†РІРµС‚Р° Р°РІС‚РѕРјРѕР±РёР»СЏ РЅРµРґРѕРїСѓСЃС‚РёРјС‹Рµ СЃРёРјРІРѕР»С‹ (С†РёС„СЂС‹)"); break; 
 	            }
 	        }
 	    }
@@ -95,7 +95,7 @@ public class Car {
 		if ((0<= yearIssue) && (yearIssue<= 100_000_000)) {
 			this.price = price;}
 	    	else {
-	    		System.out.println("Вы ввели неверную стоимость автомобиля. Стоимость должна быть в пределах [0 до 100_000_000]");
+	    		System.out.println("Р’С‹ РІРІРµР»Рё РЅРµРІРµСЂРЅСѓСЋ СЃС‚РѕРёРјРѕСЃС‚СЊ Р°РІС‚РѕРјРѕР±РёР»СЏ. РЎС‚РѕРёРјРѕСЃС‚СЊ РґРѕР»Р¶РЅР° Р±С‹С‚СЊ РІ РїСЂРµРґРµР»Р°С… [0 РґРѕ 100_000_000]");
 	    	}
 	}
 	public String getRegistrationNumber() {
@@ -103,7 +103,7 @@ public class Car {
 	}
 	public void setRegistrationNumber(String registrationNumber) {
 		if((registrationNumber.length()<9) || (registrationNumber.length()>9)) {
-			System.out.println("Введите регистрационный номер машины в формате \"1111 AA-1\"");
+			System.out.println("Р’РІРµРґРёС‚Рµ СЂРµРіРёСЃС‚СЂР°С†РёРѕРЅРЅС‹Р№ РЅРѕРјРµСЂ РјР°С€РёРЅС‹ РІ С„РѕСЂРјР°С‚Рµ \"1111 AA-1\"");
 		}
 		else {this.registrationNumber = registrationNumber;}
 	}
@@ -122,7 +122,7 @@ public class Car {
 	}
 
 	public void outputCarsSortedByBrand(Car [] sampleCars, String brand) {
-		System.out.println("Список моделей(марка - " + brand + ") :");
+		System.out.println("РЎРїРёСЃРѕРє РјРѕРґРµР»РµР№(РјР°СЂРєР° - " + brand + ") :");
 		for (Car car : sampleCars) {
 			if(car.getBrand().equals(brand)){
 				System.out.print(car.getCarModel() + ", ");
@@ -132,7 +132,7 @@ public class Car {
 	}
 	
 	public void outputCarssortedByModelAndYear(Car [] sampleCars, String model, int year) {
-		System.out.println("Id автомобилей, у которых модель " + model + " и которые эксплуатируются более " + year + " лет:");
+		System.out.println("Id Р°РІС‚РѕРјРѕР±РёР»РµР№, Сѓ РєРѕС‚РѕСЂС‹С… РјРѕРґРµР»СЊ " + model + " Рё РєРѕС‚РѕСЂС‹Рµ СЌРєСЃРїР»СѓР°С‚РёСЂСѓСЋС‚СЃСЏ Р±РѕР»РµРµ " + year + " Р»РµС‚:");
 		for (Car car : sampleCars) {
 			if((car.getCarModel().equals(model)) && ((2021- car.yearIssue) <= year)) {
 				System.out.print(car.getId() + ", ");
@@ -142,7 +142,7 @@ public class Car {
 	}
 	
 	public void outputCarsSortedByYearAndPrice(Car [] sampleCars, int year, double price) {
-		System.out.println("Марка и модель автомобиля, у которого год выпуска " + year + " и стоимость больше " + price + "$:");
+		System.out.println("РњР°СЂРєР° Рё РјРѕРґРµР»СЊ Р°РІС‚РѕРјРѕР±РёР»СЏ, Сѓ РєРѕС‚РѕСЂРѕРіРѕ РіРѕРґ РІС‹РїСѓСЃРєР° " + year + " Рё СЃС‚РѕРёРјРѕСЃС‚СЊ Р±РѕР»СЊС€Рµ " + price + "$:");
 		for (Car car : sampleCars) {
 			if((car.getYearIssue()==year) && (car.getPrice()>price)){
 				System.out.print(car.getBrand() + " " + car.getCarModel() +  ", ");
