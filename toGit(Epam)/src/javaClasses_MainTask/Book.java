@@ -50,7 +50,7 @@ public class Book {
 		if ((0 <= id) && (id<= 1000)) {
 	        this.id = id;}
 	    	else {
-	    		System.out.println("Âû ââåëè íåâåðíûé id. id äîëæåí áûòü â ïðåäåëàõ [0 äî 1000]");
+	    		System.out.println("Ð’Ñ‹ Ð²Ð²ÐµÐ»Ð¸ Ð½ÐµÐ²ÐµÑ€Ð½Ñ‹Ð¹ id. id Ð´Ð¾Ð»Ð¶ÐµÐ½ Ð±Ñ‹Ñ‚ÑŒ Ð² Ð¿Ñ€ÐµÐ´ÐµÐ»Ð°Ñ… [0 Ð´Ð¾ 1000]");
 	    	}
 	}
 
@@ -62,7 +62,7 @@ public class Book {
 		if ((titleBook != null) && (!titleBook.isEmpty())) {
             for (char c : titleBook.toCharArray()) {
                 if (Character.isDigit(c)) {
-                	System.out.println("Â âàøåé ôàìèëèè íåäîïóñòèìûå ñèìâîëû (öèôðû)"); break; 
+                	System.out.println("Ð’ Ð²Ð°ÑˆÐµÐ¹ Ñ„Ð°Ð¼Ð¸Ð»Ð¸Ð¸ Ð½ÐµÐ´Ð¾Ð¿ÑƒÑÑ‚Ð¸Ð¼Ñ‹Ðµ ÑÐ¸Ð¼Ð²Ð¾Ð»Ñ‹ (Ñ†Ð¸Ñ„Ñ€Ñ‹)"); break; 
                 }
             }
         }
@@ -77,7 +77,7 @@ public class Book {
 		if ((author != null) && (!author.isEmpty())) {
             for (char c : titleBook.toCharArray()) {
                 if (Character.isDigit(c)) {
-                	System.out.println("Â ôàìèëèè àâòîðà íåäîïóñòèìûå ñèìâîëû (öèôðû)"); break; 
+                	System.out.println("Ð’ Ñ„Ð°Ð¼Ð¸Ð»Ð¸Ð¸ Ð°Ð²Ñ‚Ð¾Ñ€Ð° Ð½ÐµÐ´Ð¾Ð¿ÑƒÑÑ‚Ð¸Ð¼Ñ‹Ðµ ÑÐ¸Ð¼Ð²Ð¾Ð»Ñ‹ (Ñ†Ð¸Ñ„Ñ€Ñ‹)"); break; 
                 	}
                 }
             }
@@ -92,7 +92,7 @@ public class Book {
 		if ((publisher != null) && (!publisher.isEmpty())) {
             for (char c : titleBook.toCharArray()) {
                 if (Character.isDigit(c)) {
-                	System.out.println("Â íàçâàíèè èçäàòåëüñòâà íåäîïóñòèìûå ñèìâîëû (öèôðû)"); break; 
+                	System.out.println("Ð’ Ð½Ð°Ð·Ð²Ð°Ð½Ð¸Ð¸ Ð¸Ð·Ð´Ð°Ñ‚ÐµÐ»ÑŒÑÑ‚Ð²Ð° Ð½ÐµÐ´Ð¾Ð¿ÑƒÑÑ‚Ð¸Ð¼Ñ‹Ðµ ÑÐ¸Ð¼Ð²Ð¾Ð»Ñ‹ (Ñ†Ð¸Ñ„Ñ€Ñ‹)"); break; 
                 	}
                 }
             }
@@ -107,7 +107,7 @@ public class Book {
 		if ((1564 <= yearPublishing) && (yearPublishing<= 2021)) {
 	    	this.yearPublishing = yearPublishing;}
 	    	else {
-	    		System.out.println("Âû ââåëè íåâåðíûé ãîä ïóáëèêàöèè êíèãè. Ãîä äîëæåí áûòü â ïðåäåëàõ [1564 äî 2021]");
+	    		System.out.println("Ð’Ñ‹ Ð²Ð²ÐµÐ»Ð¸ Ð½ÐµÐ²ÐµÑ€Ð½Ñ‹Ð¹ Ð³Ð¾Ð´ Ð¿ÑƒÐ±Ð»Ð¸ÐºÐ°Ñ†Ð¸Ð¸ ÐºÐ½Ð¸Ð³Ð¸. Ð“Ð¾Ð´ Ð´Ð¾Ð»Ð¶ÐµÐ½ Ð±Ñ‹Ñ‚ÑŒ Ð² Ð¿Ñ€ÐµÐ´ÐµÐ»Ð°Ñ… [1564 Ð´Ð¾ 2021]");
 	    	}
 	}
 
@@ -119,7 +119,7 @@ public class Book {
 		if (4 <= numberPages && numberPages<= 500) {
 	    	this.numberPages = numberPages;}
 	    	else {
-	    		System.out.println("Âû ââåëè íåâåðíîå êîëè÷åñòâî ñòðàíèö. Êîëè÷åñòâî äîëæåí áûòü â ïðåäåëàõ [4 äî 500]");
+	    		System.out.println("Ð’Ñ‹ Ð²Ð²ÐµÐ»Ð¸ Ð½ÐµÐ²ÐµÑ€Ð½Ð¾Ðµ ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ ÑÑ‚Ñ€Ð°Ð½Ð¸Ñ†. ÐšÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ Ð´Ð¾Ð»Ð¶ÐµÐ½ Ð±Ñ‹Ñ‚ÑŒ Ð² Ð¿Ñ€ÐµÐ´ÐµÐ»Ð°Ñ… [4 Ð´Ð¾ 500]");
 	    	}
 	}
 
@@ -131,7 +131,7 @@ public class Book {
 		if ((0 <= numberPages) && (numberPages<= 30_800_000)) {
 	    	this.price = price;}
 	    	else {
-	    		System.out.println("Âû ââåëè íåâåðíóþ ñòîèìîñòü êíèãè. Ñòîèìîñòü äîëæíà áûòü â ïðåäåëàõ [0 äî 30_800_000 $]");
+	    		System.out.println("Ð’Ñ‹ Ð²Ð²ÐµÐ»Ð¸ Ð½ÐµÐ²ÐµÑ€Ð½ÑƒÑŽ ÑÑ‚Ð¾Ð¸Ð¼Ð¾ÑÑ‚ÑŒ ÐºÐ½Ð¸Ð³Ð¸. Ð¡Ñ‚Ð¾Ð¸Ð¼Ð¾ÑÑ‚ÑŒ Ð´Ð¾Ð»Ð¶Ð½Ð° Ð±Ñ‹Ñ‚ÑŒ Ð² Ð¿Ñ€ÐµÐ´ÐµÐ»Ð°Ñ… [0 Ð´Ð¾ 30_800_000 $]");
 	    	}
 	}
 
@@ -143,7 +143,7 @@ public class Book {
 		if ((bindingType != null) && (!bindingType.isEmpty())) {
             for (char c : bindingType.toCharArray()) {
                 if (Character.isDigit(c)) {
-                	System.out.println("Â íàçâàíèè ïåðåïëåòà íåäîïóñòèìûå ñèìâîëû (öèôðû)"); break; 
+                	System.out.println("Ð’ Ð½Ð°Ð·Ð²Ð°Ð½Ð¸Ð¸ Ð¿ÐµÑ€ÐµÐ¿Ð»ÐµÑ‚Ð° Ð½ÐµÐ´Ð¾Ð¿ÑƒÑÑ‚Ð¸Ð¼Ñ‹Ðµ ÑÐ¸Ð¼Ð²Ð¾Ð»Ñ‹ (Ñ†Ð¸Ñ„Ñ€Ñ‹)"); break; 
                 	}
                 }
             }
@@ -151,15 +151,15 @@ public class Book {
 	}
 	
 	public void createArrayBooks() {
-		sampleBooks [0] = new Book("Ìåðòâàÿ âîäà. Îò ñîöèîëîãèè ê æèçíåðå÷åíèþ", "Âíóòðåííèé Ïðåäèêòîð ÑÑÑÐ", "Äîáðàÿ êíèãà", 2004);
-		sampleBooks [1] = new Book("Àííà Êàðåíèíà", "Ë.Í.Òîëñòîé","Ìàíí, Èâàíîâ è Ôåðáåð", 1873);
-		sampleBooks [2] = new Book("Ìû", "Åâãåíèé Çàìÿòèí", "Äîáðàÿ êíèãà", 1974);
-		sampleBooks [3] = new Book("1984", "Äæîðäæ Îðóýëë", "Past simple", 1949);
-		sampleBooks [4] = new Book("Ñêîòíûé äâîð", "Äæîðäæ Îðóýëë", "Past simple", 1945);
+		sampleBooks [0] = new Book("ÐœÐµÑ€Ñ‚Ð²Ð°Ñ Ð²Ð¾Ð´Ð°. ÐžÑ‚ ÑÐ¾Ñ†Ð¸Ð¾Ð»Ð¾Ð³Ð¸Ð¸ Ðº Ð¶Ð¸Ð·Ð½ÐµÑ€ÐµÑ‡ÐµÐ½Ð¸ÑŽ", "Ð’Ð½ÑƒÑ‚Ñ€ÐµÐ½Ð½Ð¸Ð¹ ÐŸÑ€ÐµÐ´Ð¸ÐºÑ‚Ð¾Ñ€ Ð¡Ð¡Ð¡Ð ", "Ð”Ð¾Ð±Ñ€Ð°Ñ ÐºÐ½Ð¸Ð³Ð°", 2004);
+		sampleBooks [1] = new Book("ÐÐ½Ð½Ð° ÐšÐ°Ñ€ÐµÐ½Ð¸Ð½Ð°", "Ð›.Ð.Ð¢Ð¾Ð»ÑÑ‚Ð¾Ð¹","ÐœÐ°Ð½Ð½, Ð˜Ð²Ð°Ð½Ð¾Ð² Ð¸ Ð¤ÐµÑ€Ð±ÐµÑ€", 1873);
+		sampleBooks [2] = new Book("ÐœÑ‹", "Ð•Ð²Ð³ÐµÐ½Ð¸Ð¹ Ð—Ð°Ð¼ÑÑ‚Ð¸Ð½", "Ð”Ð¾Ð±Ñ€Ð°Ñ ÐºÐ½Ð¸Ð³Ð°", 1974);
+		sampleBooks [3] = new Book("1984", "Ð”Ð¶Ð¾Ñ€Ð´Ð¶ ÐžÑ€ÑƒÑÐ»Ð»", "Past simple", 1949);
+		sampleBooks [4] = new Book("Ð¡ÐºÐ¾Ñ‚Ð½Ñ‹Ð¹ Ð´Ð²Ð¾Ñ€", "Ð”Ð¶Ð¾Ñ€Ð´Ð¶ ÐžÑ€ÑƒÑÐ»Ð»", "Past simple", 1945);
 	}	
 	
 	public void outputBooksSortedByAuthor(Book [] sampleBooks, String author) {
-		System.out.println("Ñïèñîê êíèã àâòîðà(" + author + "):");
+		System.out.println("Ð¡Ð¿Ð¸ÑÐ¾Ðº ÐºÐ½Ð¸Ð³ Ð°Ð²Ñ‚Ð¾Ñ€Ð°(" + author + "):");
 		for (Book book : sampleBooks) {
 			if (book.getAuthor().equalsIgnoreCase(author)){
 				System.out.print(book.getTitleBook() + ", ");
@@ -169,7 +169,7 @@ public class Book {
 	}
 	
 	public void outputBooksSortedByPublisher(Book [] sampleBooks, String publisher) {
-		System.out.println("Ñïèñîê êíèã èçäàòåëüñòâà(" + publisher + "):");
+		System.out.println("Ð¡Ð¿Ð¸ÑÐ¾Ðº ÐºÐ½Ð¸Ð³ Ð¸Ð·Ð´Ð°Ñ‚ÐµÐ»ÑŒÑÑ‚Ð²Ð°(" + publisher + "):");
 		for (Book book : sampleBooks) {
 			if(book.getPublisher().equalsIgnoreCase(publisher)) {
 				System.out.print(book.getTitleBook() + ", ");
@@ -179,7 +179,7 @@ public class Book {
 	}
 	
 	public void outputBooksSortedByYear(Book [] sampleBooks, int year) {
-		System.out.println("Ñïèñîê êíèã, èçäàííûõ ïîñëå " + year + " ãîäà:");
+		System.out.println("Ð¡Ð¿Ð¸ÑÐ¾Ðº ÐºÐ½Ð¸Ð³, Ð¸Ð·Ð´Ð°Ð½Ð½Ñ‹Ñ… Ð¿Ð¾ÑÐ»Ðµ " + year + " Ð³Ð¾Ð´Ð°:");
 		for (Book book : sampleBooks) { 
 			if(book.getYearPublishing()>=year) {
 				System.out.print("\"" + book.getTitleBook() + "\", ");
