@@ -97,6 +97,6 @@ public class Abiturient extends Human{
 	   for (int i = arrayStudentsMin.size()-1; i>=arrayStudentsMin.size()-numberSelected; i--) {
 		   System.out.print(arrayStudentsMin.get(i).getSurname()+"(средний балл - " + arrayStudentsMin.get(i).getAverageScoreAbiturient() + "), ");
 	   }
-	   System.out.println();
+	   System.out.println(); 
    }
 }
